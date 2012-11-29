@@ -1,0 +1,93 @@
+\documentclass[10pt,a4paper,final]{article}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\author{Jeren}
+\title{HW \#5}
+\begin{document}
+Problem 1a:
+
+\begin{align}
+L & \approx L_\odot \left( \frac{M}{M_\odot} \right)^{11/2} \left( \frac{R}{R_\odot} \right) ^{-1/2}\\
+L & \approx \frac{GM^2}{2Rt}\\
+M^{11/2} R^{-1/2} & \propto \frac{M^2}{Rt}\\
+R^{1/2} & \propto \frac{M^2}{M^{11/2}t}\\
+R & \propto \left( \frac{M^{2-{11/2}}}{t} \right)^2\\
+R & \propto \left( \frac{M^{-7/2}}{t} \right)^2\\
+R & \propto M^{-7}t^{-2}
+\end{align}
+
+\begin{align}
+L & \propto M^{11/2}R^{-1/2}\\
+L & \propto M^{11/2}(M^{-7}t^{-2})^{-1/2}\\
+L & \propto M^{11/2}M^{7/2}t\\
+L & \propto M^9 t
+\end{align}
+
+\begin{align}
+L & \propto T^4R^2\\
+T^4R^2 & \propto M^9 t\\
+T^4 & \propto M^9 R^{-2} t\\
+T^4 & \propto M^9 (M^{-7}t^{-2})^{-2} t\\
+T^4 & \propto M^9 (M^{14}t^4)t\\
+T & \propto (M^{23}t^5)^{1/4}\\
+T & \propto M^{23/4} t^{5/4}
+\end{align}
+
+Problem 1b:
+
+\begin{align}
+E_\gamma = E_{conv}\\
+L_{conv} = 0.2 L_\odot \left( \frac{M}{M_\odot} \right)^{4/7} \left( \frac{R}{R_\odot} \right)^2\\
+L_{rad} \approx L_\odot \left( \frac{M}{M_\odot} \right)^{11/2} \left( \frac{R}{R_\odot} \right)^{-1/2}\\
+\end{align}
+
+set them equal to each other
+
+\begin{align}
+0.2 L_\odot \left( \frac{M}{M_\odot} \right)^{4/7} \left( \frac{R}{R_\odot} \right)^2 & = L_\odot \left( \frac{M}{M_\odot} \right)^{11/2} \left( \frac{R}{R_\odot} \right)^{-1/2}\\
+0.2 \left( \frac{M}{M_\odot} \right) ^{4/7 - 11/2} & = \left( \frac{R}{R_\odot} \right)^{-1/2 -2}\\
+0.2 \left( \frac{M}{M_\odot} \right)^{8/14 - 77/14} & = \left( \frac{R}{R_\odot} \right)^{-5/2}\\
+\left( 0.2 \left( \frac{M}{M_\odot} \right)^{-69/14} \right)^{-2/5} & = \frac{R}{R_\odot}
+\end{align}
+
+\begin{align}
+L_{conv} &  = 0.2L_\odot \left( \frac{M}{M_\odot} \right)^{4/7} \left( \left( 0.2 \left( \frac{M}{M_\odot} \right)^{-69/14} \right)^{-2/5} \right)^2\\
+& = 0.2L_\odot \left( \frac{M}{M_\odot} \right) ^{4/7} \left( 0.2 \left( \frac{M}{M_\odot} \right)^{-69/14} \right)^{-4/5}\\
+& = 0.2L_\odot \left( \frac{M}{M_\odot} \right)^{4/7} (0.2)^{-4/5} \left( \frac{M}{M_\odot} \right)^{69/7 \cdot 2/5}\\
+& = 0.2L_\odot \left( \frac{M}{M_\odot} \right)^{4/7} (0.2)^{-4/5} \left( \frac{M}{M_\odot} \right)^{138/35}\\
+& = 0.2^{-1/5}L_\odot \left( \frac{M}{M_\odot} \right)^{158/35}\\
+\end{align}
+\newpage
+
+Problem 2b:
+
+\begin{align}
+t_{KH} & = t_{FF}\\
+\frac{E}{L} & = \frac{1}{\sqrt{G \bar{\rho}}}\\
+\frac{U}{2L} & = \frac{1}{\sqrt{G \bar{\rho}}}\\
+\frac{GM^2}{2RL} & = \frac{1}{\sqrt{G \bar{\rho}}}\\
+\frac{GM^2}{2R \cdot 0.2L_\odot \left( \frac{M}{M_\odot} \right)^{4/7} \left( \frac{R}{R_\odot}\right)^2} & = \dfrac{1}{\sqrt{G\dfrac{M}{\dfrac{4}{3} \pi R^3}}}\\
+\frac{GM^2}{2R \cdot 0.2L_\odot \left( \frac{M}{M_\odot} \right)^{4/7} \left( \frac{R}{R_\odot}\right)^2} & = \sqrt{\frac{4\pi R^3}{3GM}}\\
+\frac{GM^2}{0.4RL_\odot \left( \frac{M}{M_\odot} \right) ^{4/7} \left( \frac{R}{R_\odot} \right)^2} & = \sqrt{\frac{4\pi R^3}{3GM}}\\
+\frac{25G^2M^4}{4R^2L_\odot^2 \left( \frac{M}{M_\odot} \right)^{8/7} \left( \frac{R}{R_\odot} \right)^4} & = \frac{4 \pi R^3}{3GM}\\
+\frac{75 G^3 M^5}{16 \pi L_\odot^2 \left( \frac{M}{M_\odot} \right)^{8/7}} & = R^5 \left( \frac{R}{R_\odot} \right)^4\\
+\frac{75G^3M^5R_\odot^4}{16 \pi L_\odot^2 \left( \frac{M}{M_\odot} \right)^{8/7}} & = R^9\\
+\left( \frac{75G^3M^5R_\odot^4}{16 \pi L_\odot^2 \left( \frac{M}{M_\odot} \right)^{8/7}} \right)^{1/9} & = R\\
+\left( \frac{75G^3M^5 M_\odot^{8/7}R_\odot^4}{16 \pi L_\odot^2 M^{8/7}} \right)^{1/9} & = R\\
+\left( \frac{75G^3M^{27/7} M_\odot^{8/7}R_\odot^4}{16 \pi L_\odot^2} \right)^{1/9} & = R\\
+\left( \frac{75G^3}{16 \pi L_\odot^2}  M^{27/7} M_\odot^{8/7} R_\odot^4 \right)^{1/9} & = R
+\end{align}
+
+Problem 2c:
+
+\begin{align}
+2K &  = U\\
+2 \frac{3}{2}NkT & = \frac{GM^2}{R}\\
+\frac{3MkT}{\mu m_p} & = \frac{GM^2}{R}\\
+T & = \frac{\mu m_p GM}{3kR}~, \text{setting} ~\mu = 1\\
+T =& = \frac{\mu m_p GM}{3k} \left( \frac{75G^3}{16 \pi L_\odot^2}  M^{27/7} M_\odot^{8/7} R_\odot^4 \right)^{-1/9}\\
+& = 
+\end{align}
+\end{document}

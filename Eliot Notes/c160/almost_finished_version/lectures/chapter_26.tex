@@ -1,0 +1,86 @@
+\chapter{Physics of Neutron Stars}
+
+\begin{center}
+\textbf{\begin{huge} November 29, 2011\end{huge}}
+\end{center}
+
+\section{NS Structure}
+To a 0th order, we can model them like WDs. We have neutron-degeneracy pressure $P_n \pt \rho^{5/3}$ described by a $n=\sfrac{3}{2}$ polytrope. 
+\begin{align}
+R &\pt M^{1/3}\\
+R &\approx 15\textrm{ km} \mfrac^{-1/3} \sim \frac{m_e}{m_n} R_{WD}\\
+\rho_c &\approx 8 \times 10^{14} \mfrac^2 \textrm{ g cm}^{-3}
+\end{align}
+As $M \uparrow, \rho_c \uparrow, p_F \pt hn^{1/3} \uparrow$, so as you go to higher masses, NS are more relativistic. Particularly as $p_F \uparrow$, velocity approaches $c$. For relativistic degeneracy pressure, $P \pt \rho^{4/3}$ (independent of mass). This leads to a maximum mass of a neutron star: $M_{ch} \approx 5.8 \mu^{-2} M_\odot$. Which $\mu$ is this?
+\begin{align}
+n &= \frac{\rho}{\mu m_p}~,
+\end{align}
+where $n$ corresponds to the fermions providing pressure. In the WD case, $\mu =2$ --- in the NS case, $\mu = 1$. From this, we conclude that $M_{ch} \approx 5.8 M_\odot$. So far, we've treated the NS like a WD but instead of electrons we use neutrons. This reasoning is quite accurate for WDs but it's not so for NSs. This is due to 2 factors:
+\begin{list}{$\circ$}{}
+\item General Relativity
+\item Neutrons are not an ideal gas
+\end{list}
+
+The way to measure the importance of G.R is to relate the escape velocity to $c$. 
+\begin{align}
+\frac{GM}{Rc^2}\textrm{ is the dimensionless number that compares G.R. to $c$.}
+\end{align}
+In the case of a NS.
+\begin{align}
+\frac{GM}{Rc^2} \approx 0.1 \mfrac^{4/3}
+\end{align}
+
+The problem with \#2 is that the density of a proton is equal to $\frac{3 m_p}{4 \pi r_p^3}$ where $r_p=1.5 \times 10^{-13}$ cm $\ra\rho_{nuc} \approx 2 \times 10^{14} \textrm{ g cm}^{-3}$. According to this, the central density is bigger than the nuclear density for masses above $0.5 M_\odot$ i.e. neutrons are slammed together and you can't treat it as an ideal gas. 
+
+\subsection{HE in General Relativity}
+\begin{align}
+\frac{dP}{dr} &=-\rho \frac{GM_r}{r^2} \underbrace{ \frac{1}{1-\frac{2GM_r}{c^2r}}}_{\textrm{time dilation}} \underbrace{\lp 1 + \frac{P}{\rho c^2} \rp \lp 1 + \frac{4 \pi Pr^3}{c^2M_r}  \rp}_{\textrm{every mass produces $g$}}
+\end{align}
+
+We can treat this as an ideal gas (neglecting problem \#2 but correcting for \#1). Now, $M_{max} \approx 0.7 M_\odot$. But... the maximum mass of a WD is less than the maximum mass of a NS? At this mass, $\rho_c \approx 5 \times 10^{15}$ g cm$^{-3} \sim 25 \rho_{nuc}$. 
+
+\section{Nuclear Physics of NSs}
+For:
+\begin{align}
+\rho \leq 4 \times 10^{11}\textrm{ g cm}^{-3} \ll \rho_{nuc}
+\end{align}
+Quick aside, what's $\rho_{surf}$? Turns out at the surface, it's not even degenerate. $\rho_{surf} \sim 1 \textrm{ g cm}^{-3}$. $H = \frac{KT}{mg} \sim 1$ cm. \\
+
+Starting from the surface and working your way in, there are no free $n$ and thus there are only nuclei and free $e^-$. You eventually reach a shell in a NS where
+\begin{align}
+\rho \geq 4 \times 10^{11} \textrm{ g cm}^{-3} \equiv \rho_{drip}
+\end{align}
+This corresponds to ``neutron drip" where you now have free neutrons and electrons. As you go in, you're creating more and more neutron rich nuclei. At some point, you're creating nuclei where neutrons can't be bound. The neutrons get ``spit" back out; the stable state of matter isn't stacking neutrons on nuclei, it's free neutrons floating around. 
+\begin{align}
+E_{F,electron}& \approx 5 \textrm{ MeV} \lp \frac{\rho}{10^9 \textrm{ g cm}^{-3}} \rp^{1/3}\\
+e^- + p &\ra n + ...\\
+e^- + \textrm{ nucleus} &\ra \textrm{ n-rich nucleus}
+\end{align}
+Up until this point, $e^-$ degeneracy pressure still dominates. As $\rho \uparrow$, neutron degeneracy pressure goes up like $\rho^{5/3}$ and electron degeneracy pressure goes up like $\rho^{4/3}$. Eventually we reach a point where $\rho \geq 4 \times 10^{12} \textrm{ g cm}^{-3}$; this is where neutron degeneracy dominates. In terms of mass, it's a tiny fraction of the mass of the NS in. In terms of height... Eliot doesn't know now but he'll figure it out later. \\
+
+As you proceed with the neutron drip, you approach the limit where the neutrons become relativistic. You reach an equilibrium where:
+\begin{align}
+n \ra  p + e^- + \bar{\nu}\\
+e^- + p \ra n + \nu
+\end{align}
+Equilibrium results in $n_n = 8 n_p= 8n_{e^-}$. The NS turns out to be $\sim 10\% ~e^- \textrm{ and } p$. The physics are well understood until $\rho \sim \rho_{nuc} \approx 2 \times 10^{14} \textrm{ g cm}^{-3}$. (Un)Fortunately, this is more than 99\% of the NS mass. At this point, the neutrons are bumping against each other and thus must take into account the strong interaction by many neutrons. We know the equations to solve but not even supercomputers can solve them at this point. Maybe NSs behave like quarks, we just don't know. Basically, above $\rho_{nuc}$, we don't know what happens. This means the radii of NSs are uncertain and the maximum mass is ``uncertain". By uncertain, we don't have large uncertainties, they've been narrowed down to about 50\%. We think that the $M_{max} \approx 2 -3M_\odot$. 
+
+\section{How We Observe NSs}
+If you just have an isolated NS and ignored it's magnetic field, what would it look like? 
+\subsection{Isolated NSs}
+We ignore pulsars and NSs with accretion disks. NSs are born \textbf{extremely} hot; they become fainter and fainter as they age. They are born with $T_c \sim 10^{11}$ K and cool to $T_c \sim 10^9$ K in a day by neutrinos. Neutrino cooling dominates photon cooling for $\sim 10^5-10^6$ years. %
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=\textwidth /2]{images/cooling.ps}
+\label{fig:cooling}
+\end{figure}
+
+Young NSs have a $T_{eff} \sim 10^6$ K with $\langle h\nu\rangle \sim 0.1$ keV. We can observe NS in nature but we can't directly measure their radius. Why not? It's isolated! Haha... We also can't measure it's distance even though we can measure flux. They're also not BB and must create detailed models of the atmosphere... it just gets more and more complicated. If we look at binary systems the neutron stars are usually older and thus we have to trade off $T_{eff}$ for radius. 
+\section{NS Properties}
+\begin{list}{$\circ$}{}
+\item Masses: $M_{NS} \sim 1.2 - 2M_\odot$ ( a lot with $\approx 1.4M_\odot$). The maximum measured mass $\approx 2 M_\odot$. 
+\item Radii: $\sim 10$ km~, $L = 4 \pi R^2 \sigma T_{eff}^4 ~(\sim 5 - 20$ km)
+\item Rotation: Starting with $M_\odot$, $P_{NS} = P_\odot \lp \frac{R_{NS}}{R_\odot} \rp^2 \ra P_{NS} \sim 1$ ms (observed to have $P_{NS} \sim 1-10$ ms)
+\item B-Fields: $B_\odot \sim 1$ G, $B_{NS} \sim 10^7-10^{15}$ G (Also, not sure why NSs have such a large magnetic flux. Perhaps $\Phi = \int \bar{B} \cdot d\bar{A}$ = constant~, $BR^2 \sim$ constant)
+\end{list}

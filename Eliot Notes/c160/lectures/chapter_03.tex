@@ -1,0 +1,118 @@
+
+\chapter{The Basics}
+
+\begin{center}
+\textbf{\begin{huge} September 4, 2011\end{huge}}
+\end{center}
+
+\section{Hydrostatic Equilibrium and the Virial Theorem}
+
+\begin{align}
+\int \frac{dP}{dr} &= -\rho g\\
+&= -\int \frac{\rho GM_r}{r^2}\\
+&= -\int \frac{\rho GM}{r^2}4 \pi r^3dr
+\end{align}
+
+Let's first solve each side individually and combine the results:
+
+Right Hand Side:
+
+\begin{align}
+-\int_0^R \frac{GM_r}{r} 4 \pi r^2 \rho dr\\
+\frac{dM_r}{dr}=4\pi r^2\rho\\
+dM_r = 4 \pi r^2\rho dr\\
+-\int_0^R \frac{GM_r}{r} dM_r \equiv U
+\end{align}
+
+Left Hand Side:
+
+\begin{align}
+&=\int_0^R \frac{dP}{dr}4\pi r^3 dr\\
+\frac{d}{dr}(P 4 \pi r^3) = \frac{dP}{dr}4\pi r^3 + 3P4\pi r^2\\
+&=\int_0^Rdr \lp \frac{d}{dr}\lp P4\pi r^3 \rp - 3P 4\pi r^2 \rp\\
+&=\int_0^R \underbrace{dr \cdot  \frac{d}{dr}\lp P4\pi r^3 \rp}_{P 4 \pi r^3 \Bigl\lvert_0^R} - \underbrace{3 \int_0^R 4 \pi r^2drP }_{-3\int dVP}\\
+&=P 4 \pi R^3 - P 4 \pi 0^3 - 3\int dVP~,\text{ but $P=0$ at surface, so $P4\pi R^3=0$}
+\end{align}
+
+\begin{align}
+\langle P\rangle  &= \int_{P(r=0)}^{P(r=R)}dP\\
+&= \frac{1}{V}dVP\\
+&= \frac{3}{4 \pi R^3}\int dVP
+\end{align}
+
+Combining the LHS and RHS, 
+
+\begin{align}
+\Aboxed{-3\langle P\rangle V &= U}
+\end{align}
+
+This is the most general version of the Virial Theorem for stars. Now that we have this, let's derive relations between $P$ and $E$. First, what are the properties of stars?
+
+\begin{list}{$\circ$}{}
+\item $n=$ \# per unit time
+\item $\overline{V}=$ velocity
+\item $\overline{p} =$ momentum
+\end{list}
+
+Force on a wall $= \frac{\Delta p}{\Delta t}$. $PA = \frac{\Delta p}{\Delta t}$, $P = \frac{\Delta p}{\Delta t}\frac{1}{A}$.\\
+
+\begin{align}
+\frac{\Delta p}{\Delta t} = \# \text{ of collisions per unit time $\times~ \Delta p$ per collision}
+\end{align}
+
+For particles moving either way, 
+
+\begin{align}
+\frac{\Delta p}{\Delta t} &= n\cdot v_x \cdot A \cdot \half\\
+\frac{\Delta p_x}{\Delta t} &= nv_xp_xA = PA\\
+\frac{\Delta p_y}{\Delta t} &= nv_yp_yA = PA\\
+\frac{\Delta p_z}{\Delta t} &= nv_zp_zA = PA\\
+\frac{\Delta p}{\Delta t} &=\frac{1}{3}nA\overline{v}\overline{p} = PA\\
+\frac{\Delta p}{\Delta t} &=\frac{1}{3}nvp = P\\
+\Aboxed{P &= \frac{1}{3}n\langle pv\rangle}
+\end{align}
+
+\subsection{NR Virial Theorem}
+
+For a NR gas of particles, $p=mv$
+
+\begin{align}
+P &= \frac{1}{3}n\langle mv^2\rangle\\
+P &= \frac{2}{3}n\langle \half mv^2\rangle \\
+P &= \frac{2}{3}n\langle K\rangle ~,\text{ KE is the energy per unit particle}\\
+P &= \frac{2}{3}K~,\text{ per unit volume}
+\end{align}
+
+\begin{align}
+U &= -3\langle P\rangle V\\
+&= -3 \langle \frac{2}{3}K \rangle V\\
+\Aboxed{U &= -2\langle K\rangle }\\
+E_{TOT} &= U + K = \frac{U}{2}
+\end{align}
+
+What about a star where the kinetic energy is mostly dominated by relativistic particles?
+\subsection{R Virial Theorem}
+
+\begin{align}
+P &= \frac{1}{3}n\langle pc\rangle \\
+P &= \frac{1}{3}n\frac{K}{v}\\
+U &= 3 \lp \frac{1}{3}nK \rp\\
+\Aboxed{U &= -K}\\
+E_{TOT} &= U + K = 0
+\end{align}
+
+If $E_{TOT} < 0$, the star is bound and stable. If $E_{TOT} = 0$, then the star is unstable. 
+
+\section{Behavior of NR Stars}
+
+For a NR star, $E_{TOT} = -K = \frac{U}{2}$. Let's say the star is losing heat to radiation and thus $E_{TOT}$ is decreasing. Because it's a gravitationally bound system, a loss in $E$ means that the star will contract and heat up. In other words, the star has negative heat capacity. \\
+
+How long will it take for a star to go from $r=R$ to $r=\frac{R}{2}$? 
+
+\begin{align}
+\Delta U &\sim \frac{GM^2}{R}\\
+&\sim \frac{GM^2}{ \lp\frac{R}{2} \rp}\\
+&\sim \frac{2GM^2}{R}
+\end{align}
+
+Since we're dealing with Kelvin Helmholtz contraction, let's define a new time scale $t_{KH}$ defined to be $t_{KH} \approx \frac{E}{L}$. For our sun, $t_{KH} \approx 3 \times 10^7$ years $\ll 4.5 \times 10^9$ years, where the latter is the approximate current age of our sun. Therefore, KH contraction cannot explain fully the behavior of the sun; something else must be needed (fusion). 

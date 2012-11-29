@@ -1,0 +1,60 @@
+\documentclass[10pt,preprint]{article}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{fullpage}
+
+\newcommand{\pt}{\propto}
+\newcommand{\rp}{\right)}
+\newcommand{\lp}{\left(}
+
+\begin{document}
+
+\begin{center}
+\textbf{\begin{huge} September 22, 2011\end{huge}}\\
+\begin{large}Jeren Suzuki\end{large}
+\end{center}
+
+\section{Star Formation}
+
+Gas in galaxies comes in multiple "phases". It's still a gas, just a broad range with particular characteristics. They have different $\rho$ \& $T$ with comparable $P$. Hot, low $\rho$ gas is mostly in the form of Hot ISM. Stars form from \textbf{cold molecular clouds}. What are the conditions for a cold molecular gas cloud to collapse? 
+
+\begin{align*}
+|U| &\geq |K|\\
+\frac{GM}{R^2} &\gtrsim \Bigl\lvert \frac{dP}{dr} \Bigl\lvert\\
+\text{self gravity of cloud} &\gtrsim \frac{3}{2}NkT\\
+&\approx \frac{M}{m_p}kT
+\end{align}
+
+If $M \gtrsim \frac{RkT}{Gm_p}$, then it will collapse. 
+
+\begin{align*}
+\rho &\approx \frac{M}{R^3}\\
+R &\sim \lp \frac{M}{\rho} \rp^{1/3}\\
+M^{2/3} &\gtrsim \frac{kT}{Gm_p \rho^{1/3}}\\
+\Aboxed{M &\geq \lp \frac{k}{Gm_p} \rp^{3/2} \frac{T^{3/2}}{\sqrt{\rho}}}~, \text{ Jeans Mass}\\
+\frac{GM^2}{R} &\geq \frac{MkT}{m_p} \\
+\frac{GM^2}{R} &\geq c_s\\
+\test{if} \frac{1}{\sqrt{G\rho}} &\leq \frac{R}{c_s}~,\text{ then $t_{FF} < t_{sound}$, and it will collapse}
+\end{align}
+
+Stars are more prone to collapse if they have lower $T$ and higher $\rho$. Stars form from cold molecular clouds because they are the most unstable.
+
+\begin{align*}
+M_J &\approx 50 M_\odot \frac{\lp \frac{T}{10K}\rp^{3/2}}{\lp \frac{\text{n}}{100 \text{ cm}^{-3}} \rp^{1/2}}\\
+R_J &= \lp \frac{M_J}{\rho} \rp^{1/3}\\
+&\approx 3 \text{ pc} \frac{(T/10K)^{1/2}}{(n/100\text{ cm}^{-3})}
+\end{align}
+
+If a star has $M>M_J$ and $R<R_J$, then it will collapse. 
+
+
+
+
+
+
+
+
+\end{document}

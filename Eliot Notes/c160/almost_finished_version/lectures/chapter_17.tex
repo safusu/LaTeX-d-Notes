@@ -1,0 +1,165 @@
+\chapter{Mass of Stars}
+
+\begin{center}
+\textbf{\begin{huge} October 25, 2011\end{huge}}
+\end{center}
+
+\section{Minimum Mass of Stars $M_\star \gtrsim .08 M_\odot$}
+
+If you have gas with an inter-particle spacing $a$, and if it's a bunch of Fermions, then quantum mechanically, we require that the $\lambda$ be less than the inter-particle spacing. This can be violated when:
+
+\begin{align}
+\lambda &\leq a\\
+\frac{h}{p_{th}} &\sim \frac{h}{\sqrt{kTm}}
+\end{align}
+
+There is a finite momentum such that at $T=0$, there is still energy.
+
+\begin{align}
+\frac{h}{p} \sim a \sim n^{-1/3}
+\end{align}
+
+This relates to the Fermi momentum $p_F \sim hn^{-1/3}$. This makes no assumption about the relativistic properties of the gas. Associated with the Fermi momentum and the case of a NR gas,
+
+\begin{align}
+E_F = \frac{p_F^2}{2m	} \sim \frac{h^2 n^{2/3}}{2m}
+\end{align}
+
+Lastly, because the particles have a certain momentum, they collide and exchange momentum, exerting a force and thus a pressure. 
+
+\begin{align}
+P &\sim \text{ energy volume}^{-1}\\
+&\sim nE_F
+\end{align}
+
+For a NR quantum gas, we have a pressure: $\dfrac{h^2n^{5/3}}{2m}$. If you do it another way with integrals and stuff, you get: 
+
+\begin{align}
+P = \frac{h^2}{5m} \lp \frac{3}{8 \pi} \rp^{2/3} n^{5/3}~,P \pt \rho^{5/3}~,n=\sfrac{3}{2}\text{ polytrope}
+\end{align}
+
+We get this by integrating the momentum distribution which is a straight line until $p_F$ by where it drops to 0. Recall, $\mu = \lp \frac{\delta E}{\delta N} \rp_{S,V} = E_F$. For a classical gas, $\mu$ changes with $kT$. Quantum mechanically, you adds particles with $E_F$. For R QM gases:
+
+\begin{align}
+E = pc\\
+E_F = p_F c\sim hn^{1/3}c\\
+\Aboxed{P &\sim hn^{4/3}c}\\
+\Aboxed{&\sim E_F n}~,P \pt \rho^{4/3}~,n=3\text{ polytrope}
+\end{align}
+
+\section{Types of Ideal Gases}
+
+There exists two types of ideal gases, Classical and QM. One way to tell apart is whether or not $\lambda$ is comparable to inter-particle spacing. Another is whether the quantum density is comparable to the gas density. Put another way, $n > n_Q$ is QM, $n < n_Q$ is classical. You can also compare:
+
+\begin{align}
+nkT &\sim P_{degen}\\
+E_F& \sim kT
+\end{align}
+
+Where does $T$ come in for the deBr\"oglie Wavelength? It comes in from $\lambda = \frac{h}{p_{th}}$, where $p_{th}$ is a function of $T$.\\
+
+As a star of mass $M \downarrow, n\uparrow, T \downarrow, n_Q \downarrow$, which pushes you more towards the limit where QM is important. 
+
+\section{Low Mass Object}
+
+We know that these are fully convective, where for fully convective objects:
+
+\begin{align}
+P_c = .5 GM^{2/3}\rho_c^{4/3}
+\end{align}
+
+which comes from:
+
+\begin{align}
+\frac{dP}{dr} &= -\rho \frac{GM_r}{r^2}\\
+P_c &\sim \rho \frac{GM}{R}~,\rho \sim \frac{M}{R^3}~,R \sim \lp \frac{M}{\rho} \rp^{1/3}\\
+P_c &\sim GM^{2/3}\rho^{4/3}~,P_c \text{ is from a gas of radiation}
+\end{align}
+
+Now,
+
+\begin{align}
+P_c &= P_{gas} + P_{degen}\\
+&= \underbrace{nkT}_{\text{from protons}} + \underbrace{\frac{h^2}{5m} \lp \frac{3}{8 \pi} \rp^{2/3} n^{5/3}}_{\text{from electrons}}\\
+&= n_p kT + \frac{h^2}{5m} \lp \frac{3}{8 \pi} \rp^{2/3} n_e^{5/3}\\
+&= \frac{\rho kT}{\mu m_p} + \frac{h^2}{5m} \lp \frac{3}{8 \pi} \rp^{2/3} \lp  \frac{\rho}{\mu_e m_p}\rp^{5/3}\\
+&= \frac{\rho_c kT}{\mu m_p} + \frac{h^2}{5m} \lp \frac{3}{8 \pi} \rp^{2/3} \lp  \frac{\rho_c}{\mu_e m_p}\rp^{5/3}\\
+&= 0.5 GM^{2/3} \rho_c^{4/3}
+\end{align}
+
+This tells us that $\rho_c T_c \pt \rho_c ^{4/3}M^{2/3}$ classically to get $T_c \pt \rho_c^{1/3}M^{2/3}$. Now, we want to include the $P_{degen}$ to find $T_c$ given $\rho_c$. 
+
+\begin{align}
+T_c = 6 \times 10^6 \text{ K} \mfrac^{2/3}\rho_c^{1/3} - 10^5 \text{ K} \rho_c^{2/3}
+\end{align}
+
+As you increase $\rho_c$, $T_c \ra 0$ at some $\rho_c$. Line 24 is the $T_c$ required for HE given $M$ and $\rho_c$. At some central density, it's large enough to provide all the pressure needed to support the star. The star is fully supported by degeneracy pressure and there is no gas pressure. For larger central densities, it's nonphysical. If $T_c = 0$, there is a unique $\rho_c$ so that $P_{degen} =$ gravity. 
+
+\begin{align}
+\rho_c^{5/3} &\pt M^{2/3} \rho_c^{4/3}\\
+\rho_c^{1/3} &\pt M^{2/3}\\
+\rho_c &\pt M^2~,\text{ unique $\rho_c$ given $M$}\\
+&\pt \frac{M}{R^3}\\
+R &\pt M^{-1/3}~,\text{ unique $R$ given $M$ for deg. pressure support}
+\end{align}
+
+For stars undergoing KH contraction,
+
+\begin{align}
+\rho_c \uparrow, T_c \uparrow\\
+P_{gas} \uparrow\\
+P_{degen} \uparrow
+\end{align}
+
+To stop this contraction, the $T_c$ gets high enough so that you get fusion. OR the star finds another way to support itself. The $P_{degen}$ can get large enough so that it becomes comparable to HE and you stop contracting without ever having to fuse. There's a battle within the star between $T$ and $\rho_c$. Either you get hot enough so that fusion sets in or your $\rho_c$ gets high enough so that $P_{degen}$ supports the star.
+
+\section{That One Graph that Looks like an LN plot but that touches down at the X axis}
+
+There is a $T_{MAX}$ an object can have supported by $P_{gas} + P_{degen}$.
+
+\begin{align}
+\frac{dT_c}{d\rho_c} = 0\\
+8 \times 10^7 \text{ K} \mfrac^{4/3}
+\end{align}
+
+If $T_{MAX}$ is large enough, fusion sets in and you become a star. If $T_{MAX}$ is too small, there is no fusion and you are supported by degen. pressure, resulting in a brown dwarf or a giant planet. \\
+
+For fusion to stop KH contraction, you need:
+
+\begin{align}
+\underbrace{L_{conv}}_{\text{energy leaving star}} = \underbrace{L_{fusion}}_{\text{energy generated by fusion}}\\
+L_{fusion} \sim \epsilon_{pp}M\\
+T = 10^7 \text{ K}~, L \sim .01 L_\odot \rho \mfrac\\
+T = 10^6 \text{ K}~, L \sim 10^{-9} L_\odot \rho \mfrac\\
+T = 2 \times 10^6 \text{ K}~, L \sim 10^{-6} L_\odot \rho \mfrac
+\end{align}
+
+Basically, you need $T_c \gtrsim 2 \times 10^6$ K for fusion of H to stop KH contraction. If you set $2 \times 10^6 K = T_{MAX} = 8 \times10^7 \text{ K} \mfrac^{4/3}$, you get $M \leq .06 M_\odot, T_c < 2 \times 10^6 $ K and it is supported by deg. pressure because it never got hot enough to fuse. On the other hand, $M \geq .06 M_\odot \ra T_c > 2 \times 10^6$ K, fusion sets in, stops KH contraction, and is now on the MS. \\
+
+Detailed calculations give $M \gtrsim .08 M_\odot$ are stars, and $M \lesssim .08 M_\odot$ are not. 
+
+%
+%the circle is where degen presureis about the same as gravity. the plot is for jupiter
+%
+
+\begin{list}{$\circ$}{}
+\item $D= \dfrac{n_D}{d_p} \sim 3 \times 10^{-5}$
+\item $Li = \dfrac{n_{Li}}{n_p} \sim 3 \times 10^{-10}$
+\end{list}
+
+But they fuse before H. Why? Let's look at the reactions:
+
+\begin{align}
+p + D &\ra \textrm{$^{3}$He} + \gamma\\
+E_G &= 655 \text{ KeV}\\
+p + \textrm{$^{7}$Li} & \ra \textrm{$^{4}$He} + \textrm{$^{4}$He}\\
+E_G &= 7.7 \text{ MeV}\\
+p + p &\ra ...\\
+E_G &= 508 \text{ KeV}
+\end{align}
+
+It's because their $S$ value is so large. Why? The reactions are strong reactions. There's a little tiny D and Li Main Sequence. 
+
+\section{Max Mass of Stars (Quickly)}
+
+Observationally, it looks like (at least in nearby galaxies) that there aren't stars with $M \geq 100 \ra 300M_\odot$. This is subtle though, since in a model you could come up with a star with $1000 M_\odot$, we just don't think they're stable. In particular these are $P_{Rad}$ supported, so they have a $\gamma = \sfrac{4}{3}$ and their $E_{tot} = 0$. It may be the case that these stars form, but they are SOOO unstable that any perturbation and they oscillate out of control. But hey, it's all speculation. 

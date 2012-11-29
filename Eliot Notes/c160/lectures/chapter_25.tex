@@ -1,0 +1,115 @@
+\chapter{Supernovae}
+
+\begin{center}
+\textbf{\begin{huge} November 22, 2011\end{huge}}
+\end{center}
+
+\section{Finishing up NSs}
+
+What determines the fate of the central object? There are 2 basic routes that you can get BHs instead of a NS.
+
+\begin{list}{$^\circ$}{}
+\item No explosion - envelope falls onto the NS, $M > 2.5 M_\odot$ and it collapses into a BH. (Never been observed)
+\item Partial explosion - some of envelope is blown away but enough material rains back down onto the NS and thus would exceed the $M_{ch}$ for a NS. (Fallback) See Fig \ref{fig:raining}.
+\end{list}
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=\textwidth /2]{images/raining.ps}
+\label{fig:raining}
+\end{figure}
+
+\section{Rotation}
+
+\begin{align}
+KE \sim 10^{51} \textrm{ ergs}\\
+E_\nu \sim 10^{53} \textrm{ ergs}
+\end{align}
+
+For a NS, if the period of it's rotation is $\sim 100$ ms, 
+\begin{align}
+E_{rot} &= I\Omega^2\\
+&= MR^2\Omega^2\\
+&\sim 10^{48} \textrm{ ergs}
+\end{align}
+ but this amount of energy is tiny compared to the energy in the explosion. But every once in a while, the rotation of a star is extraordinarily important. Roughly speaking, 1 out of every 1000 stellar collapses involve very rapid rotation. This rapid rotation completely changes the explosion. This gives gives rise to a new type of explosion called a Gamma Ray Burst (GRB). 
+ 
+ \subsection{GRBs}
+
+They are two types of GRBs, short ($\sim$ 0.3 secs), and long ($\sim 30$ secs). They are observed to be isotropic in the sky and thus are sourced not from our local galaxy, but from the entire universe. GRBs are produced from material that collapses that fly out from the core at speeds $\sim$ .999 $c$. By nature, GRBs are hard to detect but recent developments have made it so we can observe a fading of optical photons at the exact same position, enabling us to find distances and positioning much better. \\
+
+If a neutron star is rotating $\sim$ 1000 times a second, the energy in rotation is getting close the the KE in the SN explosion. If the star spins fast enough, the infalling matter doesn't fall directly on the core; it collects in an accretion disk. The result is that the explosion happens on the poles at nearly the speed of light. The rotation energy doesn't quite go spherically out, but prefers the rotational axis. 
+
+\section{As Our Explosion Gets Going}
+
+We have a NS with material moving outwards with KE $\sim 10^{51}$ ergs into shells of Si, O, Ne, C, etc. If you take, say, C, and heat it up to $\sim 5 \times 10^9$ K, you can change the properties of the matter (explosive nucleosynthesis). The star spends tens of millions of years to convert between elements, but it takes bout 10 seconds to reprocess and refuse it to make new elements through this process. In particular, Si and O shells (and depending on physics, some of Ne and C shells) get recycled by fusion into heavier elements.\\
+
+For this to happen, the $t_{\textrm{fuse}} < t_{\textrm{expansion}} = \frac{R}{v}$. As material moves out and expands, it's $T$ decreases thanks to adiabatic cooling. Thus, $T \geq \textrm{few } 10^9$ K and fusion goes to Nuclear Statistical Equilibrium (Saha). NSE favors the most bound elements. In the case of the core of the most massive star, the most bound element isn't Fe since you're fusing Si, O, NE, and C on a timescale less than the weak interaction time. This is important since the ratio of $N:Z$ is constant. You can only change n into p through beta decay and inverse beta decay, but that takes time which we don't have. Therefore, $\frac{n_n}{n_p}$ = constant. Therefore, you favor the most bound element with $Z = N$. This isn't $^{56}$Fe, but $^{56}$Ni. Why do we care?\\
+
+This is because Ni is radioactive and decays into Cobalt:
+\begin{align}
+\boxed{ \textrm{$^{56}$Ni} \ra \textrm{$^{56}$Co} + e^+ + \nu_e\textrm{ on a $\lambda$ of about 6 days}}
+\end{align}
+
+\section{SNe as Sources of Optical Light}
+
+$\sim$ week to month sources of optical to infrared emissions. The total energy radiated by photons is $\sim 10^{49} $ ergs $\ll KE \ll E_\nu$ which corresponds to $L_{photons} \sim 10^9 L_\odot$. There are two kinds of SNe:
+
+\begin{list}{$^\circ$}{}
+\item Type Ia - Thermonuclear SNe - no H, He
+\item Type II, Ibc - Core-Collapse SNe - sometimes H, He
+\end{list}
+
+If you have a C/O WD with a $M \sim M_{ch} = 1.4 M_\odot$ with a $R \sim 10^{8-9}$ cm with $E_{BE} \sim 3 \times 10^{50}$ ergs, fusion of C/O into $^{56}$Ni releases about 2 MeV per nucleon. If you took 1 $M_\odot$ of C/O and converted it into Ni, you'd get about $2 \times 10^{51}$ ergs which is $> E_{BE}$ and it blows the star apart. The explosion has a $KE \sim 10^{51}$ ergs with $M \sim \ms$. If you have an explosion of a C/O WD, you should see no H or He. Why do we know the week-month timescale of the SNe if the actual explosion takes a few seconds? 
+
+\section{SNe}
+
+Right after explosion, the photons can't initially escape the inner shells of the star and that's why you don't see BB emission. Instead, you see hot shock material that adiabatically expands. The initial thermal energy of the outward material:
+\begin{align}
+E_{th} \sim E_{KE},R \uparrow, E_{th} \downarrow
+\end{align}
+and in particular, photons dominate energy.
+\begin{align}
+\gamma = \frac{4}{3}~, E_{th} &\sim \frac{4}{3}\pi R^3 \underbrace{P}_{\pt \rho^{4/3} \pt \frac{M^{4/3}}{R^4}}\\
+E_{th} &\pt \frac{1}{R}
+\end{align}
+
+Initially, the diffusion timescale for photons to escape is much much bigger than the timescale for the material to expand, leading to adiabatic cooling. 
+\begin{align}
+t_{\textrm{diff}} &\sim \frac{R^2}{lc} \gg t_{\textrm{exp}} \sim \frac{R}{v}\\
+& \sim \frac{R^2 \kappa \rho}{c} \sim \frac{\kappa M}{Rc}~,\rho \sim \frac{M}{R^3}
+\end{align}
+so as $t_{\textrm{diff}} \downarrow$, $t_{\textrm{exp}} \uparrow$. Eventually, you reach the time where $t_{\textrm{diff}} \sim t_{\textrm{exp}}$. Now, the photons can escape. This is typically the peak of the optical emission from the SNe. This happens when:
+\begin{align}
+\frac{\kappa M}{Rc} &\sim \frac{R}{v} \ra R_{\textrm{peak}} \sim \lp \frac{\kappa M v}{c}\rp^{1/2}~,\textrm{ radius of ejecta at peak emission}\\
+R_{\textrm{peak}} &= vt_{\textrm{peak}}\\
+t_{\textrm{peak}} &= \textrm{ time of peak optical emission}\\
+\Aboxed{t_{peak} &\sim \lp \frac{\kappa M}{vc} \rp^{1/2}}
+\end{align}
+\begin{align}
+t_{\textrm{peak}} &\sim 2 \textrm{ weeks } \frac{\mfrac^{1/2}}{(v/10000\textrm{ km/s})^{1/2}}\\
+R_{\textrm{peak}} &= vt_{\textrm{peak}}\\
+&= 10^{15} \textrm{ cm } \mfrac^{1/2} \lp \frac{v}{10000\textrm{ km/s}} \rp^{1/2}\\
+&\sim 100 \textrm{ AU}\\
+&\sim 10^4 R_\odot~,\textrm{ as far out as Pluto}
+\end{align}
+What's the $L$ of this?
+\begin{align}
+L_{\textrm{peak}} &= \frac{E_{th}(t_{\textrm{peak}})}{t_{\textrm{peak}}}
+\end{align}
+when $R = R_\star, E_{th} = E_{KE} \sim 10^{51}$ ergs.
+\begin{align}
+E_{th}(t_{\textrm{peak}}) = E_{KE} \frac{R_\star}{R_{\textrm{peak}}}
+\end{align}
+combining these:
+\begin{align}
+L_{\textrm{peak}} &= \frac{E_{th}(t_{\textrm{peak}})}{t_{\textrm{peak}}}\\
+\Aboxed{&\approx \frac{E_{KE}cR_\star}{M\kappa}}\\
+\Aboxed{&\sim 10^{42} \textrm{ ergs/s } \frac{\frac{E_{KE}}{10^{51}\textrm{ ergs}}}{\mfrac} \lp \frac{R_\star}{100R_\odot} \rp \sim 10^9L_\odot}
+\end{align}
+
+This requires that when the star explodes, it be $\sim100 R_\odot$. If $R \ll 100R_\odot$, $L_{peak} \ll$. In the cases of small stars, the $L$ is dominated by radioactive heating. It's a ``wonderful" coincidence that the $\lambda$ of Ni is on the timescale that the photons come out, which is a few weeks. Ni produces about 2 MeV per decay which all gets radiated away. For the case of small stars:
+\begin{align}
+L_{peak} &= m_{Ni} \epsilon_{Ni}~,\epsilon = 2\textrm{ MeV/nucleon}= 4.8 \times 10^{10}\textrm{ ergs/s/g}\\
+\Aboxed{L_{peak} &\approx 10^{43} \textrm{ ergs/s}\lp \frac{M_{Ni}}{0.1M_\odot} \rp}
+\end{align}

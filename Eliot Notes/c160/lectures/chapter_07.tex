@@ -1,0 +1,145 @@
+
+\chapter{More Convection}
+
+\begin{center}
+\textbf{\begin{huge} September 15, 2011\end{huge}}
+\end{center}
+
+\section{Models}
+Blob's motion is adiabatic: $s_{blob} = s \ne s_\star$. The blob is in pressure and pressure equilibrium with it's surroundings. The time scale for the blob to move is $\ll t_{{\text dynamic}}$ or $t_{{\text sound~crossing}}$. 
+
+\begin{align}
+s \pt \ln \lp \frac{P}{\rho^\gamma} \rp : \frac{ds}{dr}<0~, s_{blob} = s > s_\star~,\rho_{blob} < \rho_\star
+\end{align}
+
+At the new position, $a = g \frac{\Delta \rho}{ \rho} = |\overline{g} | \lp \frac{\rho_\star - \rho_{blob}}{\rho_{blob}} \rp$. If $\rho_{blob} > \rho_\star$, $a$ is negative and it goes back down. If $\rho_{blob} < \rho_\star$, then $a$ is positive.
+
+\subsection{Background Stellar Model}
+
+\begin{align}
+\boxed{\rho_\star = \rho + \frac{d \rho}{dr} \delta r}~,\text{ where $ \frac{d \rho}{dr}$ is the $\rho$ gradient of the stellar model}
+\end{align}
+
+This, however, is quite boring. 
+
+\begin{align}
+P_\star &= \rho + \frac{d\rho}{dr}\delta r\\
+&= P_{blob} = P  + \delta P\\
+\delta P &= \frac{dP}{dr}\delta r
+\end{align}
+
+\subsection{Blob Model}
+
+\begin{align}
+\rho_{blob} &= \rho + \underbrace{\lp \frac{\delta \rho}{\delta P} \rp_s}_{\text{adiabatic}} \delta P~, \text{ able to calculate $\delta P$ from $P_{\text{blob}} = P_\star$}\\
+P &\pt \rho^\gamma\\
+\lp \frac{\delta P}{\delta \rho} \rp_s &= \gamma \frac{P}{\rho}\\
+\lp \frac{\delta \rho}{\delta P}\rp_s = \frac{\rho}{\gamma P}\\
+\rho_{blob} &= \rho + \frac{\rho}{\gamma}\frac{\delta P}{P}\\
+\Aboxed{\rho_{blob} &= \rho + \frac{\rho}{\gamma} \frac{d \ln P}{dr} \delta r}
+\end{align}
+
+\begin{align}
+a &= g  \lp \frac{\rho_\star - \rho_{blob}}{\rho_{blob}} \rp\\
+&= g \lp \frac{\rho + \frac{d\rho}{dr} \delta r}{\rho + \frac{\rho}{\gamma} \frac{d \ln P}{dr}\delta r} - 1 \rp~,\text{ assuming that $\delta r$ is really small}
+\end{align}
+
+\begin{align}
+a &\equiv -N^2\delta r\\
+N &= -g \lp \frac{d \ln \rho}{dr} - \frac{1}{\gamma} \frac{d \ln P}{dr} \rp\\
+&= \frac{\gamma -1}{\gamma} \frac{m}{k}g \frac{ds}{dr}
+\end{align}
+
+$[N] = \frac{1}{s}$, the Brunt-V\"ais\"al\"a Frequency. Whether or not convection sets in or not is only dependent on $\frac{ds}{dr}$. 
+
+\begin{align}
+a = \frac{d^2}{dt^2}\delta r = -N^2 \delta r\\
+\boxed{\frac{d^2}{dt^2}\delta r + N^2 \delta r = 0}~,\text{ Equation of Motion}
+\end{align}
+
+If $N^2 > 0$, then $\delta r \pt e^{iNt} \pt  \cos(Nt)  + i\sin(Nt)$. This is a stable oscillatory solution. If you push it a little bit, it'll oscillate. If $N^2 < 0, \frac{ds}{dr} < 0, \delta r \pt e^{|N|t}$, which is an exponentially growing solution on a time scale $\frac{1}{N}$ and is dubbed "convection". Say for example we know $dP, d\rho, ds$, then we know if it's spontaneously boiling.\\
+
+\subsection{Will Convection Set In?}
+
+Convection sets in if:
+
+\begin{align}
+\frac{ds}{dr} < 0\\
+N^2 < 0\\
+s &\pt \ln \lp \frac{P}{\rho^\gamma} \rp\\
+ &\pt \ln \lp \frac{T^\gamma}{P^{\gamma -1}} \rp\\
+P = \frac{\rho kT}{\mu m_p}\\
+\rho \pt \frac{P}{T}~.
+\end{align}
+
+\begin{align}
+\gamma \frac{d \ln T}{dr} &< ( \gamma - 1) \frac{d \ln P}{dr}\\
+\underbrace{\frac{d \ln T}{dr}}_{\text{$-$ sign}} &< \frac{\gamma -1}{\gamma}\underbrace{\frac{d \ln P}{dr}}_{\text{$-$ sign}}\\
+\Aboxed{\Bigl\lvert \frac{d \ln T}{dr} \Bigl\lvert &> \frac{\gamma -1}{\gamma} \Bigl\lvert \frac{d \ln P}{dr} \Bigl\lvert} \\
+\text{or}\\
+\Bigl\lvert \frac{d \ln T}{d \ln P	} \Bigl\lvert &> \frac{\gamma - 1}{\gamma} = \frac{2}{5}~,\gamma = \frac{5}{3}
+\end{align}
+
+We can calculate $\frac{dT}{dr}$ if the photons carry the energy.
+
+\begin{align}
+\Bigl\lvert \frac{d \ln T}{dr} \Bigl\lvert &> \frac{\gamma -1}{\gamma} \Bigl\lvert \frac{d \ln P}{dr} \Bigl\lvert\\
+\text{Combine HE \& RD: } \frac{dP_{rad}}{dP} &= \frac{L_r \kappa}{4 \pi GM_r c}\\
+\frac{P}{P_{rad}}\frac{dP_{rad}}{dP} &= \frac{L_r \kappa}{4 \pi GM_r c}\frac{P}{P_{rad}}~,\frac{P}{dP} = \frac{1}{d \ln P}\\
+\Aboxed{\frac{d \ln P_{rad}}{d \ln P} &=4 \frac{d \ln T}{d \ln P}}
+\end{align}
+
+Quick note about the $d \ln T$ stuff: take for example $P\pt T_{rad}^4$. $\ln P_{rad} \pt 4 \ln T +$ constant. $\frac{d}{d \ln T} \ln P_{rad} = \frac{d}{d \ln T}4 \ln T +$ constant$= 4$.\\
+If photons carry the energy, can directly calculate: 
+
+\begin{align}
+\boxed{\frac{d \ln T}{d \ln P} = \frac{1}{4} \frac{P}{P_{rad}} \frac{L_r \kappa}{4 \pi GM_rc}}
+\end{align}
+
+Another way to think about it is that if 
+
+\begin{align}
+\frac{d \ln T}{d \ln P} > \frac{\gamma -1}{\gamma}~,
+\end{align}
+
+then convection sets in.
+
+\section{Our $\odot$}
+
+For our sun, convection occurs in a radius about $r \gtrsim 0.7 R_\odot$. At the enter of the sun, $T\sim 10^7$ K. At larger $r$, $T \downarrow$ and $\kappa \uparrow$. 
+
+\begin{align}
+\frac{d \ln T}{d \ln P} > \frac{2}{5}~,\text{ at higher $r$, convection is determined by $\kappa$}
+\end{align}
+
+In the region between $0 < r \lesssim 0.7R_\odot$, the sun is relatively much hotter than its other parts and thus photons can carry the energy out. The $l$ per photons is relatively large and streaming out isn't a problem. As you extend outwards, however, $T \downarrow, \kappa \uparrow$, resulting in a higher $N$ (where in this case $N$ is the number of RW steps). Photons now have trouble moving the energy and convection takes over. \\
+
+$M < M_\odot, T < T_\odot, \kappa \uparrow$, and more convection. For stars with $M \lesssim \frac{1}{3}M_\odot$, they are fully convective. $M > M_\odot, T > T_\odot, \kappa \downarrow$, the surface convection zone goes away, BUT the core now becomes convective. What actually happens when convection moves energy?
+
+\section{Energy Transport by Convection}
+
+Let's say there are two blobs, one with a high $\rho$ and low $T$ and another with a low $\rho$ and a high $T$. The blobs with high $\rho$ will sink and the blob with low $\rho$ will rise. This makes sense, hot stuff rises, cold stuff sinks. 
+
+\begin{align}
+v_c = \text{ typical convective velocity}\\
+F_c &\sim \frac{1}{2}\rho v_c^2 \cdot v_c \\
+\Aboxed{&\sim \frac{1}{2} \rho v_c^3}\\
+\text{OR}\\
+\Aboxed{F_c &\sim \rho \Delta E \cdot v_c}
+\end{align}
+
+Since $d\rho$ is so small, able to use either. Let's determine the $v_c$ through the work done by buoyancy. When a blob rises from one position to another, it moves from a region of high $P$ to a region of lower $P$. The blob shares energy with it's surroundings and must enlarge to conserve mass. 
+
+\begin{align}
+l \equiv \alpha H~,\text{ H is the scale height},H = \lp \frac{d \ln P}{dr} \rp^{-1}
+\end{align}
+
+How much energy goes the blob gain?
+
+\begin{align}
+a \equiv |N|^2\delta r\\
+E_{gained/mass} = \frac{1}{2}\rho v_c^2\\
+v_c^2 &= |N|^2 \delta r\\
+v_c^2 &= |N|^2l^2\\
+&= \alpha^2 H^2 |N|^2~,|N|^2 = g\frac{1}{c_p} \frac{ds}{dr}
+\end{align}

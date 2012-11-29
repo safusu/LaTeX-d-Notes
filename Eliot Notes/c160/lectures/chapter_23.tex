@@ -1,0 +1,193 @@
+\chapter{Evolution of Massive Stars}
+
+\begin{center}
+\textbf{\begin{huge} November 15, 2011\end{huge}}
+\end{center}
+
+\section{Intro to Massive Stars}
+
+White dwarf stars are usually comprised mostly of C/O. He fusion has occurred, leading to an abundance of C/O. Not $^{12}$C +  $^{12}$C $\ra$ $^{20}$Ne + $\alpha$ which requires temps of about $10^9$ K. Recall, if a star has a $M < M_{ch}$, the core contracts and is supported by electron degeneracy. This is the central reason why most white dwarf stars are C/O. They just don't get hot enough to fuse C into heavier elements. 
+
+\subsection{Massive Stars}
+
+\begin{align}
+M_{\textrm{core}} &> M_{ch}\\
+P_c &= P_{gas} + P_{degen}~,P_c \sim GM^{2/3}\rho^{4/3}\textrm{ (HE)}
+\end{align}
+
+for stars supported by electron degeneracy pressure, then the electron degeneracy pressure is $\pt \rho^{5/3}$. For stars above $M_{ch}$, $P_{deg} \pt \rho_c^{4/3}$. i.e., 
+\begin{align}
+M > M_{ch} \ra P_{degen} < P_c \forall \rho_c~.
+\end{align}
+
+In the case of massive stars,
+\begin{align}
+\underbrace{P_c}_{\pt \rho_c^{4/3}} &= \underbrace{P_{gas}}_{\pt \rho_cT_c\ra T_c \pt \rho_c^{1/3}} + \underbrace{P_{degen}}_{\pt T_c^4}
+\end{align}
+
+As the star contracts, $T_c \uparrow$, leading into fusion of heavier elements, cycling back to $T_c \uparrow$. Once you get to $^{56}$Fe, there is no way for fusion of heavier elements to provide energy. Fusion dies, electron degeneracy pressure fades out and the star collapses in on itself. This is the fate of stars with $M > M_{ch}$. Basically, once you're above $M_{ch}$, the only support is high $T$ which when you run out of fusion, will collapse. It's good to note that the time to go from Si to Fe is about a day while going from H to He takes a much longer time. The reason for this is as you get hotter, the dominant way the star loses energy is no longer through radiating photons, but now through radiating neutrinos. This happens at around C fusion. Since neutrinos leave the star really easily, energy is carried out much more effectively, accelerating the fusion process. 
+\section{Importance of $\nu$'s}
+These neutrinos are not neutrinos from nuclear reactions. These are thermal neutrinos, simply produced from high $T$. 
+\begin{align}
+L_{\textrm{fusion}} &= L_{\textrm{rad}}
+\end{align}
+But for C fusion and later, 
+\begin{align}
+L_{\textrm{fusion}} = L_{\nu}~.
+\end{align}
+
+They're very good at moving energy away since $\sigma_{\nu} \sim 10^{-44} \lp \frac{E_{\nu}}{m_ec^2} \rp^2$. $m_ec^2 = kT \ra T \sim 10^9$ K. %
+%
+%\begin{align}
+%\frac{l}{R}~,\frac{M}{m_p R^3}
+%\end{align}
+As long as the radius is less than 30 km or so, the $l_\nu$ is longer than the radius and can leave very quickly. But where do they come form? Also, why are they different from fusion neutrinos? 
+
+\subsection{Positron Number Density}%Thermal $\nu$ Production}
+\begin{align}
+e^- + e^+ \ra \nu_e + \overline{\nu_e} \textrm{ (rare), most of the time it's photons}
+\end{align}
+
+But where do the positrons come from? The answer is $\gamma + \gamma \ra e^- + e^+$. For this to have \textbf{ANY} chance, $m_ec^2 \sim 511$ keV $\sim 6 \times 10^9$ K. If I want to calculate how many positrons there are in a star, then I have use use $\mu$. 
+\begin{align}
+\gamma + \gamma &\ra e^- + e^+\\
+e^- + e^+ &\ra \gamma + \gamma\\
+\mu(e^+) + \mu(e^-) &= 2\mu(\gamma) = 0\\
+\Aboxed{\mu(e^+) &= -\mu(e^-)}
+\end{align}
+
+We can use this to calculate $n_{e^+}$. We're going to assume non-relativistic and non-degenerate. 
+\begin{align}
+m_ec^2 - kT\ln \lp \frac{gn_Q}{n_{e^+}} \rp &= -m_ec^2 + kT\ln \lp \frac{gn_Q}{n_{e^-}} \rp\\
+2m_ec^2 &= kT \ln \lp \frac{g^2n_Q^2}{n_{e^-} n_{e^+}} \rp\\
+n_{e^-}  n_{e^+} &= g^2n_Q^2e^{-2m_ec^2/kT}
+\end{align}
+
+Plugging in numbers, 
+\begin{align}
+n_{e^-}  n_{e^+} &= 2 \times 10^{58} T_9^3 e^{-11.9/T_9}\textrm{ cm}^{-6}
+\end{align}
+
+But to find the $n_{e^+}$, we need to know $n_{e^-}$. At $10^9$ K though, 
+\begin{align}
+n_{e^-} &= \frac{\rho}{\mu_e m_p} (\sim n_{\textrm{ions}})= 3 \times 10^{29} \lp \frac{\rho}{10^6 \textrm{ g/cm}^3}\rp \textrm{ cm}^{-3}
+\end{align}
+
+\begin{center}
+\begin{tabular}{c|c}
+\hline
+$\frac{n_{e^+}}{n_{e^-}}$ & $T$ ($10^9$ K)\\ \hline
+$10^{-6}$& $1$\\ \hline
+$0.01$ & $2$\\ \hline
+$1$ & $4$\\
+\hline
+\end{tabular}
+\end{center}
+For $T \gtrsim 3 \times 10^9$ K, charge neutrality dictates that $n_{e^+} \sim n_{e^-}$. Using this, 
+\begin{align}
+\boxed{n_{e^+}\approx 10^{29}T_9^{3/2} e^{-5.95/T_9}\textrm{ cm}^{-3}}~.
+\end{align}
+
+This isn't enough though, I want to get the rate at which I'm producing neutrinos. 
+
+\subsection{Rate of $\nu$ Production}
+
+Rare (per volume) of $\nu$ given by $e^- + e^+ \ra \nu_e + \overline{\nu_e} $.
+\begin{align}
+r &\sim \frac{n_{e^+}}{\tau}~,\tau \sim \frac{l}{v} = \frac{1}{n_{e^-}\langle \sigma v\rangle }\\
+r &\sim n_{e^-}n_{e^+}\underbrace{\langle \sigma v\rangle }_{\sim 10^{-20} \sigma_T c}
+\end{align}
+
+\begin{align}
+\epsilon_\nu &= \textrm{ergs/s/g lost to thermal $\nu$}\\
+\Aboxed{\epsilon_{\nu} &= \frac{r2m_ec^2}{\rho}}
+\end{align}
+
+\subsection{$\nu$ Luminosity}
+
+The $\nu$ cooling of a star due to $e^- + e^+ \ra \nu_e + \overline{\nu_e}$ is set by:
+\begin{align}
+\boxed{\epsilon_\nu = 4 \times 10^8 \frac{T_9^3}{\rho} e^{-11.9/T_9}\textrm{ ergs/s/g}}
+\end{align}
+
+\noindent Let's use this result to actually calculate $L_\nu$. 
+\begin{align}
+L_\nu &= \int \epsilon_\nu dM = \frac{4}{3}\pi R_c^3 \rho \epsilon_\nu
+\end{align}
+We only use core since it's the only place hot enough. The core radius is also approximately the radius of a white dwarf. 
+\begin{align}
+\boxed{L_\nu = 10^{12} T_9^3 e^{-11.9/T_9} \lp \frac{R_c}{R_{\textrm{WD}}} \rp^3 L_\odot}
+\end{align}
+
+At:
+\begin{center}
+\begin{tabular}{c|c}
+\hline
+ $T$ ($10^8$ K) &$L_\nu$ ($L_\odot$)\\ \hline
+5   & 10\\ \hline
+10 & $10^7  \gg L_{\textrm{photon}}$\\ \hline
+20 & $10^{10}  \gg L_{\textrm{photon}}$\\
+\hline
+\end{tabular}
+\end{center}
+
+It's losing energy so rapidly that fusion must keep up. If it weren't for $L_\nu$, you could have your steady state at much lower $T$, meaning much slower fusion rates and longer lifetimes.
+
+\section{On Our Way to Iron}
+
+Recall, C to Ne fusion is where $L_\nu$ becomes significant.
+\begin{center}
+\begin{tabular}{l|c|c}
+\hline
+Element Fusing & Time to Run Out& $\frac{L_\nu}{L_{\textrm{photon}}}$ \\ \hline
+C  	&$10^3$ yrs	&10\\ \hline
+Ne	&1 yr 		&$ 6 \times 10^3$\\ \hline
+O  	&1 yr		&$2 \times 10^4$\\ \hline
+Si 	&1 day		&$3 \times 10^6~, L_\nu \sim 10^{12} L_\odot$\\ \hline
+collapse& 0.1 sec 	& N/A \\ \hline
+\end{tabular}
+\end{center}
+
+\begin{list}{$^\circ$}{}
+\item C fusion
+\item Ne fusion $T \sim 10^9$ K, $\langle h \nu\rangle \sim 2.8 kT \sim 240 \textrm{ keV} \sim \textrm{nuclear binding energy}$
+\end{list}
+
+Photodisentigration of nuclei is a fancy word for ionization we're familiar with. For example, for Ne:
+\begin{align}
+\gamma + \textrm{$^{20}$Ne} &\ra \textrm{$^{16}$O}+ \textrm{$^{4}$He}\\
+\textrm{$^{4}$He} + \textrm{$^{20}$Ne} &\ra \textrm{$^{24}$Mg}\\
+\textrm{$^{4}$He} + \textrm{$^{24}$Mg} &\ra \textrm{$^{28}$Si}
+\end{align}
+
+The above steps occur before O fusion though! Imagine taking a solar mass core taking 10 or 100 Myrs to go from H to He. It then takes 1 yr to turn that same amount of mass into Mg and Si. For a star with a core of O, Mg, and Si:
+\begin{align}
+\textrm{$^{16}$O} + \textrm{$^{16}$O} &\ra \textrm{$^{28}$Si} + \textrm{$^{4}$He}\\
+ &\ra \textrm{$^{31}$P} + p\\
+ &\ra \textrm{$^{31}$S} + n~, T_c \sim 2 \times 10^9 \textrm{ K}
+\end{align}
+
+Note that the $^4$He don't just sit around, at these $T$ which can overcome the nuclear forces of O, its instantly absorbed into something else.  Lastly, star contracts to $T_c \sim 3 -4 \times 10^9$ K ($\langle h\nu\rangle \sim $ MeV). Instead of Si fusion, might as well think of it as Si melting. 
+\begin{align}
+\gamma + \textrm{$^{28}$Si} &\ra \textrm{$^{24}$Mg}+ \textrm{$^{4}$He}\\
+\textrm{$^{4}$He} + \textrm{$^{28}$Si} &\ra \textrm{$^{32}$S}\\
+\textrm{$^{4}$He} + \textrm{$^{32}$S} &\ra \textrm{$^{36}$Ar}\\
+\textrm{$^{4}$He} + \textrm{$^{36}$Ar} &\ra \textrm{$^{40}$Ca}\\
+.\\
+.\\
+.\\
+\textrm{$^{4}$He} +\textrm{$^{52}$Fe} &\ra \textrm{$^{56}$Fe} + ...
+\end{align}
+
+The above reactions are actually ``easier" than $\textrm{$^{28}$Si} +\textrm{$^{28}$Si} \ra \textrm{$^{56}$Fe} $. At these high T, you can also ionize ALL of the nuclei, including iron. What does this sound like? Yes, that's right. What you reach is something called nuclear statistical equilibrium.
+
+\section{Nuclear Statistical Equilibrium (NSE)}
+
+These reactions go all ways, sometimes more than a back and forth. These reactions (at ``low" $T$, $kT$ is just barely comparable to binding $E$.) favor the most bound particle ($^{56}$Fe). \\
+\indent Imagine I took a bunch of protons and formed them into a ball, restricting the time scale to prevent weak interaction physics. What is the most bound thing I could make? Would it be heavy elements? Since there is no time for weak interactions, there are no neutrons so then you just have a ball of protons. Basically, if there's not enough time, protons will stay protons. \\
+\indent NSE favors the most bound nucleus given the $\frac{n}{p}$ ratio which is given by weak interaction physics. For tens of millions year old stars, there is plenty of time for these reactions to occur. Inverse beta decay (electron capture, $e^- + p \ra n$) happens at high enough $T$ or $\rho$.
+\begin{align}
+e^- + \textrm{heavy elements} \ra \textrm{heavy element with more n}
+\end{align}
+The centers of massive stars have slightly more neutrons than they have protons. This slight imbalance is created by the above reactions. This is important because the most bound nucleus with slight excess of neutrons is different than one with $n_p = n_n$. \\
+\indent If N = Z, the most bound is $^{56}$Ni. If N $>$ Z, most bound is $^{56}$Fe. If $M_{\textrm{core}}> M_{\textrm{ch}}$, you have no degeneracy support, no fusion, and thus the star collapses on a timescale of about 0.1 secs. If $M_{\textrm{core}} < M_{\textrm{ch}}$, it can still be supported by degeneracy support... until the core loses enough mass so that $M_{\textrm{core}}> M_{\textrm{ch}}$.

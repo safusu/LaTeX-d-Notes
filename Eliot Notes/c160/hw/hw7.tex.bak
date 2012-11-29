@@ -1,0 +1,271 @@
+\documentclass[10pt,letter,preprint]{aastex}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{fullpage}
+
+\newcommand{\pt}{\propto}
+\newcommand{\lp}{\left(}
+\newcommand{\rp}{\right)}
+
+\begin{document}
+
+\title{HW \#7}
+\author{\begin{large}Jeren Suzuki\end{large}}
+\author{October 17, 2011}
+
+Problem 1a:
+Increasing the s-value means there is more energy per cross-sectional area for nuclear reactions. Since the first step of the pp chain is weak, \\
+
+Problem 1b:
+\begin{align}
+T = \frac{GM\mu}{3kR}\\
+L &\approx \epsilon M\\
+&= 5.5 \times 10^5 \frac{\rho X^2}{T_7^{2/3}}e^{-15.7T_7^{-1/3}}M\\
+L_{fusion}&\pt M^3
+\end{align}
+
+Problem 2a:
+
+Need to find:
+
+\begin{list}{*}{}
+  \item $R(M)$
+  \item $L(M)$
+  \item $T_c(M)$
+  \item $L(T_{eff})$
+\end{list}
+
+\begin{align}
+  \beta & = -\frac{2}{3} + 5.2 T_7^{-1/3}\\
+  & = 5.88
+\end{align}
+\begin{align}
+ 2K& = U\\
+  K & = \frac{U}{2}\\
+  \frac{3}{2}NkT & = \frac{GM^2}{2R}\\
+ \Aboxed{ T & \propto \frac{GM}{3Rk}}
+\end{align}
+\begin{align}
+ L & \approx \epsilon M\\
+  & = \rho T^\beta M\\
+  0.2 \left( \frac{M}{M_\odot} \right)^{4/7} \left( \frac{R}{R_\odot} \right)^2 L_\odot & = \rho \left( \frac{GM}{3Rk} \right)^\beta M\\
+  \left( \frac{\rho R_\odot^2 \left( \dfrac{GM}{3k} \right)^\beta }{0.2 L_\odot \left( \dfrac{M}{M_\odot} \right)^{4/7} } \right)^{1/(2 + \beta)} & = R\\
+  (M^{5.42})^{1/(2+\beta)} & \propto R\\
+\Aboxed{  M^{.6775} & \propto R(M)}
+\end{align}
+\begin{align}
+  L(M) & \sim 0.2 \left( \frac{M}{M_\odot} \right)^{4/7} \left( \frac{R}{R_\odot} \right)^2 L_\odot = L_\text{conv}\\
+  & \propto M^{4/7}R^2\\
+  & \propto M^{4/7}M^{0.6775 * 2}\\
+\Aboxed{L(M) & \propto M^{1.92}}
+\end{align}
+\begin{align}
+  T_c & = \frac{GM}{3Rk}\\
+  & \propto \frac{M}{R}\\
+  & \propto \frac{M}{M^{.6775}}\\
+\Aboxed{T_c(M) & \propto M^{.3225}}
+\end{align}
+\begin{align}
+T_{eff} \approx 4000 \left( \frac{L}{L_\odot} \right)^{1/102} \left( \frac{M}{M_\odot} \right)^{7/51} K\\
+L & = 4 \pi R^2 \sigma T_{eff}^4\\
+&  = 4 \pi \sigma T_{eff}^4 (M^{.6775})^2\\
+\frac{L}{4 \pi \sigma T_{eff}^4} & = M^{1.355}\\
+\left( \frac{L}{4 \pi \sigma T_{eff}^4} \right)^{1/1.355} & = M\\
+T_{eff} & \approx 4000 \left( \frac{L}{L_\odot} \right)^{1/102}  \left( \left( \frac{L}{4 \pi \sigma T_{eff}^4} \right)^{1/1.355} \frac{1}{M_\odot} \right)^{7/51} K \\
+& \propto L^{1/102} \left( \left( \frac{L}{T_{eff}^4} \right)^{1/1.355} \right)^{7/51}\\
+& \propto L^{1/102} \left( \left( \frac{L}{T_{eff}^4} \right)^{.74} \right)^{7/51}\\
+& \propto L^{1/102} \left( \frac{L}{T_{eff}^4} \right)^{.1}\\
+T_{eff}^{1+.4} & \pt L^{1/102 + .1}\\
+L^{.11} & \pt T_{eff}^{1.4}\\
+L & \pt (T_{eff}^{1.4} )^{1/.11}\\
+\Aboxed{L(T_{eff}) & \pt T_{eff}^{12.73}}
+\end{align}
+
+Problem 2b:
+
+Information from HW \#4:\\
+
+\begin{align}
+\rho_c = \frac{3Ma_n}{4\pi R^3}\\
+T_c  = \frac{0.6m_pd_na_n^{1/3} G}{k} \left( \frac{3}{4 \pi} \right)^{1/3} \frac{M}{R}\\
+n=\frac{3}{2}~, a_n = 5.99~, d_n = .478
+\end{align}
+\begin{align}
+\rho_c & = \frac{3M}{4 \pi R^3}5.99\\
+& = \frac{M_\odot}{R_\odot^3} \frac{3 \cdot 5.99}{4 \pi}\frac{M}{M_\odot} \frac{R_\odot^3}{R^3} \frac{\text{cm}^3}{\text{g}}\\
+\Aboxed{\rho_c& \approx 8.48 \frac{M}{M_\odot} \left( \frac{R_\odot}{R} \right)^3 \frac{\text{cm}^3}{\text{g}}}
+\end{align}
+
+\begin{align}
+T_c & = \frac{0.6m_pd_na_n^{1/3} G}{k} \left( \frac{3}{4 \pi} \right)^{1/3} \frac{M}{R}\\
+& = \frac{M_\odot}{R_\odot} \frac{0.6m_pd_na_n^{1/3} G}{k} \left( \frac{3}{4 \pi} \right)^{1/3}  \frac{M}{M_\odot} \frac{R_\odot}{R}\\
+\Aboxed{T_c & \approx 3.53 \times 10^{6} \frac{M}{M_\odot} \frac{R_\odot}{R} \text{K}}\\
+\end{align}
+
+\begin{align}
+\epsilon_{pp} \approx 5.05 \times 10^5 \rho_c X^2 T_7^\beta~,
+\end{align}
+and we're going to evaluate it at the center of the star.
+
+\begin{align}
+\epsilon_{pp_c} & \approx 5.05 \times 10^5 \cdot 8.48 \frac{M}{M_\odot} \left( \frac{R_\odot}{R} \right)^3 \frac{\text{cm}^3}{\text{g}} X^2 \left(\frac{3.53 \times 10^{6}}{1 \times 10^7} \frac{M}{M_\odot} \frac{R_\odot}{R}\right)^\beta\\
+\Aboxed{\epsilon_{pp_c} & \approx 4.6 \times 10^{3} \left( \frac{M}{M_\odot} \right)^{1+\beta} \left( \frac{R_\odot}{R} \right)^{3+\beta}}
+\end{align}
+
+Problem 2c:
+
+\begin{align}
+L_{fus}  & = L_{conv} = 0.2 \lp \frac{M}{M_\odot} \rp^{4/7} \lp \frac{R}{R_\odot} \rp^2 L_\odot\\
+L_{fus} & \simeq =\frac{2.4 \epsilon_c M}{(3 + \beta)^{3/2}}\\
+& \simeq \frac{2.4 \epsilon_c M}{8.88^{3/2}}\\
+& \simeq 9.07 \times 10^{-2} \epsilon_c M\\
+0.2 \lp \frac{M}{M_\odot} \rp^{4/7} \lp \frac{R}{R_\odot} \rp^2 L_\odot & \simeq 9.07 \times 10^{-2} \epsilon_c M\\
+& \simeq 9.07 \times 10^{-2}M_\odot \frac{M}{M_\odot} \cdot 4.6 \times 10^{3} \left( \frac{M}{M_\odot} \right)^{1+\beta} \left( \frac{R_\odot}{R} \right)^{3+\beta}\\
+& \simeq 8.34 \times 10^{35} \left( \frac{M}{M_\odot} \right)^{2+\beta} \left( \frac{R_\odot}{R} \right)^{3+\beta}\\
+\lp \frac{M}{M_\odot} \rp^{4/7} \lp \frac{R}{R_\odot} \rp^2 L_\odot & \simeq 4.17 \times 10^{36} \left( \frac{M}{M_\odot} \right)^{2+\beta} \left( \frac{R_\odot}{R} \right)^{3+\beta}\\
+\lp \frac{M}{M_\odot} \rp^{4/7} \lp \frac{R}{R_\odot} \rp^2 & \simeq 1.1 \times 10^{3} \left( \frac{M}{M_\odot} \right)^{2+\beta} \left( \frac{R_\odot}{R} \right)^{3+\beta}\\
+\lp \frac{R}{R_\odot} \rp^2 & \simeq 1.1 \times 10^{3} \left( \frac{M}{M_\odot} \right)^{2+\beta - 4/7}\left( \frac{R}{R_\odot} \right)^{-(3+\beta)}\\
+\lp \frac{R}{R_\odot} \rp^{2 + 3+ \beta}& \simeq 1.1 \times 10^{3} \left( \frac{M}{M_\odot} \right)^{2+\beta - 4/7}\\
+\Aboxed{\frac{R}{R_\odot} & \simeq 1.903 \left( \frac{M}{M_\odot} \right)^{.6717}}
+\end{align}
+
+\begin{align}
+L(M) & \sim 0.2 \lp \frac{M}{M_\odot} \rp^{4/7} \lp \frac{R}{R_\odot} \rp^2 L_\odot\\
+& \sim 7.6 \times 10^{32} \lp \frac{M}{M_\odot} \rp^{4/7} \lp \frac{R}{R_\odot} \rp^2\\
+& \sim 7.6 \times 10^{32} \lp \frac{M}{M_\odot} \rp^{4/7} \lp 1.903 \left( \frac{M}{M_\odot} \right)^{.6717} \rp^2\\
+& \sim 2.75 \times 10^{33} \lp \frac{M}{M_\odot} \rp^{4/7 + 1.34}\\
+\Aboxed{L(M) & \sim 2.75 \times 10^{33} \lp \frac{M}{M_\odot} \rp^{1.915}}
+\end{align}
+
+\begin{align}
+T_c & = 3.53 \times 10^{6} \frac{M}{M_\odot} \frac{R_\odot}{R} \text{K}\\
+& = 3.53 \times 10^{6} \frac{M}{M_\odot} \lp 1.903 \lp \frac{M}{M_\odot} \right)^{.6717} \rp^{-1}\\
+& = 1.85 \times 10^6 \frac{M}{M_\odot} \lp \frac{M}{M_\odot} \rp^{-.6717}\\
+\Aboxed{T_c & = 1.85 \times 10^6 \lp \frac{M}{M_\odot} \rp^{.3283}}
+\end{align}
+
+\begin{align}
+L & = 4 \pi R^2 \sigma T_{eff}^4\\
+& = 4 \pi R_\odot^2 \lp\frac{R}{R_\odot} \rp^2 \sigma T_{eff}^4\\
+& = 4 \pi R_\odot^2 \lp 1.903 \left( \frac{M}{M_\odot} \right)^{.6717} \rp^2 \sigma T_{eff}^4\\
+& = 1.25 \times 10^{19} \lp \frac{M}{M_\odot} \rp^{1.343}T_{eff}^4 \\
+\frac{L}{1.25 \times 10^{19} T_{eff}^4} & = \lp \frac{M}{M_\odot} \rp^{1.343}\\
+\lp \frac{L}{1.25 \times 10^{19} T_{eff}^4} \rp^{1/1.343} & = \frac{M}{M_\odot} \\
+4000 \left( \frac{L}{L_\odot} \right)^{1/102} \left( \frac{M}{M_\odot} \right)^{7/51} & \approx T_{eff}\\
+4000 \left( \frac{L}{L_\odot} \right)^{1/102} \left( \lp \frac{L}{1.25 \times 10^{19} T_{eff}^4} \rp^{1/1.343} \right)^{7/51} & \approx T_{eff}\\
+44.7 \left( \frac{L}{L_\odot} \right)^{1/102} \left( \lp \frac{L}{ T_{eff}^4} \rp^{1/1.343} \right)^{7/51} & \approx T_{eff}\\
+44.7 \left( \frac{L}{L_\odot} \right)^{1/102} \lp \frac{L}{ T_{eff}^4} \rp^{.102}& \approx T_{eff}\\
+44.7 \left( \frac{L}{L_\odot} \right)^{1/102} L^{.102} & \approx T_{eff}^{1.408}\\
+44.7 \left( \frac{L}{L_\odot} \right)^{1/102} L_\odot^{.102} \lp \frac{L}{L_\odot} \rp^{.102} & \approx T_{eff}^{1.408}\\
+1.19 \times 10^{5} \lp \frac{L}{L_\odot} \rp^{.112} & \approx T_{eff}^{1.408}\\
+\lp \frac{L}{L_\odot} \rp^{.112} & \approx 8.4 \times 10^{-6} T_{eff}^{1.408}\\
+\frac{L}{L_\odot} & \approx \lp 8.4 \times 10^{-6} T_{eff}^{1.408} \rp^{1/.112}\\
+\Aboxed{\frac{L}{L_\odot} & \approx 4.82 \times 10^{-46} T_{eff}^{12.57}}
+\end{align}
+
+Problem 2d:
+\begin{align}
+L(M=.1M_\odot) &  \sim 2.75 \times 10^{33} \lp \frac{.1M_\odot}{M_\odot} \rp^{1.915}\\
+L(M=.1M_\odot) &  \sim 2.75 \times 10^{33} \lp .1 \rp^{1.915}\\
+L(M=.1M_\odot) &  \sim 3.34 \times 10^{31} ~\text{ergs/s}\\
+L(M=.1M_\odot) &  \sim 8.8 \times 10^{-3} L_\odot
+\end{align}
+\begin{align}
+L(M=.3M_\odot) &  \sim 2.75 \times 10^{33} \lp \frac{.3M_\odot}{M_\odot} \rp^{1.915}\\
+L(M=.3M_\odot) &  \sim 2.75 \times 10^{33} \lp .3 \rp^{1.915}\\
+L(M=.3M_\odot) &  \sim 2.74 \times 10^{32}~\text{ergs/s} \\
+L(M=.3M_\odot) &  \sim .072 L_\odot
+\end{align}
+\begin{align}
+R(M=.1M_\odot) & = R_\odot \cdot 1.903 \lp \frac{.1M_\odot}{M_\odot} \rp^{.6717}\\
+R(M=.1M_\odot) & = R_\odot \cdot 1.903 \lp .1\rp^{.6717}\\
+R(M=.1M_\odot) & =.4 R_\odot
+\end{align}
+\begin{align}
+R(M=.3M_\odot) & = R_\odot \cdot 1.903 \lp \frac{.3M_\odot}{M_\odot} \rp^{.6717}\\
+R(M=.3M_\odot) & = R_\odot \cdot 1.903 \lp .3\rp^{.6717}\\
+R(M=.3M_\odot) & =.85 R_\odot
+\end{align}
+\begin{align}
+T_{eff}(M=.1M_\odot) & = \lp \frac{L(M=.1M_\odot)}{L_\odot} \frac{1}{4.82 \times 10^{-46}} \rp^{1/12.57}\\
+T_{eff}(M=.1M_\odot) & = \lp \frac{8.8 \times 10^{-3} L_\odot}{L_\odot} \frac{1}{4.82 \times 10^{-46}} \rp^{1/12.57}\\
+T_{eff}(M=.1M_\odot) & \approx 2765~\text{K}
+\end{align}
+\begin{align}
+T_{eff}(M=.3M_\odot) & = \lp \frac{L(M=.3M_\odot)}{L_\odot} \frac{1}{4.82 \times 10^{-46}} \rp^{1/12.57}\\
+T_{eff}(M=.3M_\odot) & = \lp \frac{.072 L_\odot}{L_\odot} \frac{1}{4.82 \times 10^{-46}} \rp^{1/12.57}\\
+T_{eff}(M=.3M_\odot) & \approx 3268~\text{K}
+\end{align}
+
+Problem 3a:
+
+\begin{list}{*}{}
+  \item $R(M)$
+  \item $L(M)$
+  \item $T_c(M)$
+  \item $L(T_{eff})$ ...again
+\end{list}
+
+\begin{align}
+\beta & = -2/3 + 23.6T_7^{-1/3}\\
+& \approx 20
+\end{align}
+
+\begin{align}
+L_{fusion} & \approx \epsilon M\\
+& \approx \rho T^\beta M ~, \rho \propto \frac{M}{R^3}~,T \propto \frac{M}{R}~\text{from VT} \\
+& \approx \frac{M}{R^3} \left( \frac{M}{R} \right)^{20} M\\
+& \approx \frac{M^{22}}{R^{23}}\\
+& \sim L_{rad} \propto M^3\\
+\frac{M^{22}}{R^{23}} & \propto M^3\\
+\frac{M^{22}}{M^3} & \propto R^{23}\\
+\Aboxed{R & \propto M^{19/23} \propto M^{.8}}\\
+\Aboxed{T_c & \propto M^{.2}}
+\end{align}
+
+\begin{align}
+L & \propto R^2 T_{eff}^4\\
+R^2 & \propto (M^{.8})2\\
+R^2 & = M^{1.6} \propto L^{1/2}\\
+L_{rad} & \propto M^3\\
+L & \propto L^{1/2}T_{eff}^4\\
+L^{1/2} & \propto T_{eff}^4\\
+L& \propto T_{eff}^8\\
+M^3 & \propto T_{eff}^8\\
+\Aboxed{M^{3/8} & \propto T_{eff}}
+\end{align}
+
+Missing $L(M)$ scaling.
+
+Problem 3b:
+
+\begin{align}
+\frac{M_r}{M} < \frac{5}{8} \frac{P}{P_{rad}} \frac{L}{L_{edd}}~,~\text{taken from lecture}
+\end{align}
+
+\begin{align}
+\frac{L}{L_{edd}} \approx 1~\text{for very massive stars}\\
+\frac{P}{P_{rad}} \approx 1 ~\text{for very massive stars}\\
+\frac{M_r}{M} &< \frac{5}{8} \frac{P}{P_{rad}} \frac{L}{L_{edd}} \lesssim \frac{5}{8}\cdot 1\cdot 1\\
+\frac{M_r}{M} &\lesssim .62
+\end{align}
+
+Problem 3c:
+
+\begin{align}
+t& \approx \frac{E_{nuc}}{L}\\
+\frac{L}{L_\odot} = \left( \frac{M}{M_\odot} \right)^{3.5}\\
+E_{nuc} = N_pE\\
+E_{nuc} \approx .1 \frac{M}{m_p} \cdot 7~\text{MeV}\\
+t & \approx \frac{.1 \frac{M}{m_p} \cdot 7~\text{MeV}}{ L_\odot \left( \frac{M}{M_\odot} \right)^{3.5}}\\
+t & \approx \frac{.1 M_\odot \frac{M}{M_\odot} \cdot 7~\text{MeV}}{ L_\odot m_p \left( \frac{M}{M_\odot} \right)^{3.5}}\\
+t & \approx \frac{.1 M_\odot  \cdot 7~\text{MeV}}{ L_\odot m_p }\left( \frac{M}{M_\odot} \right)^{-2.5}\\
+t & \approx 2.5 \times 10^{18}\left( \frac{M}{M_\odot} \right)^{-2.5}~\text{s}\\
+t & \approx 7.8 \times 10^{10}\left( \frac{M}{M_\odot} \right)^{-2.5}~\text{years}\\
+t(M = 50M_\odot) & \approx 4.43 \times 10^6~\text{years}\\
+t(M = 100M_\odot) & \approx 7.84 \times 10^5~\text{years}%
+\end{align}
+\end{document}

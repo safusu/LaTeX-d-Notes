@@ -1,0 +1,95 @@
+\documentclass[10pt,preprint]{article}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{fullpage}
+
+\newcommand{\pt}{\propto}
+\newcommand{\rp}{\right)}
+\newcommand{\lp}{\left(}
+
+\begin{document}
+
+\begin{center}
+\textbf{\begin{huge} September 13, 2011\end{huge}}\\
+\begin{large}Jeren Suzuki\end{large}
+\end{center}
+
+\section{Convection}
+Second Law of Thermodynamics: $TdS = dE + PdV$, which isn't all that useful for stars, really.
+\begin{list}{}{}
+\item $U = \frac{E}{\mu}$: Energy per unit mass
+\item $s = \frac{S}{U}$: Entropy
+\item $M =$ conserved, $l$ is small
+\item $\rho = \frac{M}{V}, V = \frac{M}{\rho} \rightarrow \boxed{dV = -d\rho \frac{M}{\rho^2}}$ : second law, for astrophysicists
+\end{list}
+
+\subsection{Review of the Adiabatic Process}
+
+\begin{align*}
+\epsilon = E/\text{unit volume}, NR: P &= \frac{2}{3} \epsilon\\
+R: P &= \frac{1}{3} \epsilon\\
+U = \frac{\epsilon}{\rho} = \frac{P}{\rho} = \phi U~,\text{ where $\phi$ is either $1/3$ or $2/3$}\\
+dU = \frac{P}{\rho^2}d\rho = \phi U\frac{d\rho}{\rho}\\
+\frac{dU}{U} = \phi \frac{d\rho}{\rho}\\
+U \pt \rho^\phi~,\text{ for an adiabatic process}\\
+P \pt \rho U \pt \rho ^{\phi+1} \pt \rho^{\gamma}~, \phi + 1 \text{ is the adiabatic index}\\
+\end{align}
+
+\begin{align*}
+\text{For a NR gas: } \phi = \frac{2}{3}, \gamma = \frac{5}{3}~,P\pt \rho^{5/3}, T \pt \rho^{2/3}\text{ for an adiabatic process}\\
+\text{For a R gas: } \phi = \frac{1}{3}, \gamma = \frac{4}{3}~,P\pt \rho^{4/3}, T \pt \rho^{1/3}\text{ for an adiabatic process}
+\end{align}
+
+\subsection{What is the Entropy of an Ideal Gas?}
+
+\begin{align*}
+TdS &= dU - \frac{P}{\rho^2}d\rho\\
+\frac{TdS}{U} &= \frac{dU}{U} - (\gamma - 1)\frac{U\frac{d\rho}{\rho}}{U}\\
+U &=\frac{P}{\rho}\frac{1}{\gamma -1} \frac{kT}{m}\\
+\frac{m(\gamma -1)}{k}dS &= \frac{dU}{U} - (\gamma -1)\frac{d\rho}{\rho}\\
+\frac{m(\gamma - 1)}{k}s &= \ln U - (\gamma - 1)\ln \rho + c\\
+\Aboxed{s &= \frac{k}{m}\frac{1}{\gamma - 1} \ln \lp \frac{U}{\rho^{\gamma - 1}} \rp  +c}\\	
+s &= \frac{k}{m} \frac{1}{\gamma -1} \ln \lp \frac{P}{\rho^\gamma} \rp + c
+\end{align}
+
+For an adiabatic process, $s=0$.
+
+\begin{align*}
+\frac{Tds}{dt} &= \frac{dU}{dt} - \frac{P}{\rho^2}\frac{d\rho}{dt}\\
+&= E_{fusion} - \frac{1}{\rho}(\bar{\nabla} \cdot \bar{F})
+\end{align}
+
+Say a blob is gaining/losing heat. $E_{fusion}$ is the heating per mass per time and $\bar{F}$ is the flux of $E$. In general:
+
+\begin{align*}
+\text{total cooling} &= \int \bar{F}\cdot d\bar{A}\\
+&= \int \bar{\nabla} \cdot \bar{F} d\bar{V}\\
+\text{cooling per unit $V$} &= \bar{\nabla} \cdot \bar{F}\\
+\text{cooling per unit mass} &= \frac{1}{\rho}(\bar{\nabla} \cdot F)
+\end{align}
+
+If a blob moves up a distance $dr$, given $T(r), P(r),$ and $\rho(r)$, is the fluid buoyantly stable? i.e. $\rho_{blob} \gtrless \rho_*$? We'll be making 2 assumptions which we will then confirm \textit{post-facto}. 
+\begin{list}{}{}
+\item Motion is adiabatic $\leftarrow$ valid is the time scale to move ($\sim$ 1 month) is sufficiently smaller than the time to exchange heat with the surroundings ($\sim10^7$ years)
+\item $P_{blob} = P_*$ at all times; in pressure equilibrium with surroundings
+\end{list}
+
+The time scale to establish HE: $\sim\frac{1}{\sqrt{G\rho}} \sim 1 $ hr $\ll$ time to move $dr$, which is about a month. If it's adiabatic, $s_{blob} = s \ne s_*$ in general, where $s_{blob}$ is the blob at the new position, $s$ is the initial entropy, and $s_*$ uis the background entropy of the star at the new position.\\
+
+\begin{center}
+\begin{tabular}{c|c}
+\hline
+$\dfrac{ds}{dr} < 0$ & $\dfrac{ds}{dr} > 0$\\ \hline
+$s>s_*$ & $s < s_*$\\ \hline
+$s_{blob} > s_*$ & $s_{blob}< s_*$\\ \hline
+$P_{blob} = P_*$ & $P_{blob} = P_*$\\ \hline
+$\rho_{blob} < \rho_*$ & $\rho_{blob} > \rho_*$ \\ \hline
+buoyancy unstable, rises & sinks back down (stable)\\
+\hline
+\end{tabular}
+\end{center}
+
+\end{document}

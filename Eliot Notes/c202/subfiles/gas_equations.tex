@@ -1,0 +1,155 @@
+\documentclass[../ay202_class_notes.tex]{subfiles}
+\begin{document}
+
+\section{Equations of ideal neutral fluids}\label{s.ideal_gas_equations}
+Reading: Shu Ch.~4, LL Ch.~ 1
+
+\subsection{Conservation of mass}
+Consider an arbitrary volume $V$ fixed in space.  The mass contained in the volume is 
+\begin{equation}
+M = \int_V \rho \;dV.
+\end{equation}
+
+\noindent Differentiating with respect to time yields 
+\begin{equation}
+\pderiv{M}{t} = \int_V \pderiv{\rho}{t} \;dV.
+\end{equation}
+
+\noindent By the conservation of mass, this must equal the mass flowing through the boundary $S$ of the region:
+\begin{equation}
+\pderiv{M}{t} = - \int_{S} \rho \V{v} \cdot \V{dS} = - \int_{V} \nabla \cdot \rho \V{v} \;dV.
+\end{equation}
+
+\noindent Equating our two expressions for $\pderiv{M}{t}$, and using the fact that $V$ can be chosen arbitrarily, we arrive at the \emph{continuity equation} for mass:
+\begin{equation}
+\int_V \pderiv{\rho}{t} \;dV = - \int_{V} \nabla \cdot \rho \V{v} \;dV,
+\end{equation}
+
+\begin{equation}
+\int_V \pderiv{\rho}{t} + \nabla \cdot \rho \V{v} \;dV = 0,
+\end{equation}
+
+\begin{equation}
+\boxed{\pderiv{\rho}{t} + \nabla \cdot \rho \V{v} = 0.}
+\end{equation}
+
+If the fluid is incompressible, that is $\rho(\V{x}, t) = \text{const.}$, then the continuity equation becomes 
+\begin{equation}
+\nabla \cdot \V{v} = 0.
+\end{equation}
+
+\subsection{Conservation of momentum}
+The total $i$-momentum in an arbitrary fixed volume $V$ is given by
+\begin{equation}
+p_i = \int_V \rho v_i \;dV.
+\end{equation}
+
+\noindent The flow of $i$-momentum through the boundary $S$ is given by
+\begin{equation}
+- \int_{S} (\rho v_i) \V{v} \cdot \V{dS} = - \int_{S} \rho v_i v_j \;dS_j = - \int_{V} \pderiv{\rho v_i v_j}{x_j} \;dV.
+\end{equation}
+
+\noindent We identify $R_{ij} = \rho v_i v_j$ as the \emph{Reynold's stress}, the flow of $i$-momentum in the $j$-direction.  By conservation of momentum, the time derivative of the total $i$-momentum is equal to this boundary flux plus the $i$-forces on the body.  The forces can be separated into the force due to pressure acting over the surface of the volume ($-\int_{S} p \;\V{dS} = - \int_{V} \nabla p \;dV$) and the volume integral of other force densities ($\int_{V} \rho \V{f} \;dV$; where $\V{f}$ is the specific force (i.e.~per unit mass) and hence $\rho \V{f}$ is the force density).  Making use of the arbitrary nature of $V$ and the continuity equation for mass, we can then write
+\begin{equation}
+\pderiv{\rho v_i}{t} = -\pderiv{\rho v_i v_j}{x_j} - \pderiv{p}{x_i} + \rho f_i,
+\end{equation}
+\begin{equation}
+v_i \pderiv{\rho}{t} + \rho \pderiv{v_i}{t} + \pderiv{\rho v_i v_j}{x_j} = - \pderiv{p}{x_i} + \rho f_i,
+\end{equation}
+\begin{equation}
+v_i \left(-\pderiv{\rho v_j}{x_j}\right) + \rho \pderiv{v_i}{t} + v_i \pderiv{\rho v_j}{x_j} + \rho v_j \pderiv{v_i}{x_j} = - \pderiv{p}{x_i} + \rho f_i,
+\end{equation}
+\begin{equation}
+\rho \pderiv{v_i}{t} + \rho v_j \pderiv{v_i}{x_j} = - \pderiv{p}{x_i} + \rho f_i.
+\end{equation}
+
+\noindent This is the \emph{momentum equation}, which we write in vector form as
+\begin{equation}
+\boxed{\rho \pderiv{\V{v}}{t} + \rho (\V{v} \cdot \nabla) \V{v} = - \nabla p + \rho \V{f}.}
+\end{equation}
+
+By defining the \emph{Lagrangian} (or \emph{convective}) derivative as 
+\begin{equation}
+\rho \deriv{\V{v}}{t} = - \nabla p + \rho \V{f},
+\end{equation}
+
+\noindent we arrive at the relation
+\begin{equation}
+\boxed{\deriv{}{t} = \pderiv{}{t} + (\V{v} \cdot \nabla),}
+\end{equation}
+
+\noindent between the Lagrangian and \emph{Eulerian} (or \emph{fixed}) derivatives, demonstrating that a background gradient appears as an extra time derivative in the comoving frame.  The Lagrangian form of the continuity equation is therefore
+\begin{equation}
+\frac{1}{\rho} \deriv{\rho}{t} + \nabla \cdot \V{v} = 0.
+\end{equation}
+
+Returning to the momentum equation, we notice that we can write the pressure term as a tensor: $\pderiv{p}{x_i} = \pderiv{p \delta_{ij}}{x_j}$.  The momentum equation then takes the form
+\begin{equation}
+\pderiv{\rho v_i}{t} + \pderiv{}{x_j}(\rho v_i v_j +p \delta_{ij}) = \rho f_i.
+\end{equation}
+
+\noindent The first term is the time derivative of the momentum density, and the second is the divergence of the  momentum density flux, which is comprised of the Reynold's stress term (the bulk flow of momentum, i.e.~advection) and the pressure stress term (the isotropic thermal redistribution of momentum).
+
+\subsection{Convervation of energy}
+At this point we have 4 equations for 5 unknowns: $\rho$, $T$, and $\V{v}$ (and $p(\rho, T)$).  The last equation is the conservation of energy.
+
+An ideal fluid with no viscosity, conduction, heating, or cooling is adiabatic and reversible, and hence isentropic in the Lagrangian frame, so 
+\begin{equation}
+\deriv{s}{t} = 0,
+\end{equation}
+\begin{equation}
+\pderiv{s}{t} + (\V{v} \cdot \nabla) s = 0.
+\end{equation}
+
+\noindent An ideal gas of particles with mass $m$ and with adiabatic index $\gamma$ has a specific entropy, up to an additive constant, of
+\begin{equation}
+s = \frac{1}{\gamma - 1} \frac{k}{m} \ln \left(\frac{p}{\rho^\gamma}\right).
+\end{equation}
+
+\noindent Using this relation and the ideal gas law, the isentropic condition becomes
+\begin{equation}
+\frac{1}{\gamma - 1} n k \deriv{T}{t} - kT \deriv{n}{t} = 0,
+\end{equation}
+where we can identify the first term as the change in thermal energy density and the second as the $p dV$ work done per unit volume on the gas.
+
+In the Eulerian frame, the total energy density of the gas is 
+\begin{equation}
+E = \frac{1}{2} \rho v^2 + \frac{1}{\gamma - 1} n k T,
+\end{equation}
+
+\noindent and hence the conservation of energy, with the work done by pressure and specific forces as source terms, can be written 
+\begin{equation}
+\pderiv{E}{t} + \nabla \cdot E \V{v} = \rho \V{f} \cdot \V{v} - \nabla \cdot \rho \V{v},
+\end{equation}
+\begin{equation}
+\boxed{\pderiv{E}{t} + \nabla \cdot \V{F} = \rho \V{f} \cdot \V{v},}
+\end{equation}
+
+\noindent where $\V{F} = (E + p) \V{v} = (\frac{1}{2} v^2 + h) \rho \V{v}$ is the energy density flux and $h = \frac{1}{\gamma - 1} \frac{kT}{m} + \frac{p}{\rho}$ is the enthalpy.
+
+\subsection{Bernoulli's principle}
+For a steady-state flow ($\pderiv{}{t} = 0$) in a gravitational field ($\V{f} = - \nabla \phi$), the energy equation becomes
+\begin{equation}
+\nabla \cdot \left(\frac{1}{2} v^2 + h \right) \rho \V{v} = -\rho \V{v} \cdot \nabla \phi,
+\end{equation}
+\begin{equation}
+\nabla \cdot \left(\frac{1}{2} v^2 + h \right) \rho \V{v} = -\nabla \cdot \phi \rho \V{v} + \phi \underbrace{\nabla \cdot \rho \V{v}}_{= - \pderiv{\rho}{t} = 0},
+\end{equation}
+\begin{equation}
+\nabla \cdot \left(\frac{1}{2} v^2 + h + \phi \right) \rho \V{v} = 0,
+\end{equation}
+\begin{equation}
+\left(\frac{1}{2} v^2 + h + \phi \right) \underbrace{\nabla \cdot \rho \V{v}}_{0} + \rho \V{v} \cdot \nabla \left(\frac{1}{2} v^2 + h + \phi \right) = 0,
+\end{equation}
+\begin{equation}
+\boxed{\V{v} \cdot \nabla \left(\frac{1}{2} v^2 + h + \phi \right) = 0.}
+\end{equation}
+
+\noindent  From this equation we infer \emph{Bernoulli's principle}, which states that along a streamline
+\begin{equation}
+\boxed{\frac{1}{2} v^2 + h + \phi = \text{const.}}
+\end{equation}
+
+\section{Equations of viscous neutral fluids}
+
+\end{document}

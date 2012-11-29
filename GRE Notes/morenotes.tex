@@ -1,0 +1,1518 @@
+% I hope this turns out well. 
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage[english]{isodate}
+\usepackage[parfill]{parskip}
+\usepackage{microtype}
+\usepackage[colorlinks=true,urlcolor=blue]{hyperref}
+\usepackage{enumerate}
+\usepackage{fullpage}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage[tocindentauto]{tocstyle}
+
+\title{GRE Physics Study Notes v2}
+\author{Courtesy of Nicole Duncan, transcribed by Jeren Suzuki}
+\date{Last Edited \today}
+
+\begin{document}
+
+\maketitle
+\pagenumbering{Roman}
+\newpage
+\tableofcontents
+\newpage
+\pagenumbering{arabic}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Hermitian Matrix} % (fold)
+\label{sec:hermitian_matrix}
+\begin{enumerate}
+    \item Square Matrix
+    \item A = A$^\dagger \rightarrow$ the matrix is equal to its conjugate transpose
+    \item Entries on the diagonal are real
+    \item Sum of 2 Hermitian matrices is Hermitian
+    \item Product of 2 Hermitian matrices is Hermitian only if they commute
+    \item Eigenvalues are orthogonal
+    \item The determinant is real
+\end{enumerate}
+% section hermitian_matrix (end)
+
+\section{Doppler Effect} % (fold)
+\label{sec:doppler_effect}
+\begin{equation}
+    f = f_0 \left[  \frac{v + v_s}{v + v_0}\right]
+\end{equation}
+
+\[
+ \Delta d \downarrow ~=
+  \begin{cases}
+   + v_s \\
+   - v_0
+  \end{cases}
+\] towards e/o
+
+\[
+ \Delta d \uparrow ~=
+  \begin{cases}
+   - v_s \\
+   + v_0
+  \end{cases}
+\] away from e/o
+% section doppler_effect (end)
+
+\subsection{Relativistic} % (fold)
+\label{sub:relativistic}
+\begin{equation}
+    \frac{f_0}{f} = \frac{\lambda}{\lambda_0} = \sqrt{\frac{1 + \beta}{1 - \beta}}~, \beta = \frac{v}{c}
+\end{equation}
+% subsection relativistic (end)
+
+\section{Lagrangian and Hamiltonian} % (fold)
+\label{sec:lagrangian_and_hamiltonian}
+\begin{equation}
+    L = T - U
+\end{equation}
+\begin{equation}
+    \frac{\partial L}{\partial x} - \frac{d}{dt} \left( \frac{\partial L}{\partial \dot{x}} \right) = 0
+\end{equation}
+\begin{equation}
+    H = T + U \textrm{ iff }U \neq U(\dot{x})~, U \neq U(t)
+\end{equation}
+\begin{equation}
+    \rho = \frac{\partial L}{\partial \dot{q}}~~~~~\dot{q} = \frac{\partial H}{\partial \rho}~~~~~ \dot{p} = \frac{\partial H}{\partial q}
+\end{equation}
+% section lagrangian_and_hamiltonian (end)
+
+\section{The Structure of Hydrogen} % (fold)
+\label{sec:the_structure_of_hydrogen}
+\begin{enumerate}
+    \item Fine: Spin/orbit + relativistic correction\\
+    Breaks $l$ degeneracy , preserves $j$\\
+    why $E_{2s} < E_{2p}$
+    \item Hyperfine: spin/spin coupling of $e^-/$nucleus\\
+    Responsible for 21 cm line\\
+    \begin{equation}
+        \mu_p = \frac{ge}{2m_p} \langle \bar{s}_p \rangle ~ \mu_e = -\frac{e}{m_e} \langle \bar{s}_e \rangle
+    \end{equation}
+    \begin{equation}
+        E_{n'f} = \frac{\mu_0 g_p e^2}{3 \pi m_p m_e a^3} \langle \bar{s}_p \cdot \bar{s}_e \rangle
+    \end{equation}
+    \item Stark Effect: Atom in external $E$\\
+    Not spin dependent\\
+    $H' = eE_z$ if $E = \hat{E}_z$\\
+    Hydrogen:
+    \begin{equation}
+        E'_1= \langle H' \rangle = eE\int \limits_0^\infty d^3rz | \Psi_{100} | ^2 = 0
+    \end{equation}
+    \item Zeeman Effect: Atom in external $B$\\
+    Spin/orbital angular momentum($l$) + $B$ coupling
+    \begin{equation}
+        H'_z = (\bar{\mu}_e+ \bar{\mu}_s) \cdot B_{\textrm{ext}}
+    \end{equation}
+    Weak: $B_{\textrm{ext}} \ll B_{\textrm{int}}$\\
+    $E'\propto mj \rightarrow$ breaks into $2j+1$ levels\\
+    Strong: $B_{\textrm{ext}} \gg B_{\textrm{int}}$\\
+    $E' = \mu_B B_{\textrm{ext}} (m_e + 2m_s)$
+\end{enumerate}
+% section the_structure_of_hydrogen (end)
+
+\section{Particle in a Box} % (fold)
+\label{sec:particle_in_a_box}
+\begin{align}
+    E_n &= n^2E_0\\
+    E_0 &= \frac{\hbar^2 k^2}{2m}\\
+    k &= \frac{n\pi}{a}\\
+    \Psi &= \sqrt{\frac{2}{a}} \sin (kx)~, p=\hbar k\\
+    \textrm{3D: }E &= \frac{\hbar^2}{2m} [k_x^2 + k_y^2 + k_z^2]
+\end{align}
+% section particle_in_a_box (end)
+
+\section{Free Particle} % (fold)
+\label{sec:free_particle}
+\begin{align}
+    \Psi &= Ae^{i(kx-\omega t)}\\
+    \Delta p \Delta x &= \frac{\hbar}{2}\\
+    \Delta  x \Delta k &\sim 1
+\end{align}
+Packet moves with group velocity... $v_g = \frac{\partial \omega}{\partial k}$
+\begin{equation}
+    \Psi = \frac{1}{\sqrt{2\pi}} \int \limits_{-\infty}^\infty \Phi(k)e^{ikx}dk~~~~~~~~~\Phi = \frac{1}{\sqrt{2\pi}} \int \limits_{-\infty}^{\infty} \Psi(x)e^{-ikx}dx
+\end{equation}
+% section free_particle (end)
+
+\section{Schr\"odinger's Equation} % (fold)
+\label{sec:schrodinger}
+\begin{equation}
+    \left( -\frac{\hbar^2}{2m}\nabla^2 + V \right) \Psi = i \hbar \frac{\partial \Psi}{\partial t}
+\end{equation}
+Separable $\Psi (x,t) = \Psi(x) \phi(t)$
+\begin{equation}
+    \phi = e^{-iE_nt/\hbar}
+\end{equation}
+% section schr\ (end)
+
+\section{Index of Refraction} % (fold)
+\label{sec:index_of_refraction}
+\begin{equation}
+    n = \frac{c}{v} = \sqrt{\frac{\epsilon \mu}{\epsilon_0 \mu_0}}~~~~~ v=v_\phi=\sqrt{\frac{1}{\epsilon \mu}}
+\end{equation}
+$\lambda = \frac{\lambda_0}{n}$ inside a medium
+
+\subsection{Cherenkov Radiation} % (fold)
+\label{sub:cherenkov_radiation}
+A charged particle passing through a medium which travels faster than the speed of light in that medium will emit light
+\begin{equation}
+    n = \frac{c}{v} \longrightarrow v_{\textrm{min}} = \frac{c}{n}
+\end{equation}
+% subsection cherenkov_radiation (end)
+% section index_of_refraction (end)
+
+\subsection{Bremsstrahlung Radiation} % (fold)
+\label{sub:bremsstrahlung_radiation}
+Continuous spectrum of radiation emitted when a charged particle is decelerated in a metal target
+% subsection bremsstrahlung_radiation (end)
+
+\section{Gauss' Laws} % (fold)
+\label{sec:gauss_laws}
+\begin{align}
+\int E \cdot da = \frac{Q_{\textrm{in}}}{\epsilon_0} &\rightarrow \nabla \cdot E = \frac{\rho_{\textrm{in}}}{\epsilon_0}\\
+\int B\cdot da = 0 &\rightarrow \nabla \cdot B = 0\\
+\int g\cdot da = 4\pi MG &\rightarrow \nabla \cdot g = -4\pi G \rho_m
+\end{align}
+% section gauss_laws (end)
+
+\section{Damped Driven Oscillator} % (fold)
+\label{sec:damped_driven_oscillator}
+\begin{equation}
+    F=-\underbrace{kx}_{\mathclap{\textrm{spring}}}-\underbrace{b\dot{x}}_{\mathclap{\textrm{damp}}}+\underbrace{A\cos\theta}_{\mathclap{\textrm{driving}}}~, \omega = \sqrt{\frac{k}{m}}~, \beta = \frac{b}{2m}
+\end{equation}
+\subsection{Critically Damped $\rightarrow \omega = \beta$} % (fold)
+\label{sub:critically_damped_}
+\begin{equation}
+    X_e = Ae^{-\omega_0t} + A_2te^{-\omega_0t}
+\end{equation}
+% subsection critically_damped_ (end)
+\subsection{Overdamped $\rightarrow \omega < \beta$} % (fold)
+\label{sub:overdamped_}
+\begin{equation}
+    X_o = Ae^{-\beta t}e^{-\omega'' t}~,\omega'' = \sqrt{\beta^2 - \omega_0^2}
+\end{equation}
+% subsection overdamped_ (end)
+\subsection{Underdamped $\rightarrow \omega > \beta$} % (fold)
+\label{sub:underdamped_}
+\begin{equation}
+    X_u = Ae^{-\beta t}\cos(\omega't + \phi)~,\omega' = \sqrt{\omega_0^2 - \beta^2}
+\end{equation}
+% subsection underdamped_ (end)
+% section damped_driven_oscillator (end)
+
+\section{Traveling Wave Formalism} % (fold)
+\label{sec:traveling_wave_formalism}
+\begin{equation}
+    v_\phi = \frac{\omega}{k}~~ \psi = A\cos k (vt-x) = A\cos (\omega t- kx)
+\end{equation}
+In one period, $x-vt=2\pi$
+% section traveling_wave_formalism (end)
+
+\section{Maxwell Velocity Distribution} % (fold)
+\label{sec:maxwell_velocity_distribution}
+\begin{equation}
+    D(v) \propto v^2 e^{-E/kT}
+\end{equation}
+% section maxwell_velocity_distribution (end)
+
+\section{Mean Free Path} % (fold)
+\label{sec:mean_free_path}
+\begin{equation}
+    l = \frac{1}{n\sigma}
+\end{equation}
+% section mean_free_path (end)
+
+\section{Cross Section} % (fold)
+\label{sec:cross_section}
+\begin{equation}
+    N_s = N_i \frac{N_t}{A} \sigma
+\end{equation}
+% section cross_section (end)
+
+\section{Particle Diffusion (Fick's Law)} % (fold)
+\label{sec:particle_diffusion}
+\begin{equation}
+    J = - D \nabla n
+\end{equation}
+% section particle_diffusion (end)
+
+\section{Thermal Diffusion (Fourier's Law)} % (fold)
+\label{sec:thermal_diffusion_}
+\begin{equation}
+    \phi = -\sigma \nabla T
+\end{equation}
+% section thermal_diffusion_ (end)
+
+\begin{tabular}{l l c l}
+Interaction & Quantity & Variable & Formula\\
+Mech & vol & $P$ & $P = -\frac{\partial U}{\partial V}=T \left( \frac{\partial S}{\partial V} \right)$\\
+Thermal & temp/energy & $T$ & $T = \frac{\partial }{\partial S}$\\
+Diffuse & particles & $\mu$ & $\mu = -\frac{\partial U}{\partial N} = T \frac{\partial S}{\partial N}$
+\end{tabular}
+
+\section{Thermodynamic Identity} % (fold)
+\label{sec:thermo_identity}
+\begin{equation}
+    T dS - PdV + \mu dN = dU
+\end{equation}
+% section thermo_identity (end)
+
+\section{Heat Capacity} % (fold)
+\label{sec:heat_capacity}
+\begin{equation}
+    C \equiv \frac{dQ}{dT}
+\end{equation}
+\begin{equation}
+    C_p = \frac{dQ}{dT} = T \frac{dS}{dT}~~~~~~~~C_v = \frac{dQ}{dT} = \frac{dU}{dT}
+\end{equation}
+At constant $P$, $E$ lost to work $\Rightarrow T_p < T_V \Rightarrow C_p > C_v$
+% section heat_capacity (end)
+
+\section{Water} % (fold)
+\label{sec:water}
+$\rho$ = 1 g/cm$^3$, 1 L = 1 kg
+% section water (end)
+
+\section{Decay} % (fold)
+\label{sec:decay}
+\begin{tabular}{ l l l}
+$^0_{-1}\beta + \bar{\nu}$ & $^0_1 \beta + \nu$ & $^2_1 D$\\
+$^4_2 \alpha$ & $^0_0 \gamma$ & $^A_Z X$
+\end{tabular}
+% section decay (end)
+
+\section{Beats} % (fold)
+\label{sec:beats}
+\begin{equation}
+    f_0 = f_1 - f_2 ~, ~~~~~ T_b = \frac{1}{f_1-f_2}~,~~~~~\textrm{ occur when }f_1 + f_2 \textrm{ are close}
+\end{equation}
+The tuned frequency:
+\begin{equation}
+    f = \underbrace{n}_{\mathclap{\textrm{harmonic}}}\overbrace{f_f}^{\mathclap{\textrm{fundamental}}}
+\end{equation}
+% section beats (end)
+
+\section{First Law of Thermodynamics} % (fold)
+\label{sec:first_law_of_thermo}
+\begin{equation}
+    U = Q + W
+\end{equation}
+\subsection{Second Law of Thermodynamics} % (fold)
+\label{sub:second_law_of_thermo}
+$S$ increases or stays the same for any cyclic process. 
+% subsection second_law_of_thermo (end)
+\subsection{Third Law of Thermodynamics} % (fold)
+\label{sub:third_law_of_thermo}
+\begin{equation}
+    S(T=0)=1~~~ C_v \rightarrow 0 \textrm{ as } T \rightarrow 0
+\end{equation}
+% subsection third_law_of_thermo (end)
+% section first_law_of_thermo (end)
+
+\section{Fundamental Assumption of Statistical Mechanics} % (fold)
+\label{sec:fundamental_assumption_of_statistical_mechanics}
+All accessible microscopic states are equally likely
+% section fundamental_assumption_of_statistical_mechanics (end)
+
+\section{Isothermal} % (fold)
+\label{sec:isothermal}
+Slow so $T$ can equalize.
+\begin{equation}
+    P_1V_1 = P_2V_2~~W = Nk\ln \left( \frac{V_i}{V_f} \right) ~~, W = -\int \limits_{V_i}^{V_f}PdV
+\end{equation}
+\begin{equation}
+    U=0~ \textrm{ since }\Delta T=0~, U = \frac{f}{2}Nk \Delta T
+\end{equation}
+% section isothermal (end)
+
+\section{Adiabatic Compression} % (fold)
+\label{sec:adiabatic_compression}
+Fast, so no $\Delta Q$ lost, like opening a soda can.
+\begin{align}
+    \Delta Q = 0 \rightarrow U = W\\
+    \Delta U = Nk \Delta T = W
+\end{align}
+\begin{equation}
+    \gamma = \frac{f+2}{f}~~, W = \frac{P_fV_f - P_iV_i}{1-\gamma}~~,V_f^\gamma P_f = V_i^\gamma P_i
+\end{equation}
+% section adiabatic_compression (end)
+
+\section{Heat} % (fold)
+\label{sec:heat}
+\begin{align}
+Q &= TdS\\
+Q &= mc \Delta T\\
+Q &= Pt\\
+U &= Q + W
+\end{align}
+% section heat (end)
+
+\section{Cyclotron} % (fold)
+\label{sec:cyclotron}
+\begin{equation}
+    \omega = \frac{qB}{m} ~~~~~ F_c = F_B \rightarrow \frac{mv^2}{r} = qvB \rightarrow v = \frac{qBr}{m} = r\omega
+\end{equation}
+% section cyclotron (end)
+
+\section{Fermi} % (fold)
+\label{sec:fermi}
+\begin{equation}
+    T_f = \frac{E}{k_B}~~~~E_f = \frac{\hbar^2 k^2}{2m} ~~~~ p = \hbar k~~~~ v_f = \frac{p_f}{m}~~~~k_F = \left( \frac{3\pi^2N}{\textrm{vol}} \right) ^{1/3}
+\end{equation}
+\begin{equation}
+    p_f = \frac{2}{3}\frac{E_f}{v}
+\end{equation}
+Degenerate Fermi gas: so cold that all states below $E_F$ are occupied
+% section fermi (end)
+
+\section{Telescope} % (fold)
+\label{sec:telescope}
+\begin{equation}
+    M = -\frac{f_\textrm{object}}{f_\textrm{eye}} = \frac{\theta_{\textrm{eye}}}{\theta_{\textrm{object}}}
+\end{equation}
+% section telescope (end)
+
+\section{Multiplicity/States} % (fold)
+\label{sec:multiplicity_states}
+Probability ($\Omega_n$) $=\frac{\Omega_n}{\Omega_{all}}$ where $\Omega$ is the multiplicity \# of things.
+\begin{enumerate}
+    \item Total \# microstates: (\# of states can be in)$^{\textrm{\# of things}}$ 
+    \item Ways to choose $n$ things from $N$
+    \begin{equation}
+        \Omega \binom{N}{n} = \frac{N!}{(N-n)!n!}
+    \end{equation}
+\end{enumerate}
+% section multiplicity_states (end)
+
+\section{Rocket Motion} % (fold)
+\label{sec:rocket_motion}
+\begin{equation}
+    u \frac{dm}{dt} + M \frac{dv}{dt} = 0
+\end{equation}
+\begin{equation}
+v_f = v_0 + u \ln \left( \frac{M_i}{M_f} \right)
+\end{equation}
+% section rocket_motion (end)
+
+\section{Collisions} % (fold)
+\label{sec:collisions}
+\begin{enumerate}
+    \item Momentum is always conserved $p_i = p_f$\\
+    Don't forget to use $(+)$ and $(-)$ for before and after velocity collisions 
+    \item $KE$ and $U$ conserved before or after collision only
+    \item \begin{equation}
+        \epsilon = \frac{\overbrace{|v_1| + |v_2|}^{\mathclap{\textrm{after}}}}{\underbrace{|U_1| + |U_2|}_{\mathclap{\textrm{before}}}}
+    \end{equation} 
+    \item Impulse $J = F \Delta t = \Delta p = \Delta L$
+    \item Cross section $N_s = N_I \frac{N_t}{A} \sigma$
+\end{enumerate}
+% section collisions (end)
+
+\section{Springs/Single Harmonic Oscillator} % (fold)
+\label{sec:springs_single_harmonic_oscillator}
+\begin{equation}
+    F = -kx~~~~ U = \frac{1}{2}kx^2 ~~~~ \omega = \sqrt{\frac{k}{m}}
+\end{equation}
+\begin{align}
+    ma = -kx = m \ddot{x}\\
+    E_{\textrm{tot}} = \frac{1}{2}kA^2~, ~A=\textrm{max amplitude}
+\end{align}
+% section springs_single_harmonic_oscillator (end)
+
+\section{Thin Films} % (fold)
+\label{sec:thin_films}
+\[
+ \Delta \phi =
+  \begin{cases}
+   0  & n_2<n_1 \\
+   \pi &  n_2>n_1
+  \end{cases}
+  ~~~~~~~~~~
+  2d =
+  \begin{cases}
+   n\lambda/2  & \Delta \phi_{\textrm{tot}} = \pi \\
+   n\lambda &  \Delta \phi_{\textrm{tot}} = 0,2\pi
+  \end{cases}~,~n=\textrm{odd \#'s only}
+\]
+% section thin_films (end)
+
+\section{Conductivity/Current Density} % (fold)
+\label{sec:conductivity_current_density}
+\begin{align}
+\bar{J} &= ne\bar{v} = \sigma E\\
+\sigma &= \frac{ne^2\tau}{m}
+\end{align}
+% section conductivity_current_density (end)
+
+\section{Resistance} % (fold)
+\label{sec:resistance}
+\begin{equation}
+    R = \frac{\rho L}{A}
+\end{equation}
+% section resistance (end)
+
+\section{Boltzmann Statistics} % (fold)
+\label{sec:boltzmann_statistics}
+\begin{equation}
+    Z = \sum \limits_i g_i e^{-E_i/kT}~, g_i = \textrm{degeneracy of state } i
+\end{equation}
+\begin{equation}
+    p_s = \frac{g_s e^{-E_s/k_B t}}{Z} ~~~~ \frac{p_A}{p_B} = \frac{g_A}{g_B} \frac{e^{-A/kT}}{e^{-B/kT}} = \frac{g_A}{g_B} e^{(-A + B)/kT}
+\end{equation}
+\begin{equation}
+    \langle \bar{X} \rangle = \frac{\sum \limits_i e^{-E_i/kT}}{Z} \rightarrow \langle\bar{E} \rangle =  \frac{1}{Z} \sum \limits_i E_i e^{-E_i/kT}
+\end{equation}
+\begin{equation}
+    U = N \bar{E} \rightarrow \textrm{total Energy of system}
+\end{equation}
+% section boltzmann_statistics (end)
+
+\section{Density of State Distribution} % (fold)
+\label{sec:density_of_state_distribution}
+Fermions: 
+\begin{equation}
+    N_i = \frac{g_i}{e^{(E_i - \mu)/kT} + 1}
+\end{equation}
+Bosons:
+\begin{equation}
+    N_i = \frac{g_i}{ e^{(E_i - \mu)/kT } - 1}
+\end{equation}
+% section density_of_state_distribution (end)
+
+\section{Band Pass Filter} % (fold)
+\label{sec:band_pass_filter}
+\begin{equation}
+    j\omega C + \frac{1}{j\omega L} = Z = \frac{-\omega^2 C L + 1}{j \omega L}~~~ \omega_o = \frac{1}{\sqrt{LC}}
+\end{equation}
+% section band_pass_filter (end)
+
+\section{Resonant Frequency} % (fold)
+\label{sec:resonant_frequency}
+Inductor and capacitor in series:
+\begin{equation}
+    j \omega L = \frac{1}{j \omega C} \rightarrow \omega_0^2 LC = 1 \rightarrow \omega = \frac{1}{\sqrt{LC}}
+\end{equation}
+Inductor and capacitor in parallel:
+\begin{equation}
+    j\omega C + \frac{1}{j \omega L} = 0 \rightarrow j \omega C = \frac{1}{j \omega L} \rightarrow \omega = \frac{1}{\sqrt{LC}}
+\end{equation}
+% section resonant_frequency (end)
+
+\section{Central Force Motion} % (fold)
+\label{sec:central_force_motion}
+\begin{tabular}{l l l}
+$\mu = \frac{m_1 m_2}{m_1 + m_2}$ & $R_{\textrm{CM}} = \frac{\sum m_i r_i}{\sum m_i}$ & $T = \frac{1}{2} \mu |\dot{r} | ^2$\\
+$r_1 = \frac{m_2}{m_1 + m_2}r$ & $r_2 = \frac{m_1}{m_1 + m_2} r$ & $\bar{r} = \bar{r}_1 - \bar{r}_2$
+\end{tabular}
+% section central_force_motion (end)
+
+\section{Moments of Inertia} % (fold)
+\label{sec:moments_of_inertia}
+\begin{enumerate}
+    \item Hoop: $MR^2$
+    \item Disk: $\frac{1}{2}MR^2$
+    \item Solid Sphere: $\frac{2}{3}MR^2$
+    \item Hollow Sphere: $\frac{2}{5} MR^2$
+    \item Rod End: $ \frac{1}{3} ML^2$
+    \item Rod Middle: $ \frac{1}{12} ML^2$
+\end{enumerate}
+% section moments_of_inertia (end)
+
+\section{Blackbody Radiation} % (fold)
+\label{sec:blackbody_radiation}
+\begin{equation}
+    T \lambda = 3 \textrm{ mm}K~~~~P \propto T^4~~~~ \rho \propto AT^4 ~(\textrm{for photons})
+\end{equation}
+% section blackbody_radiation (end)
+
+\section{Heat Engine} % (fold)
+\label{sec:heat_engine}
+\begin{equation}
+    e \leq 1 - \frac{T_c}{T_h}~~~~ e = \frac{\textrm{benefit}}{\textrm{cost}} = \frac{W}{Q_h}~~~~ W = Q_h - Q_c
+\end{equation}
+% section heat_engine (end)
+
+\section{Refrigerator} % (fold)
+\label{sec:refrigerator}
+\begin{equation}
+    e \leq \frac{T_c}{T_h - T_c} ~~~~ e = \frac{\textrm{benefit}}{\textrm{cost}} = \frac{Q_c}{W}
+\end{equation}
+% section refrigerator (end)
+
+\section{Space-Time Diagram} % (fold)
+\label{sec:space_time_diagram}
+\begin{equation}
+    s^2 = x^2 - (ct)^2
+\end{equation}
+\begin{enumerate}
+    \item $s>0$ Spacelike\\
+    $\Delta t$ can equal 0, simultaneous events occur
+    \item $s<0$ Timelike\\
+    Events can occur at same point in space, $ \Delta x = 0$, but not simultaneously $ \Delta t \neq 0$
+    \item $\Delta s = 0$ Lightlike
+\end{enumerate}
+% section space_time_diagram (end)
+
+\section{Low-Pass} % (fold)
+\label{sec:low_pass}
+RC or LR perpendicular to each other. For RC:
+\begin{equation}
+   \frac{ \frac{1}{j \omega C} }{R + \frac{1}{j\omega C}} = \frac{1}{j \omega CR + 1}~, \omega \rightarrow 0, \rightarrow 1
+\end{equation}
+For LR:
+\begin{equation}
+    \frac{R}{R + j \omega L}~, \omega \rightarrow 0,\rightarrow 1
+\end{equation}
+Square signals turn into wave-like signals with crests. 
+\begin{equation}
+    V_{\textrm{out}} = V_{\textrm{in}} \left( \frac{Z_2}{Z_1 + Z_2} \right) 
+\end{equation}
+Where $Z_1$ and $Z_2$ are on either side of a perpendicular $V_{\textrm{out}}$ with a $V_{\textrm{in}}$ leading into $Z_1$.
+% section low_pass (end)
+
+\section{High Pass} % (fold)
+\label{sec:high_pass}
+CR or RL, turns square signals into signals where the flat tops of square turns into decaying to 0.
+% section high_pass (end)
+
+\section{Special Relativity} % (fold)
+\label{sec:special_relativity}
+\begin{tabular}{ r l}
+$v/c$ & $\gamma$\\
+.1 & 1.005\\
+.25 & 1.033\\
+.5 & 1.151\\
+.75 & 1.55\\
+.9 & 2.3
+\end{tabular}
+Motion in $\hat{x}$:
+\begin{align}
+    x &= \gamma (x' + vt')\\
+    t &= \gamma \left( t' + \frac{vx}{c^2} \right)\\
+    u_x' &= \frac{u_x + v}{1 + \frac{u_x v}{c^2}}\\
+    u_z' &= \frac{u_z}{ \gamma \left( 1 + \frac{u_x v}{c^2} \right) }
+\end{align}
+\subsection{Time Dilation} % (fold)
+\label{sub:time_dilation}
+\begin{equation}
+    t' = \gamma t_0
+\end{equation}
+% subsection time_dilation (end)
+\subsection{Length Contraction} % (fold)
+\label{sub:length_contraction}
+\begin{equation}
+    x' = \frac{x}{\gamma}
+\end{equation}
+% subsection length_contraction (end)
+\subsection{Invariant} % (fold)
+\label{sub:invariant}
+\begin{equation}
+    \Delta s^2 = \Delta x^2 - (ct)^2
+\end{equation}
+% subsection invariant (end)
+\subsection{Energy} % (fold)
+\label{sub:energy}
+\begin{equation}
+    E_r^2 = E_0^2 + (pc)^2~~~E_r \neq \frac{p_r^2}{2m} ~~~~ E_r = \gamma E_0~~~~ p_r = \gamma mv = \gamma p
+\end{equation}
+% subsection energy (end)
+% section special_relativity (end)
+
+\section{Finite Potential Well} % (fold)
+\label{sec:finite_potential_well}
+\begin{equation}
+    E \propto n^2 ~~~~ d \propto \frac{1}{\sqrt{V-E_n}} \rightarrow d \propto n
+\end{equation}
+% section finite_potential_well (end)
+
+\section{Fundamental Particles} % (fold)
+\label{sec:fundamental_particles}
+\begin{enumerate}
+    \item Bosons:\\
+    Gauge Boson - Gluon - Strong\\
+    Photon - E\&M\\
+    W,Z Bosons - a.k.a weak bosons\\
+    Higgs\\
+    Graviton\\
+    Pion
+    \item Fermions:\\
+    Quarks (Up, down, top, bottom, strange, charm)\\
+    Leptons (Electron, Muon, Tauon) and neutrino variants of each
+    \item Composite Fermions: Protons and Neutrons, etc.
+\end{enumerate}
+% section fundamental_particles (end)
+
+\section{Single Slit Diffraction} % (fold)
+\label{sec:single_slit_diffraction}
+\begin{equation}
+    d\sin \theta = n\lambda ~~~~ \theta = \textrm{angle between central max and first minimum}
+\end{equation}
+\begin{equation}
+    \tan \theta = \frac{y}{L} ~ \textrm{    central max, width  } \Delta y_{\textrm{max}} = \frac{2 L \lambda}{d}
+\end{equation}
+% section single_slit_diffraction (end)
+
+
+\section{Double Slit} % (fold)
+\label{sec:double_slit}
+\begin{equation}
+    d \sin \theta = n \lambda ~~~~ \Delta y = L \tan \theta
+\end{equation}
+% section double_slit (end)
+
+\section{Diffraction Grating} % (fold)
+\label{sec:diffraction_grating}
+\begin{equation}
+    d \sin \theta = n \lambda ~~~~~ y = L \tan \theta = L \frac{\sin \theta}{\cos \theta} = \frac{L n \lambda}{d \cos \theta}
+\end{equation}
+% section diffraction_grating (end)
+
+\section{Bragg} % (fold)
+\label{sec:bragg}
+\begin{equation}
+    2d\sin \theta = n\lambda~~~~~ d= \frac{a}{\sqrt{l^2 + h^2 + k^2}}~, ~~ \textrm{letters are miller indices}
+\end{equation}
+% section bragg (end)
+
+\section{Aperture Limited: Airy Disk: Diffraction Limit: Angular Resolution} % (fold)
+\label{sec:aperture_limited_airy_disk_diffraction_limit_angular_resolution}
+\begin{equation}
+    \sin \theta = \frac{1.22 \lambda}{D} ~, D=\textrm{diameter of aperture}~, \theta = \textrm{angular separation}
+\end{equation}
+% section aperture_limited_airy_disk_diffraction_limit_angular_resolution (end)
+
+\section{Electrostatics} % (fold)
+\label{sec:electrostatics}
+\begin{equation}
+    F = \frac{kq_1q_2}{r^2}~~~ \epsilon = k \epsilon_0~~~~ k = 9 \times 10^9 \frac{\textrm{Nm}}{c^2}
+\end{equation}
+\begin{enumerate}
+    \item Sphere: $\propto \frac{1}{r^2}$ 
+    \item Infinite Line: $\propto \frac{1}{r}$
+    \item Infinite Plane doesn't fall off: $E = \frac{\sigma}{2 \epsilon_0}$
+    \item Ring: $ \propto \frac{x}{d^3}~,d = \sqrt{x^2 + R^2}$
+    \item Capacitor doesn't fall off: $E_{\textrm{out}} = 0~, E_{\textrm{in}} = \frac{\sigma}{\epsilon_0}$
+\end{enumerate}
+
+\subsection{Limits} % (fold)
+\label{sub:limits}
+As $x \rightarrow \infty$ all objects look like point objects. Sometimes use binomial approximation to get behavior at $\infty, (1+x)^n \sim 1+nx$ for $x \ll 1$.
+% subsection limits (end)
+\subsection{Motion Through a Capacitor, etc.} % (fold)
+\label{sub:motion_through_a_capacitor}
+Use kinematics equations $F=ma=qE$ find $V,a,t$ to get $\theta $ deflection.
+% subsection motion_through_a_capacitor (end)
+\subsection{Dipole} % (fold)
+\label{sub:dipole}
+\begin{equation}
+    \bar{p} = q \bar{d}
+\end{equation}
+\[
+ \bar{E}_{\textrm{dipole}} =
+  \begin{cases}
+   \frac{2k\bar{p}}{r^3}  & \textrm{axis of }\bar{d}  \\
+   -\frac{k \bar{p}}{r^3} &  \perp \textrm{ to }\bar{d}
+  \end{cases}
+\]
+% subsection dipole (end)
+
+\subsection{Current Density} % (fold)
+\label{sub:current_density}
+\begin{equation}
+    J = nev_d~,I=JA=\frac{\textrm{current of cross section}}{m^2}
+\end{equation}
+% subsection current_density (end)
+\subsection{Drift Speed} % (fold)
+\label{sub:drift_speed}
+\begin{equation}
+    J = \sigma E= \frac{ne^2\tau}{m}E \rightarrow v_d = \frac{\sigma E }{ne} = \frac{e \tau E}{m}
+\end{equation}
+% subsection drift_speed (end)
+\subsection{Conductivity} % (fold)
+\label{sub:conductivity}
+\begin{equation}
+    \sigma = \frac{ne^2\tau}{m}
+\end{equation}
+% subsection conductivity (end)
+% section electrostatics (end)
+
+\section{Magnetic Field} % (fold)
+\label{sec:magnetic_field}
+\begin{equation}
+    B = \frac{\mu_0 I }{4\pi} \frac{d\bar{l} \times \hat{r}}{r^2}~, d\bar{l}=\textrm{length and direction}
+\end{equation}
+\subsection{Tesla} % (fold)
+\label{sub:tesla}
+\begin{equation}
+    T = \frac{N}{A\cdot m}~, \textrm{current } I = \int J \cdot da_\perp
+\end{equation}
+% subsection tesla (end)
+\subsection{Force} % (fold)
+\label{sub:force}
+\begin{equation}
+    F = q\bar{v} \times \bar{B} = I (d\bar{l} \times \bar{B})
+\end{equation}
+% subsection force (end)
+\subsection{Cyclotron} % (fold)
+\label{sub:cyclotron}
+\begin{align}
+    E \parallel B &\rightarrow \textrm{ Helical motion}\\
+    v_\parallel B &\rightarrow \textrm{ Helical}\\
+    \frac{mv^2}{r} = qvB &\rightarrow F_c = F_m
+\end{align}
+% subsection cyclotron (end)
+\subsection{Cycloid} % (fold)
+\label{sub:cycloid}
+\begin{equation}
+    E \perp B
+\end{equation}
+% subsection cycloid (end)
+\subsection{Examples} % (fold)
+\label{sub:examples}
+\subsubsection{Solenoid} % (fold)
+\label{ssub:solenoid}
+\[
+ B =
+  \begin{cases}
+   0 & \textrm{outside}  \\
+   \frac{\mu_0 IN}{L}& \textrm{inside}
+  \end{cases}
+\]
+% subsubsection solenoid (end)
+\subsubsection{Ring} % (fold)
+\label{ssub:ring}
+\begin{equation}
+    B = \frac{\mu_0I}{2R}
+\end{equation}
+Any displacement along center of ring should reduce tho this equation as $x \rightarrow 0$.
+% subsubsection ring (end)
+\subsubsection{Sheet of Current} % (fold)
+\label{ssub:sheet_of_current}
+\[
+ B =
+  \begin{cases}
+   - \frac{\mu_0}{2}& z > 0\\
+   \frac{\mu_0}{2} & z < 0
+  \end{cases}
+\]
+% subsubsection sheet_of_current (end)
+\subsubsection{Toroid} % (fold)
+\label{ssub:toroid}
+\[
+ B =
+  \begin{cases}
+   0 & \textrm{out}\\
+   \frac{\mu_0IN}{2\pi R}& \textrm{in}
+  \end{cases}
+\]
+% subsubsection toroid (end)
+
+\subsubsection{Dipole} % (fold)
+\label{ssub:dipole}
+\begin{equation}
+    B \propto \frac{\mu}{r^3}~,\mu = IA = \textrm{dipole moment}
+\end{equation}
+\begin{equation}
+    B \propto \frac{IA}{r^3}~, \textrm{ as } x \rightarrow \infty, \textrm{ this is twice the field of a current loop}
+\end{equation}
+% subsubsection dipole (end)% subsection examples (end)
+% section magnetic_field (end)
+
+\section{Inductance} % (fold)
+\label{sec:inductance}
+\begin{equation}
+    \Phi = LI~~ \epsilon = - \frac{d \Phi}{dt}~~~~ \Phi_B = \int B \cdot dA
+\end{equation}
+\begin{equation}
+    W = \frac{1}{2}LI^2~\left(\textrm{corollary: cap $W = \frac{t}{2}CV^2$} \right)
+\end{equation}
+\begin{equation}
+    I(t) = \frac{\epsilon_0}{R} \left[ 1 - e^{-(R/L)t} \right]~~\tau = \frac{L}{R}
+\end{equation}
+% section inductance (end)
+
+\section{Radiation} % (fold)
+\label{sec:radiation}
+\begin{tabular}{l l l}
+Electric Dipole & Magnetic Dipole & Point Charge\\
+$P \propto q^2 d^2 \omega^4$ & $P\propto I^2 \omega^4$ & $P \propto q^2 a^2$
+\end{tabular}
+
+$P_{\textrm{max}} \perp$ to $\hat{a}$.
+% section radiation (end)
+
+\section{Maxwell's Equations} % (fold)
+\label{sec:maxwell_s_equations}
+\begin{tabular}{l l}
+$\nabla \cdot E = \frac{\rho_{\textrm{in}}}{\epsilon_0}$ & $\nabla \times E = - \frac{\partial B}{\partial t}$\\
+$\nabla \cdot B = 0$ & $\nabla \times B = \mu_0 J - \mu_0 \epsilon_0 \frac{\partial E}{\partial t}$
+\end{tabular}
+
+\begin{tabular}{ll}
+$\oint E \cdot dA = \frac{Q_{\textrm{in}}}{\epsilon_0}$ & $\oint E \cdot dl = - \frac{\partial \Phi_B}{\partial t}$\\
+$\oint B \cdot dA = 0$ & $\oint B \cdot dl = \mu_) I + \mu_0 \epsilon_0 \frac{\partial \Phi_E}{\partial t}$
+\end{tabular}
+% section maxwell_s_equations (end)
+
+\section{Boundary Conditions} % (fold)
+\label{sec:boundary_conditions}
+\begin{equation}
+    E_\parallel = 0~,~~ B_\perp = 0~~\textrm{for reflected waves}~~ E_{\textrm{tot}}=0~~ B_{\textrm{tot}} = 2B_{\textrm{wave}}
+\end{equation}
+\begin{equation}
+    \epsilon_1 E_1^\perp - \epsilon_2 E_2^\perp = \sigma_F~~E_1^\parallel = E_2^\parallel
+\end{equation}
+\begin{equation}
+    B_1 ^\perp = B_2^\perp ~~~~ \frac{B_1^\parallel}{\mu_1} - \frac{B_2^\parallel}{\mu_2} = k_f \times \hat{n}
+\end{equation}
+% section boundary_conditions (end)
+
+\section{E\&M Fields} % (fold)
+\label{sec:e&m_fields}
+$B/E$ are in phase and perpendicular
+\begin{equation}
+    B_+0 = \frac{k}{\omega}E_0 = \frac{1}{c}E_0
+\end{equation}
+\begin{equation}
+    \textrm{Energy Density } \langle U \rangle = \frac{\epsilon_0}{2}E^2~~ \textrm{ Intensity }\langle I \rangle = \frac{1}{2}c\epsilon E^2
+\end{equation}
+\begin{equation}
+    \textrm{Radiation Pressure } p = \frac{\langle s \rangle}{c}~~ \bar{s} = \frac{\bar{E} \times \bar{B}}{\mu_0}~,~~\hat{s} = \textrm{propagation of } \frac{E}{\mu}
+\end{equation}
+% section e&m_fields (end)
+
+\section{Relativistic E\&M} % (fold)
+\label{sec:relativistic_e&m}
+Processes change between frames, but outcome is same. \\
+Example: Parallel Plate Capacitor:
+\begin{equation}
+    \sigma_0 = \frac{Q}{A}~~ \sigma' = \frac{Q}{A'}~, \textrm{ length contracts, }A' < A \rightarrow \sigma'
+ > \sigma_0~~ \sigma' = \gamma \sigma_0
+\end{equation}
+\begin{equation}
+    \textrm{Also, }A = lw~~~~a' = \frac{l}{\gamma}w = \frac{lw}{\gamma}
+\end{equation}
+\begin{equation}
+    \textrm{so, }E_\perp = \gamma E_0 ~~~~ E_\parallel = E_\parallel
+\end{equation}
+% section relativistic_e&m (end)
+
+\section{Coordinate Systems} % (fold)
+\label{sec:coordinate_systems}
+\begin{enumerate}
+    \item Cartesian: $dl = \hat{x} dx + \hat{y} dy + \hat{z}dz~,~~dV = dxdydz$
+    \item Spherical: $dl = \hat{r}dr + rd\theta \hat{\theta} + r\sin \theta d\phi \hat{\phi}~,~~dV = r^2 \sin \theta dr d\phi d\theta$
+    \item Cylindrical: $dl = \hat{s} ds  +sd\phi \hat{\phi} + \hat{z}dz ~,~~ dV = sdsd\phi dz$
+\end{enumerate}
+% section coordinate_systems (end)
+
+\section{Positronium} % (fold)
+\label{sec:positronium_}
+\begin{equation}
+    \mu = \frac{m_e}{2} \rightarrow E_p = \frac{E_H}{2} ~~~~ E_{pos} = \frac{-13.6 \textrm{ eV}}{2} ~~~~ E_p = \frac{-6.8}{n^2}
+\end{equation}
+% section positronium_ (end)
+
+\section{Free Expansion} % (fold)
+\label{sec:free_expansion}
+\begin{equation}
+    W = 0~,~~ Q = 0~,~~ \Delta S > 0~,~~ \Delta S = Nk \ln \left( \frac{V_i}{V_f} \right) 
+\end{equation}
+% section free_expansion (end)
+
+\section{Entropy} % (fold)
+\label{sec:entropy}
+\begin{equation}
+    S = k\ln (\Omega)~~, Q = TdS~~ S_{\textrm{tot}}= S_A + S_B
+\end{equation}
+% section entropy (end)
+
+\section{P/N Junctions} % (fold)
+\label{sec:p_n_junctions}
+\begin{enumerate}
+    \item n donate $e^-$ to CB 
+    \item p donate holes to VB
+\end{enumerate}
+% section p_n_junctions (end)
+
+\section{Wave Velocity} % (fold)
+\label{sec:wave_velocity}
+\begin{equation}
+    \textrm{Group Velocity } v_g = \frac{\partial \omega }{\partial k}~~ \textrm{phase }v_\phi = \frac{\omega}{k} = \sqrt{\frac{1}{\epsilon \mu}} = \frac{\lambda}{T}
+\end{equation}
+% section wave_velocity (end)
+
+\section{Polarizers} % (fold)
+\label{sec:polarizers}
+\begin{enumerate}
+    \item $I=I_0 \cos^2 \theta$ for plane polarized 
+    \item $I = \frac{I_0}{2}$ for natural light
+\end{enumerate}
+% section polarizers (end)
+
+
+\section{Heisenberg} % (fold)
+\label{sec:heisenburg}
+\begin{equation}
+    \sigma_p \sigma_x \geq \frac{\hbar}{2} ~~~~ \sigma_A \sigma_B \geq \frac{1}{2i} \langle [\hat{A},\hat{B} ] \rangle
+\end{equation}
+% section heisenburg (end)
+
+\section{Compton Effect} % (fold)
+\label{sec:compton_effect}
+Elastic scattering of photons - shows particle nature of light
+\begin{equation}
+    \Delta \lambda = \lambda_c ( 1 - \cos \theta)~~~~ \lambda_c = \frac{hc}{E_0} = \frac{h}{mc}
+\end{equation}
+% section compton_effect (end)
+
+\section{Photoelectric Effect} % (fold)
+\label{sec:photoelectric_effect}
+\begin{equation}
+    KE_{\textrm{max}} = E_p - \Phi = \hbar \omega - \Phi = \frac{hc}{\lambda}-\Phi = hf - \Phi
+\end{equation}
+\begin{equation}
+    \textrm{Energy of photon }=\frac{hc}{\lambda} = hf = \frac{h}{2\pi}\omega = \hbar \omega
+\end{equation}
+\begin{equation}
+    \textrm{Einstein's Equation: }eV = hf - \Phi~, V = (-)\textrm{ value which $e^-$ can be stopped from hitting the cathode, }I \rightarrow 0
+\end{equation}
+% section photoelectric_effect (end)
+
+\section{Phonon} % (fold)
+\label{sec:phonon}
+Displacement from equilibrium values of plane spacing
+\begin{equation}
+    E_{\textrm{phonon}}=\hbar \omega
+\end{equation}
+% section phonon (end)
+
+\section{Superconductor} % (fold)
+\label{sec:superconductor}
+\begin{enumerate}
+    \item Meissner: $B=0$ inside $S_c$ 
+    \item $\rho \rightarrow 0$ at critical temp
+    \item $\lambda_c$ penetration depth measures how far $B$ penetrates before $\rightarrow 0$\\
+    $B = B_0e^{-x/\lambda_c}$
+\end{enumerate}
+% section superconductor (end)
+
+\section{Mirrors} % (fold)
+\label{sec:mirrors}
+\begin{equation}
+    \frac{1}{d_o} + \frac{1}{d_i} = \frac{1}{f} \rightarrow d_i = \frac{d_o f}{f - d_o}
+\end{equation}
+\begin{equation}
+    M = \frac{h_i}{h_o} = -\frac{d_i}{d_o}~~~~ f = \frac{R}{2}
+\end{equation}
+Rays go through center and continues in a straight line and goes parallel then through focal point.
+\subsection{Concave} % (fold)
+\label{sub:concave}
+Converging Mirror, what most diagrams are of
+% subsection convex (end)
+\subsection{Convex} % (fold)
+\label{sub:convex}
+Diverging Mirror. Images always smaller, virtual, and upright. They cover a wide field of view.
+% subsection concave (end)
+% section mirrors (end)
+
+\section{Reflection/Refraction} % (fold)
+\label{sec:reflection_rrefraction}
+Snell's Law:
+\begin{equation}
+    n_1 \sin \theta_1 = n_2 \sin \theta_2
+\end{equation}
+\begin{equation}
+    \theta_i = \theta_r~, \theta \textrm{ measured relative to normal}
+\end{equation}
+For total internal reflection:
+\begin{align}
+    n_1 \sin \theta_1 &= n_2 \sin 90\\
+    \sin \theta_1 &= \frac{n_2}{n_1}
+\end{align}
+\begin{equation}
+    n = \frac{c}{v} = \sqrt{\frac{\epsilon \mu}{\epsilon_0 \mu_0} } ~~~~~~ \epsilon = k \epsilon_0 ~~~~~~ \frac{n_1}{n_2} = \frac{v_2}{v_1}
+\end{equation}
+% section reflection_rrefraction (end)
+
+\section{Bloch's Theorem} % (fold)
+\label{sec:bloch_s_theorem}
+$\Psi$ solutions to Schr\"odinger's Equation are plane waves modulated by a function with the periodicity of the lattice
+% section bloch_s_theorem (end)
+
+\section{Stern-Gerlach} % (fold)
+\label{sec:stern_gerlach}
+Expected $2s+1$ states, saw $2s+1=2$ states. Implied that $H = -\gamma \bar{S} \cdot \bar{B}$
+% section stern_gerlach (end)
+
+\section{Mixing Gases} % (fold)
+\label{sec:mixing_gases}
+\[
+  \begin{cases}
+   \textrm{if } A \neq B & \Delta s = \Delta s_A + \Delta s_B\\
+   \textrm{if } A = B&  \Delta s = 0 \textrm{ since }\Delta\ln(\Omega) \sim 0 \textrm{ since } \Omega = \textrm{ large \#}
+  \end{cases}
+\]
+% section mixing_gases (end)
+
+\section{Equipartition Theorem} % (fold)
+\label{sec:equipartition_theorem}
+\begin{equation}
+    U = \frac{f}{2}NkT
+\end{equation}
+$f$ = \# quadratic terms in Hamiltonian (not degrees of freedom, but in general they're equal).
+\begin{equation}
+    kT \sim \frac{1}{40} \textrm{ eV @ room temperature}
+\end{equation}
+% section equipartition_theorem (end)
+
+\section{Degrees of Freedom} % (fold)
+\label{sec:degrees_of_freedom}
+\begin{enumerate}
+    \item A quadratic term in $PE$ or $KE$
+    \item Translational ($\frac{mv^2}{r}$)
+    \item Rotational ($I\omega^2$)
+    \item Vibrational (Counts as 2) ($kx^2, mv^2$)
+\end{enumerate}
+% section degrees_of_freedom (end)
+
+\section{Simple Pendulum} % (fold)
+\label{sec:simple_pendulum}
+\begin{equation}
+    \omega = \sqrt{\frac{g}{l}}~~~~~~~\theta = \theta_{\textrm{max}}\sin(\omega t)
+\end{equation}
+% section simple_pendulum (end)
+
+\section{Gravity} % (fold)
+\label{sec:gravity}
+\begin{equation}
+    F_g = \frac{Gm_1m_2}{r^2} = mg~~~~ \textrm{Kepler: }T^2 \propto a^3
+\end{equation}
+Escape velocity:
+\begin{equation}
+    F_c = F_g \rightarrow mg = \frac{mv^2}{r} \rightarrow v = \sqrt{gr}
+\end{equation}
+Gauss:
+\begin{equation}
+    \int g \cdot dA = -4\pi G \int dM_{\textrm{in}} \rightarrow \int g \cdot dA = -4 \pi GM_{\textrm{in}}
+\end{equation}
+% section gravity (end)
+
+\section{Drag Force} % (fold)
+\label{sec:drag_force}
+\begin{equation}
+    F_D \propto v^n~~~\textrm{ air: }F_D \propto v^2
+\end{equation}
+\begin{equation}
+    \textrm{Terminal velocity }F_D = F_g \rightarrow v = \sqrt{\frac{g}{k}}
+\end{equation}
+\begin{equation}
+    F_D = mkv^2
+\end{equation}
+% section drag_force (end)
+
+\section{Selection Rules} % (fold)
+\label{sec:selection_rules}
+\begin{equation}
+    \Delta l = \pm 1 ~~~~~~  \Delta m = \pm 1,0 ~~~~~~ \Delta s \textrm{ no rule}~~~~~ \Delta n \geq 1
+\end{equation}
+% section selection_rules (end)
+
+\section{Stationary States} % (fold)
+\label{sec:stationary_states}
+\begin{equation}
+    \langle \Psi | \Psi \rangle \textrm{ is not a function of time}
+\end{equation}
+% section stationary_states (end)
+
+\section{Spectroscopic Notation} % (fold)
+\label{sec:spectroscopic_notation}
+\begin{equation}
+    ^{2s+1}L_j
+\end{equation}
+\begin{enumerate}
+    \item Spin isn't always $\frac{1}{2}$    
+    \item $L$ = orbital angular momentum
+    \item $j= s+ L = $ total angular momentum
+\end{enumerate}
+\[
+  L= \begin{cases}
+    s & 0\\
+    p & 1\\
+    d & 2\\
+    f & 3
+  \end{cases}
+\]
+% section spectroscopic_notation (end)
+
+\section{Matter Waves} % (fold)
+\label{sec:matter_waves}
+\begin{equation}
+    p = \hbar k ~~~~~ k = \frac{2 \pi }{\lambda} ~~~~~ p = \frac{h}{\lambda} \rightarrow \lambda = \frac{h}{p}
+\end{equation}
+% section matter_waves (end)
+
+\section{Pipes/Tubes/Fixed and Open Ends} % (fold)
+\label{sec:pipes_tubes_fixed_and_open_ends}
+\begin{enumerate}
+    \item Closed on both ends:\\
+    Ends are nodes, $\sin kx $ dependence, $\Psi = A \sin kx \cos \omega t$\\
+    $\lambda = \frac{2L}{n}$  longest $\lambda$ is $2L$
+    \item Open on both ends:\\
+    Ends are antinodes, $\cos kx$ dependence\\
+    $\lambda = \frac{2L}{n} ~~~~~ \Psi = A \cos kx \cos \omega t$
+    \item Closed/Open ends:\\
+    Node/Antinode   Longest $\lambda = 4L$ (so $\frac{1}{4}\lambda$ can fit end to end)\\
+    $\lambda = \frac{4L}{2n-1}$ (-1 if $n$ starts at 1)\\
+    $\Psi = A \sin kx \cos \omega t$
+\end{enumerate}
+% section pipes_tubes_fixed_and_open_ends (end)
+
+\section{Solutions to Time-Independent Schr\"odinger's Equation} % (fold)
+\label{sec:solutions_to_time_independent_schr}
+\begin{equation}
+    \langle H \rangle = \sum \limits_n |C_n|^2 E_n = C_1E_1 + C_2 E_2 + \cdots~~~ ,\sum \limits_n |C_N|^2 = 1
+\end{equation}
+\begin{equation}
+    \textrm{Prob}(a<x<b) = \int \limits_a^b |\Psi(x)|^2dx \rightarrow \textrm{ area under the } |\Psi|^2 \textrm{ vs }x \textrm{ graph}
+\end{equation}
+% section solutions_to_time_independent_schr\ (end)
+
+\section{Physical Pendulum} % (fold)
+\label{sec:physical_pendulum}
+\begin{equation}
+    \tau = I \alpha = I \dot{\omega} = mg\sin \theta L_{\textrm{cm}} = \bar{r} \times \bar{F}
+\end{equation}
+\begin{equation}
+    \ddot{\theta} = \frac{mgL_{\textrm{CM}}}{I}\theta \rightarrow \omega = \sqrt{\frac{mgL_{\textrm{CM}}}{I}}~,~~ L_{\textrm{CM}}= \textrm{the distance from the pivot point to the center of mass}
+\end{equation}
+% section physical_pendulum (end)
+
+\section{Intrinsic Magnetic Moment} % (fold)
+\label{sec:intrinsic_magnetic_moment}
+\begin{equation}
+    \bar{\mu}_s = \frac{gq}{2m}\bar{s}~~~m \textrm{ is dominant factor}
+\end{equation}
+% section intrinsic_magnetic_moment (end)
+
+\section{Equations of Motions} % (fold)
+\label{sec:equations_of_motions}
+Look for boundary values $I(s)$ given $x(t)$ and $y(t)$. Differentiate and see which one yields $v_0$
+% section equations_of_motions (end)
+
+\section{Moments of Inertia} % (fold)
+\label{sec:moments_of_inertia}
+The moment of an object stretched along the axis of rotation doesn't change
+\begin{equation}
+    I_{\textrm{disk}} = I_{\textrm{cylinder}}
+\end{equation}
+The moment of a cuboid: 
+\begin{equation}
+    I = \frac{M}{12}(x^2 + y^2)
+\end{equation}
+``Twin Plate'', $y=0$ so $I_z = \frac{M}{12}x^2$. Then, $I_z = \frac{1}{12}(2d)^2 = \frac{M}{3}d^2$
+% section moments_of_inertia (end)
+
+\section{Hermitian Matrix} % (fold)
+\label{sec:hermitian_matrix}
+Real eigenvalues, square
+\begin{equation}
+    A = A^T = A^{*T} \textrm{ the entries are equal to their conjugate tranpose}
+\end{equation}
+All diagonals must be real. The sum of two Hermitian matrices is also Hermitian.
+\begin{equation}
+    \langle f | \hat{A} f \rangle = \langle \hat{A} f | f \rangle \Rightarrow A = A^*
+\end{equation}
+% section hermitian_matrix (end)
+
+\section{Balancing Problem} % (fold)
+\label{sec:balancing_problem}
+Easiest to use center of mass. 
+\begin{equation}
+    \textrm{Center of Mass = } \frac{\sum m_i r_i}{\sum m_i}~ \textrm{one mass is at}-r
+\end{equation}
+% section balancing_problem (end)
+
+\section{Decay Rates} % (fold)
+\label{sec:decay_rates}
+\begin{equation}
+    \frac{dA}{dt}= -kA \rightarrow A = A_0e^{-kt}; \frac{A}{A_0} = \frac{1}{2}=e^{-kt} \rightarrow t_{1/2} = \frac{\ln(2)}{k}
+\end{equation}
+% section decay_rates (end)
+
+\section{Interferometer} % (fold)
+\label{sec:interferometere}
+Fringe shifts occur for changing distance or $\lambda$. 
+\begin{equation}
+    2d = m\lambda ~~~ d=\textrm{change in distance} ~~~~ \lambda  = \Delta \lambda ~~~~~ \lambda_{\textrm{gas}} = \frac{\lambda_{\textrm{vac}}}{n}
+\end{equation}
+In a tube where gas $\rightarrow$ vacuum: 
+\begin{equation}
+    2d = m (\lambda_{\textrm{gas}} - \lambda_{\textrm{vac}}) = m \lambda_{\textrm{vac}} \left( \frac{1}{n} -1  \right) 
+\end{equation}
+% section interferometere (end)
+
+\section{Springs} % (fold)
+\label{sec:springs}
+Add like capacitors. Makes sense because in series they can stretch more so $F=kx$ must be decreased, in parallel, they stretch less so $k \uparrow$ for the same force.\\
+\begin{equation}
+    \textrm{Springs in series: } \frac{1}{k_{\textrm{tot}}} = \frac{1}{k_1} + \frac{1}{k_2}
+\end{equation}
+\begin{equation}
+    \textrm{Springs in parallel: } k = k_1 + k_2
+\end{equation}
+% section springs (end)
+
+\section{Speed of Sound} % (fold)
+\label{sec:speed_of_sound}
+In an ideal gas: $v \propto \sqrt{T}$
+% section speed_of_sound (end)
+
+\section{Commutator Identities} % (fold)
+\label{sec:commutator_identities}
+\begin{align}
+[A,B]&=-[B,A]\\
+[AB,C] &= A[B,C] + [A,C]B\\
+[A,BC] &= B[A,C] + [A,B]C
+\end{align}
+% section commutator_identities (end)
+
+\section{Motion in a Circle} % (fold)
+\label{sec:motion_in_a_circle}
+Always $a_{\textrm{radial}}$ component. Only $a_{\textrm{tan}}$ if $v_{\textrm{tan}}$ changes.
+\begin{equation}
+    F = \frac{mv^2}{r} = ma_r \rightarrow a_r = \frac{v^2}{r}
+\end{equation}
+\begin{equation}
+    a_r = r \times \alpha~~~~~ v = r \times \omega
+\end{equation}
+% section motion_in_a_circle (end)
+
+\section{Specific Heat in a Solid} % (fold)
+\label{sec:specific_heat_in_a_solid}
+\begin{enumerate}
+    \item Einstein Model:\\
+    Treats atoms as harmonic oscillators, $3N$ total harmonic oscillators and they all have the same energy (frequency) using Bose-Einstein statistics
+    \item Debye:\\
+    Also $3N$ harmonic oscillators. Assigns a range of energies (frequencies) and treats the lattice vibrations as phonons in a box
+    \item Dulong-Petit:\\
+    High temperature, uses equipartition theorem with harmonic oscillators ($f=6~,c=3Nk$). Debye and Einstein models reduce to this in the high $T$ limit.
+\end{enumerate}
+% section specific_heat_in_a_solid (end)
+
+\section{Doppler Shift} % (fold)
+\label{sec:doppler_shift}
+\begin{equation}
+    f = f_0 \left( \frac{1 + v_s}{1 + v_0} \right) ~~~~~~ \frac{\lambda}{\lambda_0} = \frac{f_0}{f} = \sqrt{\frac{1 + \beta}{1 -\beta}}~, \beta = \frac{v}{c}
+\end{equation}
+The ``redshift'': $z = \frac{\lambda_0 - \lambda}{\lambda} = \frac{f -f_0}{f}$
+% section doppler_shift (end)
+
+\section{Fission} % (fold)
+\label{sec:fission}
+Conservation of energy, binding energy of nucleus is always $(-)$, like $e^-$ binding energy.
+\begin{equation}
+    -BE_i + KE_i = -BE_f + KE_f
+\end{equation}
+% section fission (end)
+
+\section{Wire Resistance} % (fold)
+\label{sec:wire_resistance}
+\begin{equation}
+    R = \frac{\rho L}{A}
+\end{equation}
+% section wire_resistance (end)
+
+\section{Spin Matrices} % (fold)
+\label{sec:spin_matrices}
+\begin{equation}
+    S_i \psi = \frac{\hbar}{2}\sigma_i \psi
+\end{equation}
+For example, eigenstate of $S_x$ with $-\frac{\hbar}{2}$ and $\sigma_x = \binom{0~1}{1~0}$
+\begin{equation}
+    \frac{1}{\sqrt{2}} ( | \uparrow \rangle -  | \downarrow \rangle) = \frac{1}{\sqrt{2}}  \left[ \binom{1}{0} - \binom{0}{1} \right] = \frac{1}{\sqrt{2}} \left[ \binom{1}{-1} \right]
+\end{equation}
+\begin{equation}
+    \binom{1}{-1} \begin{pmatrix} 
+  0 & 1\\ 
+  1 & 0
+\end{pmatrix} = \binom{-1}{1} \rightarrow S_x\psi = \frac{\hbar}{2} \left( \frac{1}{\sqrt{2}} \right)  \binom{-1}{1} = -\frac{\hbar}{2} \left( \frac{1}{\sqrt{2}} \right) \binom{-1}{1} = -\frac{\hbar}{2}\psi
+\end{equation}
+\begin{equation}
+    |\uparrow \rangle = \binom{1}{0}~~~~|\downarrow \rangle = \binom{0}{1}
+\end{equation}
+% section spin_matrices (end)
+
+\section{For What $v$ Will a Car Stay on a Hill?} % (fold)
+\label{sec:for_what_}
+\begin{equation}
+    F_c = F_g ~~~~ \frac{mv^2}{r}=mg
+\end{equation}
+% section for_what_ (end)
+
+\section{B\"ohr Model} % (fold)
+\label{sec:bohr_model}
+\begin{enumerate}
+    \item $e^-$ have classical motions
+    \item $\Delta E = hf$
+    \item Angular momentum quantized   $L=n\hbar$
+    \item $E_n = -\frac{Z^2E_0}{n^2}~~~~~ E_n \propto \mu$
+    \item $\Delta E = E_0 \left( \frac{1}{n_f^2}  -\frac{1}{n_i^2} \right) \rightarrow \frac{1}{\lambda} = R_y \left( \frac{1}{n_f^2} - \frac{1}{n_i^2} \right) ~, R_y=1\times10^7$ m$^{-1}$
+    \item Positronium: $\mu = \frac{m_e}{2} \rightarrow E_p = \frac{E_0}{2n^2}$
+\end{enumerate}
+% section bohr_model (end)
+
+\section{Fluids} % (fold)
+\label{sec:fluids}
+Equilibrium when $F_A = F_B$, where $F=mg$. 
+% section fluids (end)
+
+\section{Gauss' with non-uniform} % (fold)
+\label{sec:gauss_with_non_uniform}
+Must integrate. 
+\begin{equation}
+    \rho = Ar^2 ~~~ dV = 4\pi r^2dr ~~ \int E \cdot dA = \frac{Q_{\textrm{in}}}{\epsilon_0} = \frac{\int \rho dV}{\epsilon_0} = \frac{\int Ar^2 4\ pi r^2 dr}{\epsilon_0} = \frac{A 4\pi r^5}{5 \epsilon_0}
+\end{equation}
+% section gauss_with_non_uniform (end)
+
+\section{Capacitors} % (fold)
+\label{sec:capacitors}
+In series, $Q_1 = Q_2$ while in parallel, $V_1 = V_2$
+% section capacitors (end)
+
+\section{Diffraction Limit} % (fold)
+\label{sec:diffraction_limit}
+\begin{equation}
+    \sin \theta = \frac{1.22 \lambda}{d}~~~d=\textrm{diameter of lens}
+\end{equation}
+% section diffraction_limit (end)
+
+\section{Normal Modes} % (fold)
+\label{sec:normal_modes}
+\begin{enumerate}
+    \item Highest normal mode frequency when out of phase
+    \item Use limits if possible, with $M \rightarrow \infty$
+    \item \# frequency = \# masses
+    \item If odd \# masses, one $\omega$ will be $\omega_0$, others above and below
+\end{enumerate}
+For two hanging masses connected by a spring, 
+\begin{equation}
+    \textrm{In phase: }\omega = \sqrt{\frac{g}{l}}~~ \textrm{spring's }\Delta x = 0
+\end{equation}
+\begin{equation}
+    \textrm{Out of phase: } \omega = \sqrt{ \frac{2k}{m} + \frac{g}{l}}
+\end{equation}
+For three masses connected by two springs with the mass in the middle larger than the equal masses on the sides:
+\begin{equation}
+    \omega = \sqrt{ \frac{k}{m}}~, \textrm{ like attached to a wall}
+\end{equation}
+Side masses are in phase, middle mass is out of phase, $\omega = \sqrt{\frac{2k}{m}}$.\\
+
+For 2 masses connected by 3 springs with the side masses connected to a wall:
+\begin{equation}
+    \textrm{In phase: } \Delta x_1 = \Delta x_2 \textrm{ and }k' \textrm{ isn't expanded }, \omega = \sqrt{\frac{k}{m}}
+\end{equation}
+\begin{equation}
+    \textrm{Out of phase: } \Delta x_1 = -\Delta x_2 \textrm{ and center of mass } k' \textrm{ stays in place }~ \omega = \sqrt{\frac{k + 2k'}{m}}
+\end{equation}
+% section normal_modes (end)
+
+\section{Radiation in Atoms} % (fold)
+\label{sec:radiation_in_atoms}
+$n_f=$\begin{tabular}{l l l l}
+K & L & M & N\\
+1 & 2 & 3 & 4
+\end{tabular}
+series specify the final states coming from infinity, $n_i = \infty$ when being bombarded. 
+% section radiation_in_atoms (end)
+
+\section{Ionization Energy} % (fold)
+\label{sec:ionization_energy}
+$E$ required to liberate the outermost $e^-$. On the periodic table, increases in the $+y,+x$ direction.
+% section ionization_energy (end)
+
+\section{Binding Energy} % (fold)
+\label{sec:binding_energy}
+How tightly bound nucleons are
+\begin{enumerate}
+    \item  Peak at Fe/N $\rightarrow$ elements $Z<Z_{\textrm{FE}}$ undergo Fusion, $Z>Z_{\textrm{Fe}} $ undergo fission to release energy
+    \item When BE/nucleon increases, in reaction, energy is released
+    \item The mass of a nucleus is always less than the $\sum $ particle's masses
+    \item ``More tightly bound'' = less mass/nucleon, more BE/nucleon
+    \item Created by the strong force
+    \item Energy given off in fusion/fission is the $\Delta E$ between fuel and products
+\end{enumerate}
+% section binding_energy (end)
+
+\section{Hierarchy of Forces} % (fold)
+\label{sec:heirarchy_of_forces}
+\begin{enumerate}
+    \item Strong
+    \item E\&M
+    \item Weak
+    \item Gravity
+\end{enumerate}
+% section heirarchy_of_forces (end)
+
+\section{Pair Production} % (fold)
+\label{sec:pair_production}
+\begin{enumerate}
+    \item Creation of elementary particle and anti-particle from photon
+    \item Cannot occur in free space, usually near a nucleus or other photon
+    \item For $e^-$, the photon $E$ must exceed twice the rest energy of the $e^-$, $\approx $ 1 MeV
+    \item If 2 photons, 500 keV
+    \item Dominates at high E
+\end{enumerate}
+% section pair_production (end)
+
+\section{Spectral Lines} % (fold)
+\label{sec:spectral_lines}
+\begin{enumerate}
+    \item Less dense gas $\rightarrow$ more sharp and precise lines - don't lose $E$ due to collisions
+    \item Sodium doublet - created by spin/orbit coupling, more pronounced in an external $B$ 
+\end{enumerate}
+% section spectral_lines (end)
+
+\section{Photon Interactions with Matter} % (fold)
+\label{sec:photon_interactions_with_matter}
+\begin{enumerate}
+    \item Compton Effect: low $E$, elastic scattering $< 10^6$ MeV 
+    \item Photoelectric Effect: mid $E$, $ < 10^7$ MeV
+    \item Pair Production: high $E$, $ >10^6$ MeV
+\end{enumerate}
+% section photon_interactions_with_matter (end)
+
+\section{Neutron} % (fold)
+\label{sec:neutron}
+A fermion with:
+\begin{equation}
+    ^1_0n
+\end{equation}
+\begin{equation}
+    \textrm{Decay: }^1_0n \rightarrow ^1_1p^+ + ^1_{-1}e + \bar{\nu}
+\end{equation}
+\begin{equation}
+    \textrm{Capture: }^1_1p^+ + ^1_{-1}e \rightarrow ^1_0n + \bar{\nu}
+\end{equation}
+% section neutron (end)
+
+\section{Deuteron} % (fold)
+\label{sec:deuteron}
+``Heavy Hydrogen'', $^2_1H$. Also, a boson.
+% section deuteron (end)
+
+\section{Protium} % (fold)
+\label{sec:protium}
+A proton, $^1_1H$, Hydrogen nucleus, a fermion
+% section protium (end)
+
+\end{document}

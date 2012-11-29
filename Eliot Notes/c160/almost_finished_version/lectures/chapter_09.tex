@@ -1,0 +1,86 @@
+
+\chapter{Star Formation}
+
+\begin{center}
+\textbf{\begin{huge} September 22, 2011\end{huge}}
+\end{center}
+
+\section{Star Formation}
+
+Gas in galaxies comes in multiple "phases". It's still a gas, just a broad range with particular characteristics. They have different $\rho$ \& $T$ with comparable $P$. Hot, low $\rho$ gas is mostly in the form of hot ISM. Stars form from \textbf{cold molecular clouds}. What are the conditions for a cold molecular gas cloud to collapse? 
+
+\begin{align}
+|U| &\geq |K|\\
+\frac{GM}{R^2} &\gtrsim \Bigl\lvert \frac{dP}{dr} \Bigl\lvert\\
+\text{self gravity of cloud} &\gtrsim \frac{3}{2}NkT\\
+&\approx \frac{M}{m_p}kT
+\end{align}
+
+If $M \gtrsim \frac{RkT}{Gm_p}$, then it will collapse. 
+
+\begin{align}
+\rho &\approx \frac{M}{R^3}\\
+R &\sim \lp \frac{M}{\rho} \rp^{1/3}\\
+M^{2/3} &\gtrsim \frac{kT}{Gm_p \rho^{1/3}}\\
+\Aboxed{M_J &\geq \lp \frac{k}{Gm_p} \rp^{3/2} \frac{T^{3/2}}{\sqrt{\rho}}}~,M_J = {\text{ Jeans Mass}}\\
+\frac{GM^2}{R} &\geq \underbrace{\frac{MkT}{m_p}}_{c_s^2} \\
+\text{if } \frac{1}{\sqrt{G\rho}} &\leq \frac{R}{c_s}~,\text{ then if $t_{FF} < t_{sound}$, and it will collapse}
+\end{align}
+
+Stars are more prone to collapse if they have lower $T$ and higher $\rho$. Stars form from cold molecular clouds because they are the most unstable.
+
+\begin{align}
+M_J &\approx 50 M_\odot \frac{\lp \frac{T}{10K}\rp^{3/2}}{\lp \frac{\text{n}}{100} \text{ cm}^{-3} \rp^{1/2}}\\
+R_J &= \lp \frac{M_J}{\rho} \rp^{1/3}\\
+&\approx 3 \text{ pc} \frac{(\frac{T}{10K})^{1/2}}{(\frac{\text{n}}{100}\text{ cm}^{-3})^{1/2}}
+\end{align}
+
+If a star has $M>M_J$ and $R<R_J$, then it will collapse. The collapse time is $\sim \frac{1}{\sqrt{G\rho}} \sim 10\text{ Myr} \lp \frac{n}{100}\text{ cm}^{-3} \rp^{-1/2}$. Why don't we have tons of $50M_\odot$ stars? In reality, most of them are roughly $0.3M_\odot$. 
+
+\begin{align}
+\rho a &= -\frac{dP}{dr}- \rho \frac{GM}{R^2}\\
+&\sim \frac{P}{R} - \frac{GM^2}{R^5}\\
+&\pt \frac{nT}{R}\\
+&\pt \frac{MT}{R^4}
+\end{align}
+
+\section{The Collapse Process}
+
+Initially, the gas cools rapidly and since photons easily escape cloud, $T \sim$ roughly constant, isothermal at around $10K$. $P \pt \frac{M}{R^4}$, \& gravity $\pt \frac{M^2}{R^5}$. As radius decreases, gravity dominates. There is clearly no halt to the collapse while $M=$ constant. What's happening to $M_J \pt \frac{T^{3/2}}{\sqrt{\rho}}$? So during this process, $M_J \downarrow, \rho \uparrow$. Little regions within the cloud collapse on themselves, so what determines the mass of the small cloudlets? \\
+
+\noindent Now the cloudlets are sufficiently dense so that energy can't escape. The cloud becomes adiabatic, $\kappa \uparrow, l \downarrow, T \uparrow$. The random walk time of the photons is now longer than $t_{ff}$; for adiabatic:
+
+\begin{align}
+P &\pt \rho^\gamma\\
+\rho &\pt \rho^\gamma\\
+T &\pt \rho^{\gamma-1} = \rho^{2/3}\\
+T &\pt \frac{M^{2/3}}{R^2}
+\end{align}
+
+Now, plug in the above expression for $T$ into $P \pt \frac{MT}{R^4}$ to get $P \pt \frac{M^{5/3}}{R^6}$. Yay! No more runaway collapse. Now, $\frac{dP}{dr} \sim -g\rho$ and we're back in HE. $M_J \uparrow, T\pt \rho^{2/3}, M_J \pt \rho^{1/2}$, which increases as the cloud collapses.\\
+
+The cloud is now in HE, but $R \gg R_\odot$. There exists a luminosity of the cloud from simply losing $E$. This contraction will (eventually) lead to fusion.
+
+\begin{align}
+E_{TOT} = \frac{U}{2}\\
+L = -\frac{dE}{dt} = -\frac{1}{2} \frac{dU}{dt}\\
+U = -\frac{GM^2}{R}\\
+L = \frac{GM^2}{2R^2} \Bigl\lvert \frac{dR}{dt} \Bigl\lvert
+\end{align}
+
+If the cloud is radiative, $L \pt M^3$. If the cloud is convective, $L \simeq 0.2 L_\odot \lp \frac{M}{M_\odot}\rp^{4/7} \lp \frac{R}{R_\odot}\rp^2$. 
+
+\begin{align}
+L_{conv} = \frac{1}{2}\frac{GM^2}{R^2} \Bigl\lvert \frac{dR}{dt} \Bigl\lvert\\
+\Aboxed{\frac{R}{R_\odot} &\approx \lp \frac{M}{M_\odot}\rp^{1/2} \lp \frac{t}{2 \times 10^7 \text{ years}} \rp^{-1/3}}\\
+R &\pt t^{-1/3}
+\end{align}
+
+Plug in the above expression for $\frac{R}{R_\odot}$ into $L \simeq 0.2 L_\odot \lp \frac{M}{M_\odot}\rp^{4/7} \lp \frac{R}{R_\odot}\rp^2$ to get:
+
+\begin{align}
+L&\approx 0.2 L_\odot \lp \frac{M}{M_\odot}\rp^{11/7} \lp \frac{t}{2 \times 10^7 \text{ years}}\rp^{-2/3}\\
+L &\pt t^{-2/3}
+\end{align}
+
+As the cloud contracts, $L \downarrow, R \downarrow$. For a fully convective cloud, $L \uparrow$ if $R \uparrow$. They all have similar $T_{eff}$. $L \sim 4 \pi R^2 T_{eff}^4$, $L \pt R^2$, which is what we have.

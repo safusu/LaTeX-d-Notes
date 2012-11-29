@@ -1,0 +1,156 @@
+\chapter{He Fusion}
+
+\begin{center}
+\textbf{\begin{huge} November 08, 2011\end{huge}}
+\end{center}
+
+\section{He Fusion}
+
+After stars fuse on the MS, stars finish fusing H and He fusion begins, shell fusion starts, outer parts are expanded and become fully convective. Once the star hits the Hayashi Line, it goes up the giant branch because the energy can be carried out by convection. Eventually the contraction of the core stops, either through deg pressure dominating or fusion of higher mass elements.\\
+He fusion is special because the natural fusion processes you might think of are:
+
+\begin{align}
+\textrm{$^{4}$He}+\textrm{$^{4}$He} &\ra \textrm{$^{8}$Be}~,\lambda = 3 \times 10^{-16} \textrm{ s}~,\textrm{ unstable!}\\
+\textrm{$^{4}$He} + \textrm{p} &\ra \textrm{stuff}\\
+\textrm{$^{8}$Be} &\ra \textrm{$^{4}$He} + \textrm{$^{4}$He}
+\end{align}
+
+This should look like the balance between ionization and recombination.\\
+
+Let's look closely at the first step, $\textrm{$^{4}$He}+\textrm{$^{4}$He} \ra \textrm{$^{8}$Be}$. This is an endothermic reaction because it requires energy, about 92 keV. It's a little strange because it doesn't directly release energy. It just means that Be is a little less bound than 2 He nuclei. What does it take to get this reaction going? First guess might be that $E_{thm} \geq$ 92 keV. Another guess involves:
+
+\begin{align}
+E_0 &= \lp \frac{E_G (kT)^2}{4} \rp^{1/3}~,
+\end{align}
+
+where $E_0$ is the energy of particles on the MB tail that produce the most fusion reactions.
+
+\begin{align}
+E_G &\simeq 1 \frac{m_r}{m_p}Z_1^2Z_2^2\textrm{ MeV}\\
+E_0& \geq 92 \textrm{ keV}\\
+E_0 &= 84 T_8^{2/3}\textrm{ keV}
+\end{align}
+
+For $T \gtrsim 10^8$ K, $\textrm{$^{4}$He}+\textrm{$^{4}$He} \ra \textrm{$^{8}$Be}$ can happen, but it immediately decays. This is an example where we can calculate the properties of fusion in a star with thermodynamic equilibrium. We can approach TE when:
+
+\begin{align}
+\textrm{\# decays of Be}& \ra \textrm{\# of fusion}\\
+2\mu(^4\textrm{He}) &= \mu(^8\textrm{Be})~.
+\end{align}
+
+There is a net amount of Be in the star even though it's very unstable. Now that there's a finite amount of Be...
+
+\begin{align}
+\textrm{$^{8}$Be} + \textrm{$^{4}$He} &\ra \textrm{$^{12}$C}\\
+\textrm{$^{12}$C}+ \textrm{$^{4}$He}&\ra \textrm{$^{16}$O}
+\end{align}
+
+Recall, He fusion involves fusion to C/O so it makes sense. Line 10 gives off an energy of about 7.367 MeV. Imagine a C nucleus has a bunch of energy levels. Line 10 was guessed to be a resonant reaction (thanks, Hoyle), which means that the energy of $\textrm{$^{8}$Be} + \textrm{$^{4}$He}$ combine to be almost exactly the energy of one of the nuclear excited states of C (7.65 MeV). Thus, this reaction is \textit{preferential}. You actually need:
+
+\begin{align}
+E_0 &\gtrsim 7.65 - 7.37\textrm{ MeV in order for this reaction to actually go}\\
+&\gtrsim 290 \textrm{ keV}\\
+&\gtrsim 150 T_8^{2/3} \textrm{ keV}~, T \gtrsim \textrm{ few $10^8$ K}
+\end{align}
+
+This reaction actually wins out over fusion to the ground state. We just used the (or rather, Hoyle did) anthropic principle in that since we see so much C and O, it must be happening more in stars than we can explain. So what it's telling us is that over a few $10^8$ K, we can get Be fusion and a little more T, we can get to an excited state of C. Unfortunately, that excited state is unstable. Most of the time,
+
+\begin{align}
+\textrm{$^{12}$C$^*$} \ra \textrm{$^{4}$He}+ \textrm{$^{8}$Be}
+\end{align}
+
+But every once in a while, C doesn't decay by spitting a He nucleus out, it decays by nuclei rearranging itself and spitting out a photon,
+
+\begin{align}
+^{12}\textrm{C}^* \ra \textrm{$^{12}$C}+ \gamma~, \gamma = 7.65 \textrm{ MeV.}
+\end{align}
+
+The half life for the above reaction is about $1.8 \times 10^{-13}$ sec and this is where we get most of our C that we know and love. Now, how do I describe this step quantitatively? 
+
+\begin{align}
+\mu(\textrm{$^{4}$He}) + \mu(\textrm{$^{8}$Be})=\mu(\textrm{$^{12}$C$^*$} )
+\end{align}
+
+You have to take into account $\mu$ instead of $r=n_1n_2\langle \sigma v\rangle $ because the latter doesn't take into account most of the C$^*$ decaying back into He and Be. Now, we have:
+
+\begin{align}
+\textrm{$^{4}$He} + \textrm{$^{4}$He} &\leftrightarrow \textrm{$^{8}$Be} \\
+\textrm{$^{8}$Be}  + \textrm{$^{4}$He} &\leftrightarrow \textrm{$^{12}$C$^*$}\\
+2 \mu(^4\textrm{He}) &= \mu(^8\textrm{Be})\\
+\mu(^8\textrm{He}) + \mu(^4\textrm{He}) &= \mu(^{12}\textrm{C}^*)\\
+\Aboxed{3\mu(^4\textrm{He}) &= \mu(^{12}\textrm{C}^*)}\\
+^4\textrm{He} + \textrm{$^{4}$He} + \textrm{$^{4}$He} &\leftrightarrow \textrm{$^{12}$C$^*$}~,\textrm{ this is called the ``triple $\alpha$" process.}
+\end{align}
+
+\begin{align}
+m_{\textrm{excited C}}c^2 &= 3m_{\textrm{He}}c^2 + \Delta E~, \Delta E = 379 \textrm{ keV}
+\end{align}
+
+$\Delta E$ is the combined energy needed to push each individual reaction, basically. The energy of the photon is what supports the star during He fusion.\\
+
+\begin{align}
+3\mu(^4\textrm{He}) &= \mu(^{12}\textrm{C}^*)\\
+-kT\ln \lp \frac{g_4 n_{Q,4}}{n_4} \rp^3 &= \Delta E - kT \ln \lp \frac{g_{12}n_{Q,12}}{n_{12^*}} \rp~,\textrm{ 4 corresponds to He, 12 corresponds to C}\\
+\frac{g_4^3 n_{Q,4}^3 n_{12^*}}{n_4^3 g_{12} n_{Q,12}} &= e^{-\Delta E /kT}~,g_4 = g_{12} = 1\\
+n_Q &= \lp \frac{2 \pi mkT}{h^2} \rp^{3/2}\\
+n_{Q,12} &= 3^{3/2}n_{Q,4}\\
+\Aboxed{\frac{n_{12^*}}{n_4^3} &= 3^{3/2} \lp \frac{h^2}{8 \pi m_p kT} \rp^3 e^{-\Delta E/kT}}~, m_{He} = 4m_p
+\end{align}
+
+But why are the degeneracies 1? Eliot doesn't know :( When we had H recombination, at high T, ionization won and things were broken apart. Conversely, at low T, things were neutral. Here, at high T, the reactions favor $^{12}$C$^*$ and at low T, $^4$He is favored. The big difference is that it requires energy to fuse the latter. To make excited C \textit{requires} energy. In H fusion, it was $-\chi$; here it's $+\Delta E$. 
+
+\begin{align}
+n_4 &= \frac{\rho}{4m_p}~,Y = \textrm{ overall He mass fraction}\\
+n_{12^*} &=\frac{Y^3 \rho^3}{(4m_p)^3}3^{3/2} \lp \frac{h^2}{8 \pi m_p kT} \rp^3 e^{-44/T_8}~,\frac{\Delta E}{kT} = \frac{44}{T_8}
+\end{align}
+
+Recall $\lambda$ of $n_{12^*}$ is $1.8 \times 10^{-13}$ sec. How do we represent this quantitatively? 
+
+\begin{align}
+\frac{dn_{12}}{dt} &= \frac{n_{12^*}}{\lambda}
+\end{align}
+
+This is the \# of $^{12}$C in the ground state created per unit time per unit volume. The energy generated by unit fusion is:
+
+\begin{align}
+\underbrace{\epsilon}_{\textrm{ergs/s/g}} &= \frac{\frac{dn_{12}}{dt} \cdot \underbrace{E}_{7.65\textrm{ MeV}}}{\rho}\\
+\Aboxed{\epsilon &= 5.4 \times 10^{11} \frac{\rho^2 Y^3}{T_8^3} e^{-44/T_8}\textrm{ ergs/s/g}}
+\end{align}
+
+This looks a lot more like TE because it is such an argument that gives us the rate at which C is created. 
+
+\begin{align}
+\epsilon \pt \rho^\alpha T^\beta~,\alpha =2
+\end{align}
+
+$\alpha=2$ because we have 3 things turning into 1 thing, whereas before we had 2 things turn into 1 thing. This is effectively a 3-body process and thus the rate of reactions goes something like $\frac{\rho^3}{\rho} = \rho^2$.
+
+\begin{align}
+\epsilon \pt \rho^\alpha T^\beta~,\beta = -3 +\frac{44}{T_8}
+\end{align}
+
+The T sensitivity isn't sensitive to tunneling anymore, it's sensitive to TE.
+
+\begin{align}
+\textrm{$^{4}$He} + \textrm{$^{4}$He} + \textrm{$^{4}$He} &\ra \textrm{$^{12}$C}\\
+\textrm{$^{12}$C}+ \textrm{$^{4}$He}& \ra \textrm{$^{16}$O}\\
+T\sim 10^8\textrm{ K}
+\end{align}
+
+Bottom line is you get C and O in vaguely similar amounts.
+
+\section{Back to the Bigger Picture}
+Let's put this in the context of stellar evolution. Now we're at the He core fusing with a H shell fusing. This is a long-lived phase in the life of a star. This is analogous to the H-MS, now called the Horizontal Branch (HB). What happens now? This is finished when He has been converted into C/O or for higher M stars, Mg, Ne, etc. Imagine a C/O core, a He shell, and an even bigger H shell. The core contracts and you get He fusion in the shell, generating more and more E, going into expanding layers of the star, resulting in a giant. Once it's expanded to reach the Hayashi Line, the outer part becomes fully convective again and it goes up the HL again. This is the Asymptotic Giant Branch (ASB), similar in observational appearance to the RGB. In detail, there are small differences due to composition changes, but for the most part they behave the same.\\
+
+There's 2 possibilities now...
+\begin{list}{$^\circ$}{}
+\item Star supported by $e^-$ degeneracy pressure
+\item C/O fusion starts
+\end{list}
+
+What's special for lower mass stars ($M_i \lesssim 8\ms$) is that the core has a mass less than the Chandrasekhar mass so it automatically becomes supported by degeneracy pressure. It's important to note that most of the mass lost is on the RGB and AGB in very short-lived phases ($10^4 \sim 10^5$ years). There are 2 bits of physics to note:
+\begin{list}{$^\circ$}{}
+\item He shell fusion is unstable 
+\item Dust forms in the atmosphere of the star. The $L_* > L_{EDD,dust} = L_{dust}$.
+\end{list}
+Blowing mass out reveals a hot white dwarf and it \textit{looks} like it's getting hotter, but it's really not. These WDs that ionize shells of gas are named planetary nebula even though they have nothing to do with planets. Thank pre-HST astrophysicists. 

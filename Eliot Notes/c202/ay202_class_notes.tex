@@ -1,0 +1,58 @@
+\documentclass[letterpaper, 11pt]{report}
+\usepackage{amsmath, amsfonts, amssymb}
+\usepackage[colorlinks, urlcolor=blue, citecolor=blue, linkcolor=blue]{hyperref}
+\usepackage{appendix}
+\usepackage{fullpage}
+\usepackage{subfiles}
+
+% Template by Keaton J. Burns
+
+% Set vector style
+\newcommand{\V}[1]{\mathbf{#1}}
+
+% Set Fourier coefficient style
+\newcommand{\F}[1]{\hat{#1}}
+\newcommand{\WF}[1]{\widehat{#1}}
+
+% Set derivative style
+\newcommand{\deriv}[2]{\frac{d #1}{d #2}}
+\newcommand{\pderiv}[2]{\frac{\partial #1}{\partial #2}}
+
+\begin{document}
+
+\title{Astronomy 202: Astrophysical Gas Dynamics \\ \Large{University of California Berkeley, Fall 2011}}
+\author{Eliot Quataert\thanks{Transcribed by Keaton J. Burns}}
+\date{Updated \today}
+\maketitle
+\tableofcontents
+
+\chapter{Continuum vs.~particle treatments}
+%\subfile{}
+
+\chapter{Equations of gas dynamics}
+\subfile{subfiles/gas_equations}
+
+\chapter{Kinetic-theory origin of fluid equations}
+%\subfile{}
+
+\chapter{Astrophysical applications}
+%\subfile{}
+
+\chapter{The motion of charged particles in plasmas}
+%\subfile{}
+
+\chapter{Magnetohydrodynamics}
+%\subfile{}
+
+\chapter{Astrophysical MHD applications}
+%\subfile{}
+
+\appendix
+\chapter{Definitions of symbols}
+\subfile{subfiles/symbols.tex}
+
+\chapter{Lecture timetable}
+\subfile{subfiles/timetable.tex}
+
+\end{document}
+

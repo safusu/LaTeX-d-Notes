@@ -1,0 +1,160 @@
+\documentclass[10pt,preprint]{article}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{fullpage}
+
+\newcommand{\pt}{\propto}
+\newcommand{\rp}{\right)}
+\newcommand{\lp}{\left(}
+
+\begin{document}
+
+\begin{center}
+\textbf{\begin{huge} September 8, 2011\end{huge}}\\
+\begin{large}Jeren Suzuki\end{large}
+\end{center}
+
+\section{Picking Up Where We Left Off}
+\begin{align*}
+F &= -\frac{4}{3}\frac{caT^3}{\kappa \rho} \frac{dT}{dr} \leftarrow \text{ for radiative diffusion}\\
+&= -\frac{1}{3}lc \frac{dU}{dr}
+\end{align}
+
+\begin{align*}
+\frac{dT}{dr}\sim \frac{T}{R}\\
+kT \sim \frac{GM\mu m_p}{R}\\
+L \sim \chi M^3\\
+\sigma \sim \sigma_T\\
+\chi = \frac{a (\mu m_p)^4 cG^4 \mu_e m_p}{\sigma_T k^4}\\
+L &\sim 10^{35} \lp \frac{M}{M_\odot} \rp^3\text{ ergs s}^{-1}\\
+&\sim L_\odot ~;e^- \text{ conduction $L \ll L_\odot$, so photons are dominating energy transport
+\end{align}
+
+$L$ is strictly \textit{NOT} dependent on fusion, it is more dependent on $\frac{dU}{dT}$ of the photons. Fusion creates $E$ and the photons but doesn't determine the rate of energy leaving.\\
+$\chi$ is constant, but dependent on the composition of the star. 
+
+\begin{align*}
+L \pt \mu^4 \mu_e M^3\\
+H \rightarrow HE\\
+\mu \rightarrow \mu \uparrow\\
+L \rightarrow L \uparrow
+\end{align}
+
+$L$ was lower in the past. $L$ when the Earth forced was only 20\% of the current L_\odot. This brings about the problem that the Earth was supposedly a ball of ice during it's evolution. \\
+
+\begin{align*}
+\frac{3}{2}nkT > aT^4\\
+F &= -\frac{1}{3}lv \frac{dU}{dx}\\
+&= -\chi \frac{dT}{dx},\chi = \frac{1}{3}lv \frac{dU}{dT}\\
+\frac{F_{rad}}{F_{e^-}} &= \frac{-\chi_{rad}}{-\chi_{e^-}}, \frac{dT}{dx}\text{ is the same for both}\\
+&\sim \frac{l_\gamma}{l_{e^-} }\frac{ c}{v_{e^-} }\frac{aT^4}{\frac{3}{2}nkT}
+\end{align}
+
+$ \frac{l_\gamma}{l_{e^-} } \ggg 1$, $\frac{ c}{v_{e^-}} \gg 1$, and $\frac{aT^4}{\frac{3}{2}nkT} \ll 1$.\\
+
+\begin{align*}
+F = -\frac{4}{3}\frac{caT^4}{n \sigma} \frac{dT}{dr}
+\end{align}
+
+We want to find the time for thermal energy to leak out by photon diffusion.
+
+\begin{align*}
+t_{KH} &= \frac{E}{L}\\
+L &\sim 4 \pi R^2 \frac{4}{3}aT^3 \frac{1}{n\sigma}\frac{T}{R}\\
+&= \frac{\frac{3}{2}nkT \cdot \dfrac{4}{3}\pi R^3}{ \lp \dfrac{4 \cdot 16 \pi aT^4R}{R3n\sigma} \rp}\\
+&=\frac{\frac{3}{2}nkTR^2n\sigma}{4aT^4c}\\
+&\sim \frac{nkT}{aT^4}\frac{R^2}{lc}\\
+&\sim \frac{nkT}{aT^4}t_{RW}~,\text{ where $t_{RW}=\frac{R^2}{lc}=$ random walk time}
+\end{align}
+
+\begin{align*}
+<|D|^2>&=Nl^2~,\text{ where $N = $ number of steps}\\
+<|D|^2>^{1/2} &= \text{ RMS Distance = typical distance a photon will find itself after $N$ scatterings}\\
+&= \sqrt{N}l
+\end{align}
+
+What is $N$ so that the photon leaves the star?
+
+\begin{align*}
+<|D|^2>^{1/2} &=R\\
+N &\sim \lp \frac{R}{l} \rp^2\\
+\frac{R}{l} \sim 10^{11},N\sim 10^{22}
+\end{align}
+
+How long does it take to get out? 
+
+\begin{align*}
+Nt_{step} = t_{esc} = N\frac{l}{c} \sim \lp \frac{R}{l} \rp^2 \cdot \frac{l}{c} \sim \frac{R^2}{lc}\\
+\sim 10^4 \text{ yeards for our sun}
+\end{align}
+
+If photons didn't bounce around, it would escape in 2 seconds. ($\nu_e$ can get out in about 2 seconds, $l_\nu$ must be greater than $R_\odot$) Also, the time it takes for heat to diffuse throughout a room is: $\frac{R^2}{lv_{thm}}$.
+
+\begin{align*}
+F &= -\frac{4}{3}\frac{caT^4}{n \sigma} \frac{dT}{dr}\\
+&= -lc \frac{d}{dr}\frac{1}{3}aT^4\\
+F_r &= -lc\frac{d}{dr}P_{rad}~,\text{ we must be careful, $F$ and $L$ depend on $r$}\\
+\frac{L_r}{4\pi r^2} &= -lc \frac{d}{dr}P_{rad}\\
+-\frac{L_r}{4\pi lc r^2} &= \frac{d}{dr}P_{rad}\\
+-\frac{L_r \kappa \rho}{4\pi c r^2} &= \frac{d}{dr}P_{rad}\\
+\end{align}
+
+We're interested in how $P_{rad}$ changes with $P_{tot}$. 
+
+\begin{align*}
+\frac{dP_{rad}}{dP} = \frac{L_r \kappa}{4 \pi G M_r c} \equiv \frac{L_r}{L_{EDD}}
+\end{align}
+
+Roughly, if $P_{rad} \sim P_{tot}$, then $L_r \sim L_{EDD}$.
+
+\subsection{Eddington Luminosity}
+
+\begin{list}{}{}
+\item $F_g = -\frac{GMm}{r^2}$
+\item $F_{rad} = \frac{dp}{dt}$
+\item $p_{proton} = \frac{E}{c} = \frac{h \nu}{c} = \frac{h}{\lambda}$
+\end{list}
+
+What is the total $p$ per unit time produced by the star? $\sum\limits{_i^\infty} p_i $ is too hard...
+
+\begin{align*}
+p_{photon} = \frac{E}{c} = \frac{L}{c}\\
+F_{Rad} = \frac{dp}{dt} = \frac{L}{c 4\pi r^2} \sigma
+\end{align}
+
+The Eddington Luminosity is where the radiation force equals the forge of gravity. The Eddington "Limit" is:
+
+\begin{align*}
+L_{EDD} = \frac{4 \pi G Mc}{\sigma /m} = \frac{4 \pi G Mc}{\kappa}
+\end{align}
+
+If $L > L_{EDD}$, $F_{rad} > F_{grav}$, and material is "blown" out. 
+
+\subsection{Fully Ionized H}
+
+\begin{list}{}{}
+\item $L_{EDD} = \frac{4 \pi GMc}{\kappa}$
+\item $\kappa = \frac{\sigma_T}{m}$
+\item $l = \frac{1}{n \sigma} = \frac{1}{n_e \sigma_T} = \frac{1}{\kappa \sigma}$
+\item For fully ionized $H$, $\mu_e =1$
+\item since photons are only interacting with $e^-$ and not $p$, $\mu = 1 = \mu_e$
+\end{list}
+
+\begin{align*}
+\kappa &= \frac{\sigma_T}{m}\\
+&= 0.4\text{ cm}^2\text{ g}^{-1}
+\end{align}
+
+\begin{align*}
+L_{EDD} = 1.3 \times 10^{38} \lp \frac{M}{M_\odot} \rp \text{ ergs s}^{-1}
+\end{align}
+
+\begin{list}{}{}
+\item If $L \sim L_{EDD}$, $F_{rad} \sim F_{grav}$ which results in the radiation force not being important in the sun. It's dominated by gas pressure.
+\item As $M \uparrow, L_{EDD} \uparrow$ so higher $M$ means $P_{rad}$ becomes more important $\rightarrow$ it becomes the dominant force
+\end{list}
+
+\end{document}

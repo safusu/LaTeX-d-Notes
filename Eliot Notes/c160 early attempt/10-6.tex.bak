@@ -1,0 +1,109 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\author{Jeren}
+\title{10-6}
+\begin{document}
+So I was sick for a hella long time and now I'm getting back into the rhythm of things.\\
+\boxed{ \text{Readings: Phillips}~ 5.1, 2.1,2.2,5.4}
+\section{FUSION}
+\subsection{PP Chain}
+We're going into more detail on how to go from $4p \rightarrow ^4 He +$ energy, where energy is the KE of particles with a $l \ll R$. There are 2 key ways for the above reaction to occur... one is $p \rightarrow n$, such as beta decay ($n \rightarrow p + e^- + \overline{\nu_e}$). Anything that goes from $ p$ to $n$ has some relation to the weak interaction force. We want the ooposite too... where $p + p \rightarrow ^2H + e^+ + \nu_e$. where $^2H$ is Deuterium. 
+\begin{align}
+S \approx 3.78 \times 10^{-23}~\text{keV barn}
+\end{align}
+
+From now on, the "$\rightarrow$" will be the latter reaction. The pp chain consists of:
+
+\begin{align}
+p + p &\rightarrow ^2H + e^+ + \nu_e\\
+^2H + p &\rightarrow ^3He + \gamma\\
+^3He + ^3He &\rightarrow ^4He + 2p
+\end{align}
+
+Important to note here that the first two reactions must happen twice per 1 of the last one. Since there are no neutrinos, the last two reactions are based on the strong force. This entire cycle produces about 26.7 MeV, but a few \% comes out in the form of neutrinos. \\
+Let's find the ergs/s/gram.
+
+\begin{align}
+\epsilon \propto \rho T^{-2/3}e^{-3(E_g/4kT)^{1/3}}
+\end{align}
+
+Let's recall the $l$ of a reaction, which is $l=\frac{1}{n\sigma}$. $T \approx \frac{l}{v} = \frac{1}{n \sigma v}$. Therefore, the pp step has a $\sigma$ which is must smallerthan the other steps. It means almost all the time, most of the reactions in the sun are waiting around for the initial step to happen so that you get $^H$. The latter steps happen almost instantaneously! The time for the entire cycle (pp chain) is set by the $p + p \rightarrow ^2H + e^+ + \nu_e$. This means we can write:
+
+\begin{align}
+\epsilon (\text{energy of entire chain}) = r_{12} Q / \rho ~,\text{where}~ r_{12}= n_1n_2<\sigma v>\\
+\\
+p + p \rightarrow ... E_g = 1/2 ~\text{MeV}\\
+3 (E_g/4kT) = 15.7T_7^{-1/3}\\
+\epsilon_{pp}  \propto \rho T^{-2/3} e^{-15.7 T_7^{-1/3}}\\
+\epsilon_{pp}  \approx 5 \times 10^5 \frac{\rho X^2}{T_7^{2/3}}e^{-15.7 T_7^{-1/3}}~\text{ergs/s/g}\\
+\epsilon \propto \rho T^\beta~,\beta = -2/3 + 5.2T_7^{-1/3}
+\end{align}
+and in stars like our sun whee $T \sim 10^7$ K, $\beta = 4.5$ and $\epsilon \propto T^{4.5}$. Going to use this to estimate the central T of the sun. 
+
+\begin{align}
+L &= \int_0^M \epsilon dM_r \approx 0.1 \epsilon_c(r=0)M
+\end{align}
+
+use .1 because only 10\% of the mass of the sun contributes to L
+
+\begin{align}
+L &= 10^6 \frac{M}{T_7^{2/3}}e^{-15.7T_7^{-1/3}}
+\end{align}
+
+Solving for T, we get $T_c \approx 1.5 \times 10^7$K. Our $T_c$ is dependent only on the log of the uncertainty of how much of the sun is fusing. That's one way of going from 4 protons into a He...
+
+\subsection{CNO Cycle}
+
+\begin{align}
+^{12}C + p & \rightarrow ^{13}N + \gamma \\
+^{13} N & \rightarrow ^{13}C + e^+ + \nu_e\\
+^{13}C + p  & \rightarrow ^{14}N + \gamma\\
+^{14}N + p & \rightarrow ^{15}O + \gamma\\
+^{15}O & \rightarrow ^{15}N + e^+ + \nu_e\\
+^{15}N + p & \rightarrow ^{12}C + ^4He
+\end{align}
+
+Once again, reactions with $\nu_e$ are weak interactions and everything else are strong reactions. In this cycle, line 18 is the slowest step. The first beta decay has a $\lambda$ of 870 sec and the last beta decay has a $\lambda$ of 180 secs. These steps are weak, but still faster than the strong interaction steps. Let's look at how line 18 determines the rate of the CNO cycle. Both the pp chain and the CNO cycle are relevant for generating $ ^4p \rightarrow ^4He$. 
+
+\begin{align}
+^{14}N + p \rightarrow  ^{15}O + \gamma \\
+E_g = 45.7 ~\text{MeV}\\
+3 \left( \frac{E_g}{4kT}\right)^{1/3} \approx \frac{70.7}{T_7^{-1/3}}\\
+%\epsilon_{CNO} & \propto \rho T_{-2/3} S_{CNO} e^{-70.6 T_7^{-1/3}}\\
+%\epsilon_{pp}& \propto \rho T_{-2/3} S_{pp}e^{-15.7 T_7^{-1/3}}
+\end{align}
+
+$S_{CNO} \sim 10^{24} S_{pp}$, so even if the slowest step in the CNO cycle is a strong process, not a weak process, the extremes cancel each other out. 
+
+\begin{align}
+\epsilon &= r_{\text{slowest chain}} Q/\rho\\
+\epsilon_{CNO} &= 4.4 \times 10^{27} \frac{\rho XZ}{T_7^{2/3}} e^{-70.7 T_7 ^{-1/3}}~,\text{where}~ Z = ~\text{mass fraction of heavy elements}
+\end{align}
+
+Right at the beginning, stars couldn't use the CNO cycle, but later they are. \\
+
+\begin{align}
+\text{sun:} &\epsilon_{pp} \propto ^{4.5}\\
+\text{CNO:} &\beta = \frac{\delta \ln \epsilon}{\delta \ln T} = -2/3 + 23.6 T_7^{-1/3}~, \epsilon \propto T^\beta\\
+& \approx 23~ @~ 10^7 K\\
+& \approx 17~@~ 2.7 \times 10^7K\\
+& \propto T^{20}
+\end{align}
+
+At high T, CNO dominates. AT low T, pp dominates. Stars a little more massive that the sun are dominated by CNO, whereas stars a little less massive then than the sun are dominated by the CNO cycle. \\
+
+In the case of the sun, we have direct evidence to see the effects of fusion. How? Detection of neutrinos! Fusion is dominated in our sun by the pp chain and not the CNO cycle. We also see from neutrinos the approximate central T of the sun. \\
+
+The neutrino matter cross section is dependent on the energy. At the center of the sun, the neutrino $l$ is about $10^9~R_\odot$. They give us the best probe about the center of the sun. \\
+
+Ray Davis
+\begin{align}
+^{37}Cl + \nu_e \rightarrow ^{37}Ar + e^-
+\end{align}
+
+
+
+\end{document}

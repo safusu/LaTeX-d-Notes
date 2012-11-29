@@ -1,0 +1,82 @@
+
+\chapter{Convection}
+
+\begin{center}
+\textbf{\begin{huge} September 13, 2011\end{huge}}
+\end{center}
+
+\section{Convection}
+Second Law of Thermodynamics: $TdS = dE + PdV$, which isn't all that useful for stars, really.
+\begin{list}{}{}
+\item $U = \frac{E}{\mu}$: Energy per unit mass
+\item $s = \frac{S}{U}$: Entropy per unit mass
+\item $M =$ conserved, $l$ is small
+\item $\rho = \frac{M}{V}, V = \frac{M}{\rho} \rightarrow \boxed{dV = -d\rho \frac{M}{\rho^2}}$
+\item $\frac{TdS = dE + PdV}{\mu} = \boxed{ TdS = dU - \frac{P}{\rho^2}d\rho }$  : second law, for astrophysicists
+\end{list}
+
+\subsection{Review of the Adiabatic Process}
+
+\begin{align}
+\epsilon = E/\text{unit volume},\text{ NR}: P &= \frac{2}{3} \epsilon\\
+\text{R}: P &= \frac{1}{3} \epsilon\\
+U = \frac{\epsilon}{\rho} = \frac{P}{\rho} = \phi U~,\text{ where $\phi$ is either $1/3$ or $2/3$}\\
+dU = \frac{P}{\rho^2}d\rho = \phi U\frac{d\rho}{\rho}\\
+\frac{dU}{U} = \phi \frac{d\rho}{\rho}\\
+U \pt \rho^\phi~,\text{ for an adiabatic process}\\
+P \pt \rho U \pt \rho ^{\phi+1} \pt \rho^{\gamma}~,  \phi + 1  = \gamma =\text{ the adiabatic index}\\
+\end{align}
+
+\begin{align}
+\text{For a NR gas: } \phi = \frac{2}{3}, \gamma = \frac{5}{3}~,P\pt \rho^{5/3}, T \pt \rho^{2/3}\text{ for an adiabatic process}\\
+\text{For a R gas: } \phi = \frac{1}{3}, \gamma = \frac{4}{3}~,P\pt \rho^{4/3}, T \pt \rho^{1/3}\text{ for an adiabatic process}
+\end{align}
+
+\subsection{What is the Entropy of an Ideal Gas?}
+
+\begin{align}
+TdS &= dU - \frac{P}{\rho^2}d\rho\\
+\frac{TdS}{U} &= \frac{dU}{U} - (\gamma - 1)\frac{U\frac{d\rho}{\rho}}{U}\\
+U &=\frac{P}{\rho}\frac{1}{\gamma -1} = \frac{1}{\gamma - 1} \frac{kT}{m}\\
+\frac{m(\gamma -1)}{k}dS &= \frac{dU}{U} - (\gamma -1)\frac{d\rho}{\rho}\\
+\frac{m(\gamma - 1)}{k}s &= \ln U - (\gamma - 1)\ln \rho + c\\
+\Aboxed{s &= \frac{k}{m}\frac{1}{\gamma - 1} \ln \lp \frac{U}{\rho^{\gamma - 1}} \rp  +c}\\	
+s &= \frac{k}{m} \frac{1}{\gamma -1} \ln \lp \frac{P}{\rho^\gamma} \rp + c
+\end{align}
+
+For an adiabatic process, $s=0 \rightarrow \frac{k}{m} \frac{1}{\gamma -1} \underbrace{\ln \lp \frac{P}{\rho^\gamma} \rp}_{P \pt \rho^\gamma} + c$
+
+\begin{align}
+\frac{Tds}{dt} &= \underbrace{\frac{dU}{dt}}_{\text{heating}} - \underbrace{\frac{P}{\rho^2}\frac{d\rho}{dt}}_{\text{cooling}}\\
+&= \underbrace{E_{heat}}_{\text{fusion}} - \underbrace{\frac{1}{\rho}(\overline{\nabla} \cdot \overline{F})}_{\text{photon convection}}
+\end{align}
+
+Say a blob is gaining/losing heat. $E_{fusion}$ is the heating per mass per time and $\overline{F}$ is the flux of $E$. In general:
+
+\begin{align}
+\text{total cooling} &= \int \overline{F}\cdot d\overline{A}\\
+&= \int \overline{\nabla} \cdot \overline{F} d\overline{V}\\
+\text{cooling per unit $V$} &= \overline{\nabla} \cdot \overline{F}\\
+\text{cooling per unit mass} &= \frac{1}{\rho}(\overline{\nabla} \cdot F)
+\end{align}
+
+If a blob moves up a distance $dr$, given $T(r), P(r),$ and $\rho(r)$, is the fluid buoyantly stable? i.e. $\rho_{blob} \gtrless \rho_\star$? We'll be making 2 assumptions which we will then confirm \textit{post-facto}. 
+\begin{list}{$\circ$}{}
+\item Motion is adiabatic $\leftarrow$ valid if the time scale to move ($\sim$ 1 month) is sufficiently smaller than the time to exchange heat with the surroundings ($\sim10^7$ years)
+\item $P_{blob} = P_\star$ at all times; in pressure equilibrium with surroundings
+\end{list}
+
+The time scale to establish HE: $\sim\frac{1}{\sqrt{G\rho}} \sim 1 $ hr $\ll$ time to move $dr$, which is about a month. If it's adiabatic, $s_{blob} = s \ne s_\star$ in general, where $s_{blob}$ is the blob at the new position, $s$ is the initial entropy, and $s_\star$ is the background entropy of the star at the new position.\\
+
+\begin{center}
+\begin{tabular}{c|c}
+\hline
+$\dfrac{ds}{dr} < 0$ & $\dfrac{ds}{dr} > 0$\\ \hline
+$s>s_\star$ & $s < s_\star$\\ \hline
+$s_{blob} > s_\star$ & $s_{blob}< s_\star$\\ \hline
+$P_{blob} = P_\star$ & $P_{blob} = P_\star$\\ \hline
+$\rho_{blob} < \rho_\star$ & $\rho_{blob} > \rho_\star$ \\ \hline
+buoyancy unstable, rises & sinks back down (stable)\\
+\hline
+\end{tabular}
+\end{center}

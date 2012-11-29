@@ -1,0 +1,81 @@
+\chapter{End With a ``Bang"}
+
+\begin{center}
+\textbf{\begin{huge} December 1, 2011\end{huge}}
+\end{center}
+
+\section{Rotation and Accretion}
+So far we've focused on fusion and gravity (KH contraction) as energy sources. However, most of the way we detect neutron stars and black holes (and a little bit, white dwarf stars) is through rotation or accretion. 
+
+For isolated NSs, the primary detection method is through rotation. If we have a NS in a binary, we can get mass transfer and accretion. 
+
+\subsection{Pulsars}
+\begin{align}
+E_{rot} &= \frac{1}{2} I\Omega^2~,\Omega = \frac{2 \pi}{P}\\
+E_{rot} &\sim 10^{48} \lp \frac{P}{100\textrm{ ms}} \rp^{-2} \textrm{ ergs}
+\end{align}
+But it's important to note that the dipole moment of the neutron star is usually not in the same direction as the axis of rotation. In addition, the scale height is approximately 1 cm and the space above it \textit{mostly} can be assumed to be a vacuum but for special reasons, isn't physically so in nature. 
+\begin{align}
+\frac{dE_{rot}}{dt} \sim \frac{B^2 R^6 \Omega^4}{6c^3} 
+\end{align}
+The neutron spins down via the outflow of EM energy.
+\begin{align}
+\frac{dE_{rot}}{dt} &\approx 10^{35} \textrm{ ergs} \lp \frac{B}{10^{12} \textrm{ G}} \rp^2 \lp \frac{P}{100\textrm{ ms}} \rp^{-4}\\
+ &= I\Omega \dot{\Omega}
+\end{align}
+The pulses come so regularly that we can detect changes in the period to 1 in a billion. With this, we can calculate the spin down time
+\begin{align}
+t_{\textrm{spindown}} &= \frac{E_{rot}}{\dot{E}_{rot}} \sim 3 \times 10^5 \textrm{ years} \lp \frac{B}{10^{12} \textrm{ G}} \rp^{-2} \lp \frac{P}{100\textrm{ ms}} \rp^{2}
+\end{align}
+Really old NS stars have stopped spinning! Also, it's important to note that $L_{radio} \lll \frac{dE_{rot}}{dt}$. Most of the energy is coming out in poynting flux, which we see when the outflow of a pulsar interacts with the surrounding material. (Crab Nebula) The relativistic bubble surrounding a pulsar contains all of the rotational energy lost thus far and interacts with the surrounding SNe remnant through synchrotron radiation. 
+
+\section{Detecting NSs \& BHs in Binary Systems}
+\subsection{7-series Intro to BHs}
+Setting $v_{esc} = c$, then the object has a radius $R_S = \frac{2GM}{c^2} = 3 \textrm{ km} \mfrac$. But what is the $R_S$, the radius of a black hole? It's less to do with opacity and scale height and more with causality and loss of information. Basically, anything inside the event horizon is detached from the rest of the universe. We predict GR failing inside the event horizon but for Astrophysicists, we don't really care about that since all of the information we see is outside the event horizon and we \textit{THINK} that material outside is not affected by the material inside. 
+
+\subsection{Finding BHs}
+\begin{list}{$\circ$}{}
+\item Dynamical - Detect mass unseen via its gravitational influence
+\item Radiation - Infer presence of a deep gravitational potential well via radiation emitted by gas falling into BH (accretion)
+\end{list}
+
+\subsection{Why is Accretion Such an Efficient Process?}
+Let's say we have a star with mass $M$ and radius $R$ orbited by a particle at radius $R_{out}$.
+\begin{align}
+l = Rv \pt \sqrt{R}~, v = \sqrt{\frac{GM}{R}}\\
+E_i = -\frac{GM\Delta m}{2R_{out}}
+\end{align}
+Near the surface of the orbited object, $E_f = -\frac{GM\Delta m}{2R}$ and $| \Delta E | = |E_f - E_i | = \frac{GM \Delta m}{2R}$. What happens to all this energy though? It's converted into heat and is radiated away. The luminosity is $\frac{\Delta E}{\Delta t} =  \frac{GM \Delta m / \Delta t}{2R}$. 
+\begin{align}
+\dot{M} &= \frac{\Delta m }{\Delta t}\\
+&= \textrm{ inflow/accretion rate}\\
+\Aboxed{L_{acc} &= \frac{GM \dot{M}}{2R}}
+\end{align}
+But why is it so efficient?
+\begin{align}
+L_{acc} &= \frac{G M \dot{M}}{2R} \frac{c^2}{c^2}\\
+\Aboxed{&= \eta \dot{M} c^2~, \eta = \textrm{ efficiency} = \frac{GM}{2Rc^2}}
+\end{align}
+\subsection{Fusion Efficiency} 
+\begin{align}
+4p ~, m_pc^2 &= 1\textrm{ GeV}\\
+4p \ra \textrm{$^4$He}~, \Delta E  &\approx 27\textrm{ MeV}\\
+\eta &\approx \frac{27 \textrm{ MeV}}{4m_pc^2}\\
+&\approx 0.007\\
+&\approx 0.7\%
+\end{align}
+\subsection{Accretion Efficiency}
+For a NS,
+\begin{align}
+M_{NS} &\approx 1.4M_\odot\\
+R &\simeq 10\textrm{ km}\\
+\eta &\approx 0.1 \approx 10\%\\
+L_{acc} &= 0.1\dot{M}c^2
+\end{align}
+For a BH,
+\begin{align}
+R &= R_S = \frac{2GM}{c^2}\\
+\eta &\approx \frac{1}{4} = 25\%\\
+L_{acc} &\approx 0.25 \dot{M}c^2
+\end{align}
+Bottom-line, mass accreting towards a BH is the most efficient method of converting to energy in the universe (apart from matter-antimatter annihilation, of course!) 

@@ -1,0 +1,152 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\author{Jeren}
+\title{9-29}
+\begin{document}
+\boxed{\text{Phillips}~ 1.4,1.5,4.1,4.2}\\
+\section{Post-Fusion}
+
+\begin{align}
+\lambda \sim \frac{h}{p} \gg & r_n \approx 10^{-13} ~\text{cm}\\
+& r_c ~,~\text{classical distance distance, of closest approach}
+\end{align}
+Fusion parameters will be QM, but won't have stuff to do with $\lambda$. $\sigma$ for nuclear reactions $\approx$ nuclear physics part (strong/weak interaction) $\cdot$ tunnelling through coulomb barrier. We're going to focus on the tunnelling which sets the physics for the central temps of stars. \\
+
+Let's consider SE:
+
+\begin{align}
+\left(\frac{\hbar^2}{2m_r} \nabla^2 + V(r) \right) \Psi = E\Psi~,m_r = \text{reduced mass}\\
+-\frac{\hbar^2}{2m_r}\frac{d^2}{dr^2} \Psi =E\Psi~, \Psi = e^{ikr}~, E=\frac{\hbar^2 k^2}{2m_r}~,k=\frac{\sqrt{E2m_r}}{\hbar}
+\end{align}
+Good ol review. $P = | \Psi|^2 = \text{constant}$. Now we have
+
+\begin{align}
+\frac{\hbar^2}{2m_r}\frac{d^2}{dr^2} \Psi & = (V-E)\Psi~,\text{and} (V-E)>0\\
+\Psi & \propto e^{-kr}~, \frac{\hbar^2 k^2}{2m_r} = (V-E)
+\end{align}
+
+QM'ally, particle can't be somewhere where it's potential is less than the energy. Now, the probability of tunnelling is $|\Psi|^2 \sim e^{-2kl}$. Tunnelling is generic feature of wave theory not just QM. Sound waves tunnel, waves in the atmosphere tunnel.... WUT. \\
+Now lets imagine a particle with energy $E = \frac{1}{2}m_r v^2$,$v = | \bar{v_1} - \bar{v_2} |$. Now...
+
+\begin{align}
+\left( -\frac{\hbar^2}{2m_r}\nabla^2 + \frac{Z_1 Z_2 e^2}{r} \right) \Psi = E \Psi\\
+E&=V\\
+& = \frac{Z_1 Z_2 e^2}{r_c}\\
+r_c &= \frac{Z_1 Z_2 e^2}{E}
+\end{align}
+There's some finite prob that they can tunnel trough the potential one they reach $r_c$. We want to compute the probability! One small difference is that with the atom, particles can have angular momentum and we have to use spherical harmonics.
+
+\begin{align}
+\Psi = \frac{f(r)}{r} Y_{l,m}(\theta,\phi)
+\end{align}
+
+OMG.\\
+
+\begin{align}
+\left( -\frac{\hbar^2}{2m_r} \frac{d^2}{dr^2} + \frac{l(l+1)\hbar^2}{2m_r r^2} + \frac{e^2 Z_1 Z_2}{r} \right) \Psi = E \Psi
+\end{align}
+
+Particles with high angular momentum don't fuse because any small difference in path and they'll fly off. Only possible fusion happens when $l=0$, so we can cross out the $\frac{l(l+1)\hbar^2}{2m_r r^2} $ term. Now... 
+
+\begin{align}
+\left( -\frac{\hbar^2}{2m_r} \frac{d^2}{dr^2} +  \frac{e^2 Z_1 Z_2}{r} \right) f = Ef
+\end{align}
+
+\textbf{What's the probability of reaching $r_n$ if they start at the classical turning point ($r_c$)?} $P = | f(r_n)|^2$. 
+
+Now, 
+
+\begin{align}
+\frac{d^2 f(r)}{dr^2} + g(r)f(r) = 0~,g(r) = \frac{2m_r}{\hbar^2} \left( E - \frac{e^2 Z_1 Z_2}{r} \right)
+\end{align}
+
+We're interested in situations where the $E$ is less than the potential, so $g(r) < 0$. This pops up in  lot of places, apparently. If $g(r)$ is a constant, we can solve it. 
+
+\begin{align}
+f \sim e^{\pm i \sqrt{g} r}
+\end{align}
+
+This solution isn't vaid if $g(r)$ isn't a constant. For the case of interest, $g$ is \textit{almost} constant. It's slowly varying, in reality. It's a function of position for which there is an analytic solution to the above equation. The analytic equation is known as the WKB solution.\\
+
+It's plausible that the solution is of the form $f \sim e^{i \phi(r)}$ if we think$g$ doesn't change much over time. If $g$ = constant, $\phi(r) = \sqrt{g} r$. 
+
+\begin{align}
+f' & = i \phi'(r)e^{i \phi(r)} = i \phi'(r)f\\
+f'' & =i\phi''f + i \phi'f' = i \phi''f - (\phi')^2f
+\end{align}
+
+\begin{align}
+\frac{d^2 f(r)}{dr^2} + g(r)f(r) & = 0\\
+i\phi'' - (\phi')^2 + g&=0
+\end{align}
+Assume $\phi''$ is small, and by small we mean $\phi'' \ll g$. 
+
+\begin{align}
+(\phi')^2 &= g(r)\\
+\phi' & = \sqrt{g(r)}\\
+\phi(r) & = \int^r \sqrt{g(x)}dx\\
+f & \sim e^{i\phi(r)} = e^{ \pm i\int^r \sqrt{g}dx}
+\end{align}
+
+We can check whether our assumption that $\phi'' \ll g$, $\phi'' = \frac{1}{2}g^{-1/2}g'$, and WKB solution is valid if $\frac{g'}{\sqrt{g}} \ll g$. This is what we mean by a "slowly varying" potential. Lets think about this physically. 
+
+\begin{align}
+g' &\sim \frac{g}{L}~,L = \text{length over which potential varies}\\
+\frac{1}{L\sqrt{g}} &\ll 1\\
+\frac{1}{\sqrt{g}} & \ll L\\
+\phi &= \int \sqrt{g}dx\\
+\phi &= \int \frac{dx}{\lambda}~,\text{where $\lambda$ is the wavelength to our solution on order $\frac{1}{\sqrt{g}}$}
+\end{align}
+
+Our WKB solution is okay if $\frac{1}{\sqrt{g}} \ll L$, $\lambda \ll L$. In our case, $\lambda$ is the deBroglie wavelength. 
+
+\begin{align}
+g = \frac{2m_r}{\hbar^2} \left( E - \frac{e^2 Z_1 Z)_2}{r}\right)
+\end{align}
+
+
+\subsection{Tunnelling}
+
+\begin{align}
+f(r_n) = e^{i \int_{r_n}^{r_c} \sqrt{g} dr} = e^{-\int_{r_n}^{r_c} \sqrt{|g|}dr}\\
+P = e^{-I}~, I &= 2\int_{r_n}^{r_c} \sqrt{|g|}dr\\
+I &= \frac{2\sqrt{2m_rE}}{\hbar} \int_{r_n}^{r_c} \left(  \frac{e^2 Z_1 Z_2}{r} -E \right)^{1/2} dr\\
+& = \frac{2\sqrt{2m_rE}}{\hbar}    \int_{r_n}^{r_c} \left( \frac{r_c}{r} -1 \right)^{1/2}dr\\
+x = \frac{r}{r_c}\\
+I & = r_c \int_{r_n/r_c}^{x=r/r_rc} \left(\frac{1}{x}-1\right)^{1/2}dx\\
+\int_0^1 \left(\frac{1}{x}-1\right)^{1/2}dx = \frac{\pi}{2}
+\end{align}
+
+Tunnelling is independent of where nuclear reaction becomes important. Tunnelling dominates at classical point. Once you get trough the turning point, it doesn't matter how far you have to go. 
+
+\begin{align}
+I = \pi \sqrt{ \frac{2m_r e^4 Z_1^2 Z_2^2}{\hbar^2 E} } = \left(\frac{E_g}{E} \right)^{1/2}~, E_g &= \frac{2\pi^2 m_r e^4 Z_1^2 Z_2^2}{\hbar^2}\\
+E &\sim E_g~, I \sim 1~,\text{Prob of tunnelling}~ \sim 1\\
+E& \ll E_g~, I \gg 1, P \ll 1\\
+E_g = 1 ~\text{MeV} \frac{M_r}{m_p}Z_1^2 Z_2^2\\
+P \approx e^{-(E_g/E)^{1/2}}
+\end{align}
+If $E$ is too low, no significant tunnelling and no significant fusion.
+
+At center of sun....
+
+\begin{align}
+T_{center} \sim 10^7 \text{K} \sim 1 \text{KeV}\\
+\frac{3}{2}kT &= 2\text{keV}\\
+& \ll E_g \sim 500 \text{keV}\\
+P \sim 10^{-7}~,\text{damn, that's low.}
+\end{align} 
+
+Let's imagine particles with 10 times the thermal energy. $E = 10 E_{th} = 20\text{keV}$, then $P \sim 10^{-2}$. This tells us that clearly particles whih are more energetic that average are \textbf{MUCH} more likely to tunnel and thus undergo fusion. So when do we treat things QM'ically? If deBroglie wavelength is large. Recap, $\lambda = \frac{h}{p} \sim \frac{h}{\sqrt{2Em_r}}$. As $E \uparrow$, $\lambda \downarrow$. Higher E has a smaller classical turning point. Then, $r_c \downarrow$ as $E \uparrow$. Yes, in absolute cm that the $r_c$ goes down, but relatively, it's easier to tunnel at higher $E$. 
+
+\begin{align}
+I &= (E_g/E)^{1/2}\\
+& = \frac{\pi \sqrt{2m_rE}r_c}{\hbar} \sim \frac{r_c}{\lambda}
+\end{align}
+
+At high Z, $E_g \uparrow \rightarrow T \uparrow$. H is easiest to fuse at earliest stages.
+
+\end{document}

@@ -1,0 +1,67 @@
+\chapter{Main Sequence}
+
+\begin{center}
+\textbf{\begin{huge} October 11, 2011\end{huge}}
+\end{center}
+
+\section{Main Sequence}
+
+Know how to calculate $\epsilon(\rho,T)$ in units of ergs/s/g. Quickly review the major points of the MS:
+
+\begin{align}
+\boxed{\frac{dP}{dr}=-\rho \frac{GM_r}{r^2}=-\rho g}\\
+P &= P_{gas} + P_{rad} (+ P_{degen})\\
+&= \frac{\rho kT}{\mu m_p} + \frac{1}{3}aT^4\\
+\boxed{\frac{dM_r}{dr} = 4\pi r^2 \rho}\\
+E_{tot} = U/2 = -K, \text{ for NR}\\
+E_{tot} \approx 0 , K = -U\text{ for R}
+\end{align}
+
+\subsection{Energy Transport (Radiation)}
+
+\begin{align}
+F_r = \frac{L_r}{4 \pi r^2} = -\frac{4}{3} \frac{caT^3}{\kappa \rho} \frac{dT}{dR}~,\kappa = \text{ opacity}\\
+l = \frac{1}{\kappa \rho} = \frac{1}{n \sigma},\kappa = \frac{\sigma}{m}~,m = \text{ average mass of a particle}\\
+\kappa_T,\kappa_{ff},\kappa_{bound~free},\kappa_{H^-},...
+\end{align}
+
+\subsection{Energy Transport (Buoyancy)}
+
+Convection sets in if $\frac{ds}{dr} < 0$. Exponentially driven instability is driven by buoyancy of matter. Whether or not its convecting is dependent on the entropy gradient. Another way to put it is:
+
+\begin{align}
+\frac{d \ln T}{d \ln P} > \frac{\gamma -1}{\gamma}
+\end{align}
+
+We can get away with rough estimates using mixing length to find the work done by the buoyancy force. \\
+For convective flux:
+
+\begin{align}
+F &= \frac{1}{2}\rho v_c^3\\
+&= \frac{1}{2} c_s^3 \Bigl\lvert \frac{H}{c_p} \frac{ds}{dr} \Bigl\lvert ^{3/2}~,
+\end{align}
+
+when convection is present, and
+
+\begin{align}
+\boxed{\frac{1}{T}\frac{dT}{dr} = \frac{\gamma -1}{\gamma} \frac{d\rho}{dr}}
+\end{align}
+
+This is useful for fully convective objects because then $P \pt \rho^\gamma \pt \rho^{5/3}$. This is an example of the $n=3$ polytrope. We can therefore computer $T(r)$ and $\rho(r)$ (relatively) easy.
+
+\subsection{Energy Generation in Stars}
+
+
+Gravity: KH contraction, at a minimum. 
+
+\begin{align}
+\boxed{L = -\frac{1}{2}\frac{dU}{dt}\approx -\frac{GM^2}{R^2} \Bigl\lvert \frac{dR}{dt} \Bigl\lvert}
+\end{align}
+
+For the sun, $t_{KH} \approx 30$ million years. This contraction drives $T_c$ up and eventually fusion sets in. $\epsilon(\rho,T,\text{composition})$ is the energy generation by fusion. Fusion is a collisional process and you need both high densities and temperatures for two particles to get close enough to tunnel through their Coulomb Barriers. 
+
+\begin{align}
+L \approx \epsilon dM_r = \int_0^R 4 \pi r^2 \rho \epsilon dr
+\end{align}
+
+H fusion in the sun lasts about 10$^{10}$ years, which is about 3 orders higher than KH contraction. i.e. fusion is much more important than KH for luminosity. The variables we care about are: $P, \rho, T , L_r , M_r$ and the equations are: HE, Equation of State, $dM_r = 4\pi r^2 \rho$, energy transport, and energy generation. While these equations are good, we need boundary conditions/initial conditions. If you specify the mass and initial composition of a star, that determines \textit{everything} $(T_c,T_{eff},\rho,R,L,T(r),P(r),...)$. For KH contraction, we could calculate $R(M, t)$ and $L(M, t)$.

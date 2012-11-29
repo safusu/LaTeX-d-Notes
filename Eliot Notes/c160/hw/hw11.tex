@@ -1,0 +1,233 @@
+\documentclass[10pt,letter,preprint]{aastex}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{fullpage}
+
+\newcommand{\pt}{\propto}
+\newcommand{\rp}{\right)}
+\newcommand{\lp}{\left(}
+\newcommand{\half}{\frac{1}{2}}
+\newcommand{\mfrac}{\lp \frac{M}{M_\odot}\rp}
+\newcommand{\rfrac}{\lp \frac{R}{R_\odot} \rp}
+\newcommand{\ms}{M_\odot}
+
+\begin{document}
+
+\title{HW \#11}
+\author{\begin{large}Jeren Suzuki\end{large}}
+\author{November 18, 2011}
+
+Problem 1a:\\
+\begin{align}
+\frac{dP}{dR} &= -\rho g~,\textrm{black magic dictates }\frac{dP}{dR} \sim \frac{P}{R}\\
+\frac{P}{R} &= \rho g\\
+P &= \rho g R\\
+A \rho^{\gamma} &= \rho gR\\
+A \rho^{\gamma-1}&= gR\\
+&= \frac{GM}{R}\\
+A \lp \frac{3M}{4 \pi R^3} \rp^{\gamma-1} &= \frac{GM}{R}\\
+A \lp \frac{3M}{4 \pi} \rp^{\gamma-1} &= \frac{GM}{R}R^{3\gamma - 3}\\
+\frac{A}{GM}\lp \frac{3M}{4 \pi} \rp^{\gamma-1} &= R^{3\gamma-4}\\
+\frac{A}{G} \lp \frac{3}{4\pi} \rp^{\gamma-1} M^{\gamma-2} &= R^{3\gamma-4}\\
+\Aboxed{\lp \frac{A}{G} \lp \frac{3}{4\pi} \rp^{\gamma-1} M^{\gamma-2}  \rp ^{1/{(3\gamma -4)}} &= R(M)}
+\end{align}
+
+Problem 1b:\\
+\begin{align}
+\frac{dP}{dR} &= -\rho g\\
+\frac{P}{R} &= \rho g\\
+\frac{A\rho^\gamma}{R} &= \rho g\\
+\frac{M^\gamma}{R^{(3\gamma+1)}}&\pt \frac{M}{R^3}\frac{M}{R^2}\\
+\frac{M^\gamma}{R^{(3\gamma+1)}}&\pt \frac{M^2}{R^5} 
+\end{align}
+If $\gamma=\frac{4}{3}$, then the pressure force and gravitational force are equal. 
+
+Problem 1c:\\
+The Chandrasekhar mass is the upper mass limit for stars supported by electron degeneracy pressure. Chandrasekhar knew that white dwarves cannot be supported by relativistic degeneracy pressure and thus it must be non-relativistic. For a non-relativistic electron gas, $\gamma = \frac{4}{3}$. 
+
+Problem 2a:\\
+\begin{align}
+\textrm{ratio} &= \frac{F_{rad}}{F_{degen}}\\
+&= \frac{\frac{4}{3}\frac{caT^3}{n\sigma} \frac{dT}{dR} }{\kappa\frac{dT}{dR}}~,\kappa = \frac{k^2h^3Tn_i}{Z_i^2 32e^4m_e^2}\\
+&= \frac{4}{3}\frac{caT^3}{\kappa n\sigma}\\
+&= \frac{4caT^3Z_i^2 32 e^4 m_e^2}{3k^2h^3Tn_i n\sigma}\\
+&= \frac{128 caT^2 Z_i^2 e^4 m_e^2}{3k^2h^3 n_i n_e \sigma}
+\end{align}
+\begin{align}
+n_e &= \frac{\rho}{\mu_e m_p}~,\mu_e = 2\\
+n_i &= \frac{\rho}{\mu_i m_p}~,\mu_i = 14
+\end{align}
+\begin{align}
+\textrm{ratio} &= \frac{128 caT^2 Z_i^2 e^4 m_e^2m_p^2 \mu_e \mu_i}{3k^2h^3 \rho^2 \sigma}~,\rho = \frac{3M}{4 \pi R^3}~,R =0.013 R_\odot \mfrac^{-1/3}\\
+\Aboxed{\frac{F_{rad}}{F_{degen}}&\approx 0.016}
+\end{align}
+
+
+Problem 2bi:\\
+\begin{align}
+H &= \frac{kT}{mg}\\
+&= \frac{kT_{eff}R^2}{m_H GM}~,R = \frac{GM\mu m_p}{3kT}\\
+&= \frac{kT_{eff}}{m_H GM} \lp \frac{GM\mu m_p}{3kT_c} \rp^2\\
+\Aboxed{H &\approx 22,421 \textrm{ cm}}
+\end{align}
+
+Problem 2bii:\\
+\begin{align}
+H &\approx 22,421 \approx \frac{1}{n\sigma}\\
+n &\approx \frac{1}{22,421 \cdot \sigma_T}\\
+\Aboxed{n &\approx 6.7 \times 10^{19} \textrm{ cm}^{-3}}
+\end{align}
+
+\newpage
+Problem 2c:\\
+\begin{align}
+\frac{n_en_i}{n_H} &= \frac{g_eg_i}{g_H}e^{-\chi/kT}n_{Q,e}\\
+\frac{n_e^2}{n_H} &= e^{-\chi/kT}n_{Q,e}\\
+n_e &= e^{-\chi/kT}n_{Q,e}\\
+n_e &= e^{-\chi/kT} \lp \frac{2 \pi m_e kT}{h^2} \rp^{3/2} \\
+\frac{n}{2}&= e^{-\chi/kT} \lp \frac{2 \pi m_e kT}{h^2} \rp^{3/2} \\
+\Aboxed{T &\approx 115,000 \textrm{ K}}
+\end{align}
+
+Problem 3a:\\
+Refer to Problem 3b; fraction of stars that undergo supernova:
+\begin{align}
+N_{SNe} &= N_{NS} + N_{BH}\\
+\Aboxed{N_{SNe} &= 0.0247}
+\end{align}
+
+
+Problem 3b:\\
+\begin{align}
+\frac{N_{WD}}{N} &= \frac{\int_{0.5}^{8} M^{-2.35}dM}{ {\int_{0.5}^{150} M^{-2.35}dM}}\\
+\Aboxed{\frac{N_{WD}}{N} &= 0.976}
+\end{align}
+\begin{align}
+\frac{N_{NS}}{N} &= \frac{\int_{8}^{30} M^{-2.35}dM}{ {\int_{0.5}^{150} M^{-2.35}dM}}\\
+\Aboxed{\frac{N_{NS}}{N} &= 0.0197}
+\end{align}
+\begin{align}
+\frac{N_{BH}}{N} &= \frac{\int_{30}^{150} M^{-2.35}dM}{ {\int_{0.5}^{150} M^{-2.35}dM}}\\
+\Aboxed{\frac{N_{BH}}{N} &= 0.0035}
+\end{align}
+
+Problem 3c:\\
+\begin{align}
+\frac{M_{\textrm{lost}}}{M_{\textrm{tot}}} &= \frac{\int_{0.5}^8 (M-0.5)M^{-2.35}dM + \int_{8}^{30} (M-1.4) M^{-2.35}dM  + \int_{30}^{150} (M-7) M^{-2.35}dM  }{\int_{0.5}^{150} M^{-2.35}M dM}\\
+\Aboxed{\frac{M_{\textrm{lost}}}{M_{\textrm{tot}}} &= 0.6757}
+\end{align}
+
+Problem 4a:\\
+\begin{align}
+L_{EDD} &= L_{fus} \\
+ \frac{4 \pi GM c \mu m_p}{\sigma_T}&= \epsilon M\\
+ \frac{4 \pi GM c \mu m_p}{\sigma_T}&= 5.4 \times 10^{11} \frac{\rho^2 Y^3}{T_8^3} e^{-44/T_8}M
+\end{align}
+Use Radiation-Virial Theorem:
+\begin{align}
+\frac{1}{3}aT^4 \frac{4}{3}\pi R^3 &= \frac{GM^2}{R}\\
+R &= \lp \frac{9 GM^2}{4 \pi a T^4} \rp^{1/4}
+\end{align}
+Plug in to replace the radius in $\rho$:
+\begin{align}
+\frac{4 \pi G c \mu m_p}{\sigma_T}&= 5.4 \times 10^{11} \frac{ Y^3}{T_8^3} \lp \frac{3M}{4 \pi R^3}\rp^2e^{-44/T_8}\\
+\frac{4 \pi G c \mu m_p}{\sigma_T}&= 5.4 \times 10^{11} \frac{ Y^3}{T_8^3} \lp \frac{3M}{4 \pi}\rp^2 R^{-6} e^{-44/T_8}\\
+\frac{4 \pi G c \mu m_p}{\sigma_T}&= 5.4 \times 10^{11} \frac{ Y^3}{T_8^3} \lp \frac{3M}{4 \pi}\rp^2 \lp \lp \frac{9 GM^2}{4 \pi a T^4} \rp^{1/4} \rp ^{-6} e^{-44/T_8}\\
+\frac{4 \pi Gc \mu m_p}{\sigma_T}&= 5.4 \times 10^{11} \frac{ Y^3}{T_8^3} \lp \frac{3M}{4 \pi}\rp^2 \lp \frac{9 GM^2}{4 \pi a T^4} \rp ^{-3/2} e^{-44/T_8}\\
+\Aboxed{T_c &\approx 2.46 \times 10^8\textrm{ K}}
+\end{align}
+
+\begin{align}
+\beta &= -3 + \frac{44}{T_8}\\
+&= -3 + \frac{44}{2.46}\\
+\Aboxed{\beta &\approx 14.886}
+\end{align}
+
+%$T_c(M)$:
+%\begin{align}
+%2.99 \times 10^{22} e^{-4.4 \times 10^{9}/T} M^2 &= 3.96 \times 10^4 T^3 \lp \frac{M^2}{T^4}\rp^{3/2}~,\textrm{ from Wolfram ``Alterate Results"}\\
+%\Aboxed{2.99 \times 10^{22} e^{-4.4 \times 10^{9}/T} &= 3.96 \times 10^4 T^{-3} M}
+%\end{align}
+\newpage
+Problem 4b:\\
+$T_c(M)$:
+\begin{align}
+L = \epsilon M &= \frac{4 \pi Gc M}{\kappa}\\
+\rho^2 T^\beta &= \frac{4 \pi Gc }{\kappa}\\
+\lp \frac{3M}{4 \pi R^3} \rp^2  T^\beta &= \frac{4 \pi Gc }{\kappa}\\
+\lp \frac{3M}{4 \pi } \rp^2 R^{-6} T^\beta &= \frac{4 \pi Gc }{\kappa}\\
+\lp \frac{3M}{4 \pi } \rp^2\lp \frac{9 GM^2}{4 \pi a T^4} \rp^{-3/2} T^\beta &= \frac{4 \pi Gc }{\kappa}\\
+\lp \frac{3}{4 \pi } \rp^2\lp \frac{9 G}{4 \pi a T^4} \rp^{-3/2} T^\beta &= \frac{4 \pi Gc }{\kappa} M \\
+\lp \frac{3}{4 \pi } \rp^2\lp \frac{9 G}{4 \pi a } \rp^{-3/2} T^{\beta+6}&= \frac{4 \pi Gc }{\kappa} M \\
+T^{\beta + 6} &\pt M\\
+T &\pt M^{1/(\beta + 6)}\\
+T &= K  M^{1/(\beta + 6)}\\
+\frac{T}{ M^{1/(\beta + 6)}} &= K\\
+\frac{2.46 \times 10^8}{(2\times 10^{35})^{1/(6+14.88)}}&= K\\
+K &= 5.01 \times 10^6\\
+\Aboxed{T_c &= 5.01 \times 10^6 M^{1/(\beta + 6)}}
+\end{align}
+
+$R(M)$:
+\begin{align}
+R &= \lp \frac{9 GM^2}{4 \pi aT^4} \rp^{1/4}\\
+&=  \lp \frac{9 GM^2}{4 \pi a} \rp^{1/4}\frac{1}{T}\\
+&= \lp \frac{9 GM^2}{4 \pi a} \rp^{1/4} \frac{1}{5.01 \times 10^6 M^{1/(\beta + 6)}}\\
+\Aboxed{R(M) &= 1 \times 10^{-5} M^{0.45}}
+\end{align}
+
+
+%$R(M)$:
+%\begin{align}
+%2.99 \times 10^{22} e^{-4.4 \times 10^{9}/T} &= 3.96 \times 10^4 T^{-3} M~,T = \lp \frac{9GM^2}{4 \pi a R^4} \rp^{1/4}\\
+%2.99 \times 10^{22} e^{-4.4 \times 10^{9}/ \lp \frac{9GM^2}{4 \pi a R^4} \rp^{1/4}} &= 3.96 \times 10^4  \lp \frac{9GM^2}{4 \pi a R^4} \rp^{-3/4} M\\
+%\Aboxed{1.2 \times 10^{35} M^{1/2} e^{-2.77 \times 10^5 R/M^{1/2}} &= 3.96 \times 10^4 R^3} 
+%\end{align}
+
+$L(M)$:
+\begin{align}
+L = L_{EDD} &= \frac{4 \pi GMc}{\kappa}\\
+\Aboxed{L &= 6.29\times 10^4 M}
+\end{align}
+
+$T_{\textrm{eff}}(L)$:
+\begin{align}
+L &= 4 \pi R^2 \sigma T_{eff}^4\\
+T_{eff}^4 &= \frac{L}{4 \pi \sigma R^2}\\
+T_{eff} &= \lp \frac{L}{4 \pi \sigma R^2} \rp^{1/4}\\
+&= \lp \frac{L}{4 \pi \sigma} \rp^{1/4} R^{-0.5}\\
+&= \lp \frac{L}{4 \pi \sigma} \rp^{1/4}  \lp1 \times 10^{-5} M^{0.45}\rp^{-0.5}\\
+&= \lp \frac{L}{4 \pi \sigma} \rp^{1/4}  \lp1 \times 10^{-5} \rp^{-0.5}M^{-0.225}\\
+&= \lp \frac{L}{4 \pi \sigma} \rp^{1/4}  \lp1 \times 10^{-5} \rp^{-0.5} \lp \frac{L}{6.29 \times 10^4}\rp^{-0.225}\\
+T_{eff} &= \lp \frac{1}{4 \pi \sigma } \rp^{1/4}  \lp1 \times 10^{-5} \rp^{-0.5} \lp \frac{1}{6.29 \times 10^4}\rp^{-0.225} L^{0.025}\\
+\Aboxed{T_{eff} &= 2.32 \times 10^4 L^{0.025}}
+\end{align}
+
+Problem 4c:\\
+\begin{align}
+L_{CNO} > L_{He}\\
+\epsilon_{CNO} > \epsilon_{He}\\
+4.4 \times 10^{27}\frac{\rho XZ}{T_7^{2/3}} e^{-70.7T_7^{-1/3}}&= 5.4 \times 10^{11}\frac{\rho^2 Y^3}{T_8^3}e^{-44/T_8}\\
+Z&= 1.23 \times 10^{-16}\frac{\rho Y^3 T_7^{2/3}}{XT_8^3} e^{+70.7T_7^{-1/3} - 44/T_8}\\
+Z&= 9.35 \times 10^{-16}\frac{3M}{4 \pi R^3}\\
+\Aboxed{Z&=9.85 \times 10^{-14}}
+\end{align}
+
+\newpage
+Problem 4d:\\
+\begin{align}
+\textrm{Mass of all C}=9.85 \times 10^{-14} \cdot 2\times 10^{35} \textrm{ g}=1.97 \times 10^{22} \textrm{ g}\\
+\textrm{Number of reactions} = \frac{1.97 \times 10^{22} \textrm{ g}}{12 \cdot 1.67 \times 10^{-24}} =9.8 \times 10^{44} \textrm{ reactions}\\
+\textrm{Energy released per $^{12}$C* into C} = 7.65\textrm{MeV}\\
+\textrm{Total energy released by that} = 9.8 \times 10^{44} \cdot 7.65\textrm{MeV} = 1.19\times 10^{40} \textrm{ ergs}\\
+t &= \frac{E}{L}\\
+&= \frac{\textrm{energy released}}{L}\\
+\Aboxed{ t &= 0.95 \textrm{ secs}}
+\end{align}
+
+
+
+\end{document}

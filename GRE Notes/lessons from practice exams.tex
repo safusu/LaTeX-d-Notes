@@ -1,0 +1,510 @@
+% I hope this turns out well. 
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage[english]{isodate}
+\usepackage[parfill]{parskip}
+\usepackage{microtype}
+\usepackage[colorlinks=true,urlcolor=blue]{hyperref}
+\usepackage{enumerate}
+\usepackage{fullpage}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage[tocindentauto]{tocstyle}
+
+\title{GRE Physics Study Notes - Lessons from Practice Exams}
+\author{Courtesy of Nicole Duncan, transcribed by Jeren Suzuki}
+\date{Last Edited \today}
+
+\begin{document}
+
+\maketitle
+\pagenumbering{Roman}
+\newpage
+\tableofcontents
+\newpage
+\pagenumbering{arabic}
+
+
+\section*{Introduction}
+By no means comprehensive, this list is meant to serve as additional study material to re-reading textbooks, practicing GRE tests, and nagging your physics friends for study help.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Some Stuff}
+\subsection{Cherenkov Radiation}
+A charged particle which passes through a media with a speed greater than the speed of light in that media will emit E\&M radiation (light)
+\begin{equation}
+ n = \frac{c}{v}~, v= \frac{c}{n} \leftarrow \textrm{ minimum velocity of the particle}
+\end{equation}
+
+This does not violate relativity because $n>1$ so $v<c$.
+
+\subsection{Bremsstrahlung Radiation:}
+A continuous spectra of radiation emitted when a charged particle is decelerated in a metal target.
+
+\section{Problems}
+\subsection{Hoops Hung on a Nail, Undergoing Small Oscillations}
+\begin{enumerate}
+    \item Approximate using small $\theta$ pendulum, with $\omega = \sqrt{\frac{g}{l}}$
+    \item Works because it's a hoop, with extended object use a physical pendulum.
+\end{enumerate}
+\subsection{Physical Pendulum}
+\begin{tabular}{l l}
+$\tau = I \dot{\omega} = I \alpha$ & $\tau = mgL_{\textrm{cm}}\sin\theta$\\
+$\ddot{\theta} = \frac{mgL_{\textrm{cm}}\theta}{I}$ & $\omega = \sqrt{\frac{mgL_{\textrm{cm}}}{I}}$
+\end{tabular}
+
+For hoop, $I=MR^2 = ML^2_{\textrm{cm}} \rightarrow \omega = \sqrt{\frac{mg}{L}} = \sqrt{\frac{g}{\textrm{radius}}}$\\
+Often dealing with ratios so reduces out mass + constant factor in I.
+\begin{equation}
+ \frac{\omega_1}{\omega_2} = \sqrt{\frac{L_1 \cdot R^2_2}{L_2 \cdot R^2_1}}
+\end{equation}
+
+\subsection{Intrinsic Magnetic Moment}
+\begin{equation}
+ \bar{\mu}_s = \frac{gq}{2m}\bar{s} 
+\end{equation}
+
+Mass is the dominant factor because $g \sim 10$ s, $q \sim 100 $ s but $m$ is many orders of magnitude.
+
+\subsection{Equations of Motion}
+Look for boundary values. A given $x(t)$, $y(t)$, and $v_0$, differentiate and evaluate at $t=0$ to see which one yields $v_0$.
+
+\subsection{Moments of Inertia}
+The moment of a plate is $I+\frac{1}{3}Md^2$ where $d$ is the width from the center rotation axis of the plate to the edge of the plate. 
+
+\subsubsection{Stretch Axis Theorem}
+If you stretch an object along the dimension it rotates about, then the moment is unchanged.
+
+e.g., Disk and cylinder both have $I=\frac{1}{2}MR^2$
+
+\subsection{Moments}
+\begin{enumerate}
+    \item Hoop: $I=MR^2$
+    \item Disk: $I=\frac{1}{2}MR^2$
+    \item Hollow Sphere: $I = \frac{2}{3}MR^2$
+    \item Solid Sphere: $I=\frac{2}{5}MR^2$
+    \item Rod Center: $I=\frac{1}{12}ML^2$
+    \item Rod End: $I=\frac{1}{3}ML^2$
+    \item Thick Cylinder: $I=\frac{1}{2}m(r^2_1 + r^2_2)$
+    \item Cuboid: $I_{\hat{y}} = \frac{1}{12}M(x^2_l + y^2_l)$
+\end{enumerate}
+
+\subsection{Hermitian Matrix}
+\begin{enumerate}
+    \item Described observables: The eigenvalues are real
+    \item Square matrix
+\end{enumerate}
+\begin{equation}
+ A = A^T \rightarrow \textrm{the entries are equal to their conjugate transpose}
+\end{equation}
+
+\[A= \left[ \begin{array}{cc}
+3 & 2+i  \\
+2-i & 1  \end{array} \right]\]
+
+\[A^T= \left[ \begin{array}{cc}
+3 & (2-i)^*  \\
+(2+i)^* & 1  \end{array} \right] = 
+\left[ \begin{array}{cc}
+3 & 2+i  \\
+2-i & 1  \end{array} \right] = A\]
+
+Transpose: 
+\begin{enumerate}
+    \item Row A $\rightarrow$ column A
+    \item Row B $\rightarrow$ column B
+    \item The entries on the diagonal are real
+    \item The sum of any 2 Hermitian matrices is Hermitian
+    \item The product is Hermitian if and only if $\hat{A}\hat{B} = \hat{B}\hat{A}\Rightarrow [\hat{A}\hat{B}]=0$ (Commutes)
+\end{enumerate}
+
+\subsection{Hermitian Operators}
+Condition:
+\begin{equation}
+ \langle f | \hat{A} f\rangle = \langle \hat{A} f | f \rangle 
+\end{equation}
+ is equivalent to saying $A=A^*$
+
+\subsection{Balancing Problem}
+Torque is the long and hard way to find where the pivot should be. Classic problem, where to put the fulcrum. Want to set up $\sum \tau = 0$ problem. Instead, put the origin somewhere convenient (center of rod if it has mass) and calculate the center of mass.
+\begin{equation}
+ CM = \frac{\sum \limits_i m_i r_i}{\sum \limits_i m_i} 
+\end{equation}
+
+\subsection{Decay Rates}
+\begin{equation}
+ \frac{dA}{dt} = -kA \rightarrow A = A_0 e^{-kt} \rightarrow \frac{A}{A_0} = \frac{1}{2}e^{-kt} \rightarrow \frac{\ln(2)}{k} = t_{1/2}
+\end{equation}
+for a substance with multiple decay modes,
+\begin{equation}
+ k_{\textrm{tot}} A = (k_1 + k_2)A 
+\end{equation}
+
+\subsection{Conservation of Energy}
+Total energy must be conserved.
+\begin{equation}
+ U + KE_{\textrm{roll}} + KE_{\textrm{trans}} = E_{\textrm{tot}} 
+\end{equation}
+Example: Roll down a hill at a given $v_{transl}$
+\begin{align}
+ U = KE_{\textrm{roll}} + KE_{\textrm{transl}}\\
+mgh = \frac{1}{2}I\omega^2 + \frac{1}{2}mv_{\textrm{transl}}^2
+\end{align}
+
+\subsection{Interferometer}
+Fringe shifts occur for changing distances of mirrors or changing wavelengths. A fringe shift occurs for $2d=\lambda$. When using a gas to change wavelength, it changes with $n$.
+\begin{equation}
+ 2d = m(\lambda_{\textrm{gas}} - \lambda_{\textrm{vac}}) = m\lambda_{\textrm{vac}}\left( \frac{1}{n} - 1\right)~,\lambda_{\textrm{gas}} = \frac{\lambda_{\textrm{vac}}}{n}
+\end{equation}
+
+\subsection{Vector Calculus}
+\begin{enumerate}
+    \item The div of a curl is 0 $\rightarrow \nabla \cdot (\nabla \times F) = 0$
+    \item The curl of a gradient is 0 $\rightarrow \nabla \times (\nabla \cdot F)=0$
+\end{enumerate}
+
+\subsection{Thermodynamic Work}
+The area under the $PV$ graph, or in a closed cycle. If clockwise, $+W$, if counter clockwise, $-W$. 
+
+\subsection{Special Relativity, Momentum}
+\begin{equation}
+ E_{\textrm{rel}} \neq \frac{p^2_{\textrm{rel}}}{2m}
+\end{equation}
+Instead use
+\begin{equation}
+ E^2_{\textrm{rel}} = (pc)^2 + E_0^2
+\end{equation}
+
+Only photons move at $c$, duh. However, particles can move faster than the speed of light in a medium, $v_\phi = \frac{c}{n}$ and it will emit Cherenkov radiation.
+
+\subsection{Decay}
+\begin{enumerate}
+    \item Write out coefficients!
+    \item $e^-/e^+$ always accompanied by $\bar{\nu}/\nu$ by conservation of lepton \#. Any combo of capture and emission.
+\end{enumerate}
+
+\begin{equation}
+ ^A_ZX = ^{p^+ + n^0}_{p^+}X 
+\end{equation}
+
+\subsection{Springs}
+Add like capacitors.\\
+For series:
+\begin{equation}
+    \frac{1}{k_{\textrm{tot}}} = \frac{1}{k_1} + \frac{1}{k_2}
+\end{equation}
+
+For parallel: 
+\begin{equation}
+    k_{\textrm{tot}} = k_1 + k_2
+\end{equation}
+
+\subsection{Speed of Sound in an Ideal Gas}
+\begin{equation}
+ v \propto T^{1/2} 
+\end{equation}
+
+\subsection{Conservative Field}
+\begin{equation}
+ \nabla \times F = 0 \rightarrow F = -\nabla V
+\end{equation}
+
+\subsection{Orbit Problems}
+First, think Kepler ($T^2 \propto R^3$). Minimum $E$ is a circular orbit.
+
+\subsection{Intensity / Radiation Problems}
+Radiation spreads like a spherical wavefront. 
+\begin{equation}
+ \# \textrm{ particles detected / counts} = \frac{\textrm{Area detector}}{\textrm{Area sphere @ detector}}
+\end{equation}
+
+\subsection{Partition Function}
+\begin{equation}
+ \frac{f}{2}NkT~,f = \textrm{\# squared terms in Hamiltonian}
+\end{equation}
+$f$ = Degrees of freedom; is a corollary.
+
+\subsection{Expectation Value}
+\begin{equation}
+  \langle \hat{Q} \rangle = \langle \Psi | \hat{Q} | \Psi \rangle = q \langle \Psi | \Psi \rangle \textrm{ or } q_1 \langle \Psi_1 | \Psi_1 \rangle + q_2 \langle \Psi_2 | \Psi_2 \rangle + \cdots
+\end{equation}
+
+\subsection{Commutator Identities}
+\begin{align}
+ [A,B] &= -[B,A] \\
+ [A,BC] &= B[A,C] + [A,B]C\\
+ [AB,C] &= A[B,C] + [A,C]AB
+\end{align}
+
+\subsection{Motion in a Circle}
+Always $a_{\textrm{radial}}$ component, only $a_{\parallel}$ if $v_{\textrm{tan}}$ is changing.
+\begin{equation}
+ F = \frac{mv^2}{r} = ma_r \rightarrow a_r = \frac{v^2}{r}
+\end{equation}
+
+Compare to:
+\begin{align}
+ v &= r \times \omega\\
+ a_r &= r \times \alpha \\
+ a &= a^2_{\parallel} + a^2_r
+\end{align}
+
+\subsection{Particle Decay}
+\begin{equation}
+ \frac{dN}{dt} - -kN \rightarrow N = N_0 e^{-kt}~,\textrm{ decay is exponential}
+\end{equation}
+$k$ = decay constant, $\tau$ = average, lifetime = $\frac{1}{k}$
+\subsubsection{Half Life}
+\begin{equation}
+ \frac{N}{N_0} = \frac{1}{2} = e^{-kt} \rightarrow t_{hl} = \frac{\ln(2)}{k}
+\end{equation}
+
+\subsubsection{Multiple Decay Channels}
+\begin{equation}
+ (K_{\textrm{tot}})N = K_1N + K_2N + \cdots
+\end{equation}
+so, $k = \frac{\ln(2)}{t_{hl}}$, $\frac{1}{t_{hl}} = \frac{1}{t_1} + \frac{1}{t_2} + \cdots$
+
+\subsection{Specific Heat in a Solid}
+Best fit for when accounting for $e^-$ specific heat with FD.
+\begin{enumerate}
+    \item Einstein Model: Treat atoms as 3N Harmonic Oscillators. They all have same E, (frequency).
+    \item Debye: Also 3N Harmonic Oscillators. Assigns a range of energies and treats lattice vibrations as phonons in box.\\
+    Correctly predicts low temperature $C_V \propto T^3Nk$
+    \item Dulong-Petit: High temps, uses equipartition with harmonic oscillator $f=6,c=3Nk$\\
+    Debye and Einstein reduce to this in high $T$ limit.
+\end{enumerate}
+
+\subsection{Relativistic Doppler Shift}
+\begin{align}
+ \frac{f_0}{f} = \frac{\lambda}{\lambda_0}  = \sqrt{\frac{1+\beta}{1-\beta}}~,\beta = \frac{v}{c}
+\end{align}
+The ``redshift'': $z = \frac{\lambda_0 - \lambda}{\lambda} = \frac{f - f_0}{f}$
+
+\subsection{Fission}
+\begin{enumerate}
+    \item Conservation of Energy
+    \item Binding Energies of nucleus is always $(-)$, like BE $e^-$'s
+\end{enumerate}
+\begin{equation}
+ -BE_i + KE_i = -BE_f + KE_f 
+\end{equation}
+
+\subsection{Wire Resistance}
+\begin{equation}
+ R = \frac{\rho L}{A} 
+\end{equation}
+
+\subsection{Inside a Non-conducting Sphere of Uniform Charge Density}
+With constant surface potential, like a conductor. $\nabla V = 0 = E$
+
+\subsection{Spin Matrices}
+\begin{align}
+S_i\Psi &= \frac{\hbar}{2}\sigma_i\Psi\\
+S_z | \uparrow \rangle &= \frac{\hbar}{2} | \uparrow \rangle = \frac{\hbar}{2} \binom{1}{0}\\
+S_z | \downarrow \rangle &= -\frac{\hbar}{2} | \downarrow \rangle = -\frac{\hbar}{2} \binom{0}{1}
+\end{align}
+For example, eigenstate of $S_x$ with $-\frac{\hbar}{2}$, 
+\[ \sigma_x = \left( \begin{array}{cc}
+0 & 1  \\
+1 & 0  \end{array} \right)\]
+\begin{align}
+  \frac{1}{\sqrt{2}}(| \uparrow \rangle - | \downarrow \rangle) = \frac{1}{\sqrt{2}} \left[ \binom{1}{0} - \binom{0}{1}\right] = \frac{1}{\sqrt{2}} \binom{\Psi}{-1}\\
+  \binom{1}{-1} \binom{0~1}{1~0} = \binom{-1}{1} \rightarrow S_x\Psi = \frac{\hbar}{2} \left( \frac{1}{\sqrt{2}}\right) \binom{-1}{1} = -\frac{\hbar}{2}\Psi
+\end{align}
+
+\subsection{Collisions}
+\begin{enumerate}
+    \item For $i \rightarrow f$ conditions, use conservation of momentum only!
+    \item For converting between $U$ and $KE$, use $KE$ only.
+    \item $\epsilon = 1$ if elastic, $\epsilon = 0$ if inelastic\\
+    \begin{equation}
+        \frac{\overbrace{|V_2| + |V_1|}^{ \mathclap{\textrm{final}}} } {\underbrace{|U_2| + |U_1|}_{ \mathclap{\textrm{before}} }}
+    \end{equation}
+    \item $KE$ is conserved in elastic collisions only
+\end{enumerate}
+
+\subsection{For what $v$ will car stay on hill?}
+\begin{align}
+ F_c = F_g &= mg\\
+ \frac{mv^2}{r} &= mg 
+\end{align}
+
+\subsection{B\"ohr Model}
+\begin{enumerate}
+    \item $e^-$ have classical motions
+    \item $\Delta E = hf$
+    \item Quantization of angular momentum, $L=n\hbar$
+    \item $E_n = -\frac{Z^2E_0}{n^2}~,E_n \propto \mu$
+    \item $\Delta E = E_0 \left( \frac{1}{n_f^2} - \frac{1}{n_i^2} \right) \rightarrow \frac{1}{\lambda} = R_y \left( \frac{1}{n_f^2} - \frac{1}{n_i^2}\right)~, R_y = 1\times 10^7$ m$^{-1}$
+    \item Positronium: $\mu= \frac{m_e}{2} \rightarrow E_p = \frac{E_0}{2n^2}$
+\end{enumerate}
+
+\subsection{Hydrogen Spectral Series}
+\begin{enumerate}
+    \item Lyman: $n_f = 1 \rightarrow$ UV
+    \item Balmer: $n_f = 2 \rightarrow$ Visible
+    \item Paschen: $n_f = 3 \rightarrow$ IR
+\end{enumerate}
+
+\subsection{Fluids}
+Equilibrium when $F_a = F_b$
+
+\subsection{Gauss with non-uniform densities}
+Must integrate. For example:
+\begin{align}
+ \rho = Ar^2~,\rho \propto r^2 ~, dV = 4\pi r^2 dr\\
+ \int E \cdot dA = \int \frac{\rho dV}{\epsilon_0} = \int \limits_0^R \frac{\rho(4\pi r^2dr)}{\epsilon_0} = 4\pi \int \frac{r^4 dr}{\epsilon_0}
+\end{align}
+
+\subsection{Capacitors}
+If capacitors in series, $Q_1 = Q_2$. If parallel, $V_1 = V_2$.
+
+\subsection{Diffraction Limit}
+Airy Disk: circular aperture diffraction
+\begin{equation}
+ \theta = \frac{1.22 \lambda}{d}~, \Delta l = \frac{1.22 f\lambda}{d}
+\end{equation}
+
+\subsection{Time Dilation and Mass Contraction}
+\begin{equation}
+ t=\gamma t_0~,X = \frac{X}{\gamma} 
+\end{equation}
+Used to relate a moving frame $t,x$ to a rest frame's $x_0,t_0$. Cannot use these equations to relate two moving frames.
+
+\subsection{Expectation Value Problems}
+Look for even/odd functions
+\begin{equation}
+ \int \limits_0^T \sin x \cos x = 0~ \textrm{because orthogonal, }T= \textrm{period}
+\end{equation}
+If $\frac{\partial}{\partial x}$ for $ \langle p \rangle$ doesn't bring out an $i$, then $\langle p \rangle = 0$
+
+\subsection{Normal Modes}
+\begin{enumerate}
+    \item Highest normal mode frequency when out of phase
+    \item Use limits if possible, if $M \rightarrow \infty$, etc.
+    \item \# Frequencies = \# masses
+    \item If odd \# masses, one $\omega$ will be $\omega_09$, others will be above/below.
+\end{enumerate}
+For 2 masses hung by strings and connected by a spring,
+\begin{enumerate}
+    \item In phase: $\omega = \sqrt{\frac{g}{l}}$
+    \item Out of phase: $\omega = \sqrt{\frac{2k}{m} + \frac{g}{l}} \rightarrow F = ma = K_{\textrm{eff}}x - mg\cos \theta = -2Kx - mg \cos \theta$
+\end{enumerate}
+For 3 masses held together by strings in an m-M-m configuration:
+\begin{enumerate}
+    \item 2 moving in opposite directions, $M$ @ rest, $\omega= \sqrt{\frac{k}{m}}$, like they're attached to a wall.
+    \item Side masses are in phase, mid mass is out, $\omega_2 = \sqrt{\frac{2k}{m}}$
+\end{enumerate}
+For 2 masses connected to each other and then connected to 2 walls, all on springs with k-k'-k spring coefficient configuration:
+\begin{enumerate}
+    \item In phase $\Delta x_1 = \Delta x_2$ and $k'$ isn't expanded $\omega = \sqrt{\frac{k}{m}}$
+    \item Out of phase $\Delta x_1 = -\Delta x_2$ CM $k'$ stays in place so $k'$ is split between $m_1/m_2 \rightarrow$ force on each mass $2k'$ since only $1/2$ moves $\rightarrow F = k + 2k'~,\omega = \sqrt{\frac{k + 2k'}{m}}$
+\end{enumerate}
+
+\subsection{Radiation in Atoms}
+\begin{tabular}{r l l l l}
+series & K & L & M & N\\
+$n_f=$ & 1 & 2 & 3 & 4
+\end{tabular}
+Specify what the final states are when coming from infinity. 
+
+\subsection{Ionization Energy}
+\begin{enumerate}
+    \item $E$ required to liberate outermost $e^-$
+\end{enumerate}
+
+\subsection{Binding Energy}
+\begin{enumerate}
+    \item How tightly bound nucleons are
+    \item Reaches peak at Iron-56\\
+        Elements below iron release $E$ by fusion\\
+        Elements above iron release $E$ by fission\\
+    \item The mass of a nucleus is always \underline{less than} $\Sigma$ particle's mass\\
+        The $\Delta$ energy is the binding energy\\
+        $c^2(M_{\textrm{nucleus}}-\Sigma_{\textrm{nucleons}}) = BE$
+    \item More tightly bound means less mass/nucleon, more BE/nucleon
+    \item Created by the strong force
+    \item The energy given off during fusion/fission is the $\Delta E$ between binding energies of fuel and products.
+\end{enumerate}
+
+\subsection{Hierarchy of Forces}
+\begin{enumerate}
+    \item Strong (100x E\&M, $10^5$x weak, $10^{39}$x gravity)
+    \item E\&M
+    \item Weak
+    \item Gravity
+\end{enumerate}
+
+\subsection{Pair Production}
+\begin{enumerate}
+    \item Creation of an elementary particle and it's anti-particle usually from a photon.
+    \item Cannot occur in free-space since the original momentum of the photon must be absorbed by something\\
+    Usually near a nucleus or other photon
+    \item For $e^-$ production, the $E_{\textrm{photon}}$ must exceed 2x the rest energy of $e^- = 1$ MeV or if 2 photons involved, $E/$photon = 500 keV
+    \item Dominates at high energy ($>$ MeV)
+    \item Strangeness, momentum, electric charge, must be conserved
+\end{enumerate}
+
+\subsection{Spectral Lines}
+\begin{enumerate}
+    \item Less Dense $\rightarrow $ more sharp/precise lines - don't lost $E$ due to collisions
+    \item Sodium, famous yellow doublet\\
+        created by spin/orbit coupling\\
+        coupling becomes more pronounced in an external $B$
+\end{enumerate}
+
+\subsection{Photon Interactions with Matter}
+\begin{enumerate}
+    \item Low $E$, elastically scatter $\rightarrow$ Compton   $<10^6$ MeV
+    \item Med/Low $E \rightarrow$ photoelectric         $<10^7$ MeV
+    \item High $E \rightarrow$ pair production      $>10^6$ MeV
+\end{enumerate}
+
+\subsection{Neutron}
+\begin{enumerate}
+    \item Fermion, spin=$\frac{1}{2}$
+    \item $^1_0n$
+    \item Decay: $^1_0n \rightarrow ^1_1p^+ + ^0_{-1}e + ^0_0\bar{\nu}$
+    \item Capture: $^1_1p^+ + ^0_{-1}e \rightarrow ^1_0n + ^0_0 \bar{\nu}$
+\end{enumerate}
+
+\subsection{Deuteron}
+\begin{enumerate}
+    \item Deuterium nucleus: $^2_1H \leftrightarrow $ heavy hydrogen 
+    \item Boson
+\end{enumerate}
+
+\subsection{Protium}
+\begin{enumerate}
+    \item Hydrogen nucleus $^1_1H$
+    \item Fermion, $s=\frac{1}{2}$
+\end{enumerate}
+
+\subsection{Davisson-Germer}
+\begin{enumerate}
+    \item Found diffraction pattern of $e^-$ scattering off $N_i$
+    \item Confirmed wave nature of matter
+    \item Plane spacing  $d = D\sin \theta$, $D$ = interatomic spacing
+    \item Bragg: $2d\sin \theta = n\lambda$
+\end{enumerate}
+
+\subsection{Kepler}
+\begin{enumerate}
+    \item $T^2 \propto R^3$
+    \item $\frac{dA}{dt} \propto L \rightarrow \frac{\textrm{area swept}}{\textrm{time}} \propto \textrm{angular momentum}$
+\end{enumerate}
+
+\subsection{Beats}
+\begin{enumerate}
+    \item Beats occur when 2 frequencies are similar
+    \item The \# of beats $\Rightarrow f_b = f_1 - f_2$ 
+    \item The harmonic is the index of $n$ or whatever...
+\end{enumerate}
+\begin{equation}
+ f_n = \underbrace{n}_{\mathclap{\textrm{this is the harmonic}}}\overbrace{f_0}^{\mathclap{\textrm{fundamental}}}
+\end{equation}
+
+\end{document}

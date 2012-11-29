@@ -1,0 +1,89 @@
+\chapter{Introduction}
+
+\begin{center}
+\textbf{\begin{huge} October 25, 2011\end{huge}}
+\end{center}
+
+\section{Intro to cgs}
+
+Mechanics:
+\begin{center}
+\begin{tabular}{c|c}
+\hline
+cgs &SI \\ \hline
+cm & m\\ \hline
+g & kg\\ \hline
+s & s\\ \hline
+erg & J\\ \hline
+ergs/s & W\\ \hline
+dyne & N \\
+\hline
+\end{tabular}
+\end{center}
+
+E\&M
+\begin{center}
+\begin{tabular}{c|c}
+\hline
+cgs &SI \\ \hline
+k=1 & k=$\frac{1}{4\pi \epsilon_0}$ \\ \hline
+$q_e = 4.8 \times 10^{-10}$ esu & $q_e = C$\\ \hline
+$\mathbf{F} = q \frac{\mathbf{v}}{c} \times \mathbf{B} + q\mathbf{E}$ & $\mathbf{v}\times\mathbf{B}$\\  % WAIT WHAT
+\hline
+\end{tabular}
+\end{center}
+
+\section{Intro to Stars}
+
+Sun:
+\begin{list}{$^\circ$}{}
+\item $L_\odot = 3.8 \times 10^{33} \textrm{ ergs s}^{-1} = 3.8 \times 10^{26}\textrm{ W}$
+\item $R_\odot = 7 \times 10^{10} \textrm{ cm} \sim 10R_{\textrm{Jupiter}}$
+\item $M_\odot = 2 \times 10^{33} \textrm{ g} \sim 10^3 M_{\textrm{Jupiter}} \sim 3\times 10^5 M_\oplus$
+\item $t_\odot = 4.5 \times 10^9 \textrm{ years}$ 
+\item $F_{BB} = \sigma T_{eff}^4$
+\item $L = 4 \pi R_\odot^2 \sigma T_{eff}^4~, T_{eff} \approx 5800\textrm{ K}$
+\item $T_c = 1.56 \times 10^7$ K, from neutrino measurements and sound waves
+\end{list}
+
+\begin{align}
+< \rho_\odot> &= \frac{M}{\frac{4}{3}\pi R^3} \approx 1\textrm{ g cm}^{-3}\sim \rho_{\textrm{water}}\\
+\rho_c &= 150 \textrm{ g cm}^{-3}\\
+n &= \frac{\rho}{\mu m_p} \approx 10^{26} \textrm{ cm}^{-3}\\
+&= n_e = n_p
+\end{align}
+
+Another way, $d$ = distance between particles; i.e., one particle per sphere of radius $d$. 
+\begin{align}
+n = \frac{4}{3}\pi d^3 = 1\\
+d \approx \lp \frac{n}{\frac{4}{3}\pi }\rp^{-1/3} \sim n^{-1/3}
+\end{align}
+At the center of the sun, $d \approx 2 \times 10^{-9}$ cm, which is about the B\"ohr Radius ($a_0 \sim 10^{-8}$ cm).
+
+An $e^-$ has 0 volume whereas if the size of a nucleus is $\sim 10^{-13}$ cm $ \ll$ distance between particles, then we can neglect inter-molecular forces and approximate the gas as an ideal gas. 
+
+\section{Ideal Gas}
+
+\begin{align}
+P = n_e kT + n_p kT = 2n_p kT
+\end{align}
+At the center, $P \approx 2 \times 10^{17} \textrm{ ergs cm}^{-3}$. Photons have an intrinsic radiation pressure given by:
+\begin{align}
+P_{rad} &= \frac{1}{3}aT^4 \approx 10^{14}\textrm{ ergs cm}^{-3}~,a \textrm{ is the radiation constant}
+\end{align}
+If photons were degenerate, then instead:
+\begin{align}
+P = \frac{h^2}{5m_e} \lp \frac{3}{8\pi}^{2/3} \rp n_e^{5/3},
+\end{align}
+which stands true for an ideal QM gas of fermions, giving us $P_{\textrm{degen}} \approx 5 \times 10^{16} \textrm{ ergs cm}^{-3}$ at the center of the sun. $P_{\textrm{ideal}} \sim P_{\textrm{degen}}$, so our classical assumption of the state of gas in the sun isn't great. 
+
+\subsection{Other Stars}
+
+\begin{list}{$^\circ$}{}
+\item$M \sim 0.1M_\odot - 100M_\odot$
+\item $R \sim 0.1 - 1000R_\odot$
+\item $L \sim 10^{-4} - 10^6 L_\odot$
+\item $T_{eff} \sim \textrm{ few } 10^3 - 5 \times 10^4 \textrm{ K}$
+\end{list}
+
+On the Main Sequence, plotting $\ln \lp \frac{L}{L_\odot} \rp$ as a function of  $\ln \lp \frac{M}{M_\odot} \rp$, we see that $R \sim M^{0.75}, L \sim M^{3.5}, L\sim T^6$. For the most part, while on the MS, a star fuses H into He. Most stars spend most of their time in this phase. 

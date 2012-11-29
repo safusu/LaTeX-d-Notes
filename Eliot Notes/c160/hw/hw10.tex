@@ -1,0 +1,194 @@
+\documentclass[10pt,letter,preprint]{aastex}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{fullpage}
+
+\newcommand{\pt}{\propto}
+\newcommand{\rp}{\right)}
+\newcommand{\lp}{\left(}
+\newcommand{\half}{\frac{1}{2}}
+\newcommand{\mfrac}{\lp \frac{M}{M_\odot}\rp}
+\newcommand{\rfrac}{\lp \frac{R}{R_\odot} \rp}
+\newcommand{\ms}{M_\odot}
+
+\begin{document}
+
+\title{HW \#10}
+\author{\begin{large}Jeren Suzuki\end{large}}
+\author{November 14, 2011}
+
+Problem 1a:\\
+
+Finding $\mu$:
+
+100\% Ionized H
+\begin{align}
+\mu &= \lp \frac{1}{\mu_I} + \frac{1}{\mu_e} \rp^{-1}\\
+\mu_I &= \lp \frac{1}{A} \rp^{-1} =  \lp \frac{1}{1} \rp^{-1}\\
+\mu_e &= \lp \frac{Z}{A}\rp^{-1}= \lp \frac{1}{1} \rp^{-1}\\
+\mu &= \lp1+ 1 \rp^{-1}\\
+\Aboxed{&= \frac{1}{2}}\\
+\Aboxed{\mu_e &= 1}
+\end{align}
+
+75\% Ionized H, 25\% Ionized He
+\begin{align}
+\mu &= \lp \frac{1}{\mu_I} + \frac{1}{\mu_e} \rp^{-1}\\
+\mu_I &= \lp 0.75 \cdot \frac{1}{A} +  0.25 \cdot  \frac{1}{A}\rp^{-1} = \lp 0.75 \cdot \frac{1}{1} +  0.25 \cdot  \frac{1}{4}\rp^{-1} \\
+\mu_e &= \lp 0.75\cdot \frac{Z}{A}  + 0.25 \cdot \frac{Z}{A}\rp^{-1} = \lp 0.75 \cdot \frac{1}{1} +  0.25 \cdot  \frac{2}{4}\rp^{-1}  \\
+\Aboxed{\mu &\approx 0.59}\\
+\Aboxed{\mu_e &\approx 1.23}
+\end{align}
+
+100\% Ionized He
+\begin{align}
+\mu &= \lp \frac{1}{\mu_I} + \frac{1}{\mu_e} \rp^{-1}\\
+\mu_I &= \lp \frac{1}{A} \rp^{-1}=  \lp \frac{1}{4} \rp^{-1}\\
+\mu_e &= \lp \frac{Z}{A}\rp^{-1}=  \lp \frac{2}{4} \rp^{-1}\\
+\Aboxed{\mu &= \frac{4}{3}}\\
+\Aboxed{\mu_e &= 2}
+\end{align}
+
+100\% Ionized O
+\begin{align}
+\mu &= \lp \frac{1}{\mu_I} + \frac{1}{\mu_e} \rp^{-1}\\
+\mu_I &= \lp \frac{1}{A} \rp^{-1} =  \lp \frac{1}{16} \rp^{-1}\\
+\mu_e &= \lp \frac{Z}{A}\rp^{-1} =  \lp \frac{8}{16} \rp^{-1}\\
+\Aboxed{\mu &\approx 1.77}\\
+\Aboxed{\mu_e &= 2}
+\end{align}
+
+100\% Ionized $^{56}$Fe
+\begin{align}
+\mu &= \lp \frac{1}{\mu_I} + \frac{1}{\mu_e} \rp^{-1}\\
+\mu_I &= \lp \frac{1}{A} \rp^{-1} =  \lp \frac{1}{56} \rp^{-1}\\
+\mu_e &= \lp \frac{Z}{A}\rp^{-1}=   \lp \frac{26}{56} \rp^{-1}\\
+\Aboxed{\mu &\approx 2.07}\\
+\Aboxed{\mu_e &\approx 2.15}
+\end{align}
+
+Problem 1b:\\
+Which gas has the highest ideal gas pressure?
+\begin{align}
+P &= \frac{\rho kT}{\mu m_p}\\
+P &\pt \frac{1}{\mu}
+\end{align}
+Whichever gas has the lowest $\mu$ will have the highest $P_{\textrm{ideal}}$; this works out to be fully ionized H.
+
+Which gas has the highest electron degeneracy pressure?
+\begin{align}
+P &= \frac{h^2}{5m_e} \lp \frac{3}{8\pi} \rp^{2/3} n_e^{5/3}\\
+P &\pt n_e^{5/3}~,n_e = \frac{\rho}{\mu_e m_p}\\
+P &\pt \lp \frac{1}{\mu_e} \rp^{5/3}
+\end{align}
+Whichever gas has the lowest $\mu_e$ will have the highest $P_{\textrm{degen}}$; this works out to be fully ionized H.
+
+\newpage
+Problem 2a:\\
+\begin{align}
+L &= 4\pi R^2 F\\
+&= 4 \pi R^2 \frac{4}{3} \frac{caT^3}{n\sigma}\frac{dT}{dR}\\
+&= \frac{16 \pi}{3} R^2 \frac{caT^3}{n_e \sigma_T}\frac{T}{R}\\
+&=\frac{16 \pi}{3} R \frac{caT^4}{n_e \sigma_T}\\
+&= \frac{16 \pi}{3} \frac{caT^4}{\sigma_T} \frac{\mu_e m_p}{\rho}R\\
+&= \frac{16 \pi}{3} \frac{caT^4}{\sigma_T} \frac{\mu_e m_p}{M}\frac{4\pi R^3}{3}R\\
+&= \frac{16 \pi}{3} \frac{caT^4}{\sigma_T} \frac{\mu_e m_p}{M}\frac{4\pi R^4}{3}\\
+&= \frac{16 \pi}{3} \frac{caT^4}{\sigma_T} \frac{\mu_e m_p}{M}\frac{4\pi}{3} \lp \frac{GM\mu m_p}{3kT} \rp^4 \\
+&= \frac{16 \pi}{3} \frac{ca}{\sigma_T} \frac{\mu_e m_p}{M}\frac{4\pi}{3} \lp \frac{GM\mu m_p}{3k} \rp^4 \\
+&= \frac{16 \pi}{3} \frac{ca\mu_e m_p}{\sigma_T}\frac{4\pi}{3} \lp \frac{G\mu m_p}{3k} \rp^4 M^3\\
+\Aboxed{L &= 3.94 \times 10^{-63}M^3}
+\end{align}
+
+Problem 2b:\\
+\begin{align}
+L_{\textrm{rad}} &= L_{\textrm{fus}}\\
+ \frac{16 \pi}{3} \frac{ca\mu_e m_p}{\sigma_T}\frac{4\pi}{3} \lp \frac{G\mu m_p}{3k} \rp^4 M^3 &= 0.1 \epsilon M\\
+ \frac{16 \pi}{3} \frac{ca\mu_e m_p}{\sigma_T}\frac{4\pi}{3} \lp \frac{G\mu m_p}{3k} \rp^4 M^3 &= 0.1 \cdot 5 \times 10^{11} \rho^2 T_8^{-3} e^{-44/T_8}  M\\
+ \frac{16 \pi}{3} \frac{ca\mu_e m_p}{\sigma_T}\frac{4\pi}{3} \lp \frac{G\mu m_p}{3k} \rp^4 M^3 &=  5 \times 10^{10} \lp \frac{M}{\frac{4\pi R^3}{3}} \rp^2 T_8^{-3} e^{-44/T_8}  M\\
+ \frac{16 \pi}{3} \frac{ca\mu_e m_p}{\sigma_T}\frac{4\pi}{3} \lp \frac{G\mu m_p}{3k} \rp^4 M^3 &=  5 \times 10^{10} \lp \frac{3M}{4\pi R^3} \rp^2 T_8^{-3} e^{-44/T_8}  M\\ 
+ \frac{16 \pi}{3} \frac{ca\mu_e m_p}{\sigma_T}\frac{4\pi}{3} \lp \frac{G\mu m_p}{3k} \rp^4 M^3 &=  5 \times 10^{10} \lp \frac{3M}{4\pi} \rp^2 T_8^{-3} e^{-44/T_8}  M \frac{1}{R^6}\\ 
+ \frac{16 \pi}{3} \frac{ca\mu_e m_p}{\sigma_T}\frac{4\pi}{3} \lp \frac{G\mu m_p}{3k} \rp^4 M^3 &=  5 \times 10^{10} \lp \frac{3M}{4\pi} \rp^2 T_8^{-3} e^{-44/T_8}  M  \lp \frac{GM\mu m_p}{3kT} \rp^{-6} \\   
+\Aboxed{T &\approx 1.4 \times 10^8\textrm{ K}}
+\end{align}
+
+\newpage
+Problem 2c:\\
+\begin{align}
+L_{\textrm{fus}} &= L_{\textrm{rad}}\\
+0.1 \epsilon M &=  \frac{16 \pi}{3} \frac{ca\mu_e m_p}{\sigma_T}\frac{4\pi}{3} \lp \frac{G\mu m_p}{3k} \rp^4 M^3 \\
+0.1 \rho^\alpha T^\beta &=  \frac{16 \pi}{3} \frac{ca\mu_e m_p}{\sigma_T}\frac{4\pi}{3} \lp \frac{G\mu m_p}{3k} \rp^4 M^3 \\
+0.1 \lp \frac{3M}{4 \pi R^3} \rp^\alpha T^\beta &=  \frac{16 \pi}{3} \frac{ca\mu_e m_p}{\sigma_T}\frac{4\pi}{3} \lp \frac{G\mu m_p}{3k} \rp^4 M^3\\
+0.1 \lp \frac{3M}{4 \pi} \rp^\alpha R^{-3\alpha} T^\beta &=  \frac{16 \pi}{3} \frac{ca\mu_e m_p}{\sigma_T}\frac{4\pi}{3} \lp \frac{G\mu m_p}{3k} \rp^4 M^3\\
+0.1 \lp \frac{3M}{4 \pi} \rp^\alpha \lp \frac{GM\mu m_p}{3kT} \rp^{-3\alpha} T^\beta &=  \frac{16 \pi}{3} \frac{ca\mu_e m_p}{\sigma_T}\frac{4\pi}{3} \lp \frac{G\mu m_p}{3k} \rp^4 M^3\\
+0.1 \lp \frac{3M}{4 \pi} \rp^\alpha \lp \frac{GM\mu m_p}{3k} \rp^{-3\alpha} T^{\beta+3\alpha} &=  \frac{16 \pi}{3} \frac{ca\mu_e m_p}{\sigma_T}\frac{4\pi}{3} \lp \frac{G\mu m_p}{3k} \rp^4 M^3\\
+ T^{\beta+3\alpha} &=  \frac{160 \pi}{3} \frac{ca\mu_e m_p}{\sigma_T}\frac{4\pi}{3} \lp \frac{G\mu m_p}{3k} \rp^4 M^3  \lp \frac{GM\mu m_p}{3k} \rp^{3\alpha} \lp \frac{3M}{4 \pi} \rp^{-\alpha}\\
+ T &= \lp \frac{160 \pi}{3} \frac{ca\mu_e m_p}{\sigma_T}\frac{4\pi}{3} \lp \frac{G\mu m_p}{3k} \rp^4 M^3  \lp \frac{GM\mu m_p}{3k} \rp^{3\alpha} \lp \frac{3M}{4 \pi} \rp^{-\alpha} \rp^{1/(\beta + 3\alpha)}\\
+ T &= \lp \frac{160 \pi}{3} \frac{ca\mu_e m_p}{\sigma_T}\frac{4\pi}{3} \lp \frac{G\mu m_p}{3k} \rp^4  \lp \frac{GM\mu m_p}{3k} \rp^{3\alpha} \lp \frac{3}{4 \pi} \rp^{-\alpha} \rp^{1/(\beta + 3\alpha)} M^{7/(\beta + 3\alpha)} ~, \beta \approx 29\\
+ T &= \lp \frac{160 \pi}{3} \frac{ca\mu_e m_p}{\sigma_T}\frac{4\pi}{3} \lp \frac{G\mu m_p}{3k} \rp^4  \lp \frac{G\mu m_p}{3k} \rp^{3\alpha} \lp \frac{3}{4 \pi} \rp^{-\alpha} \rp^{1/(\beta + 3\alpha)} M^{1/5}\\
+\Aboxed{  T&= 4.16 \times 10^{-5} M^{1/5}}
+\end{align}
+
+Problem 2d:\\
+\begin{align}
+R(M) &= \frac{GM\mu m_p}{3kT}\\
+&=  \frac{GM\mu m_p}{3k\cdot4.16 \times 10^{-5} M^{1/5}}\\
+&=  \frac{G\mu m_p}{3k\cdot4.16 \times 10^{-5} } M^{4/5}\\
+\Aboxed{R(M)&= 7.08 \times 10^{-12}  M^{4/5}}
+\end{align}
+
+\newpage
+\begin{align}
+L &= 4 \pi R^2 T_{eff}^4\\
+T_{eff}^4 &= L (4 \pi R^2)^{-1}\\
+T_{eff}^4 &= L (4 \pi (7.08 \times 10^{-12}M^{4/5})^2)^{-1}\\
+T_{eff} &= (L (4 \pi (7.08 \times 10^{-12}M^{4/5})^2)^{-1} )^{1/4}\\
+T_{eff} &= \lp L \lp 4 \pi \lp 7.08 \times 10^{-12} \lp \frac{L}{3.94 \times 10^{-63}} \rp^{4/15} \rp^2\rp^{-1} \rp^{1/4}\\
+T_{eff} &= L^{1/4}  \lp 4 \pi \lp 7.08 \times 10^{-12} \lp \frac{L}{3.94 \times 10^{-63}} \rp^{4/15} \rp^2\rp^{-1/4}\\
+T_{eff} &= L^{1/4}L^{-2/15}   \lp 4 \pi \lp 7.08 \times 10^{-12} \lp \frac{1}{3.94 \times 10^{-63}} \rp^{4/15} \rp^2\rp^{-1/4}\\
+\Aboxed{T_{eff} &= 9.54 \times 10^{-4} L^{.116}}
+\end{align}
+
+Problem 2e:\\
+\begin{align}
+L_{EDD} \pt M, L_{rad} \pt M^3\\
+1.3 \times 10^{38} \mfrac &= 3.94 \times 10^{-63} M^3\\
+1.3 \times 10^{38} \mfrac &= 3.15 \times 10^{37} \mfrac^3\\
+4.12 &= \mfrac^2\\
+\sqrt{4.12 \cdot \ms^2 } &= M\\
+\Aboxed{4.06 \times 10^{33} g &= M}
+\end{align}
+
+Problem 2f:\\
+\begin{align}
+t &= \frac{E}{L}\\
+t(M) &= \frac{\frac{GM}{R^2}}{L(M)}\\
+t(M) &= \frac{GM}{R^2L(M)}\\
+t(M) &= \frac{GM}{(7.08 \times 10^{-12} M^{4/5})^2 3.94 \times 10^{-63}M^3}\\
+t(M) &= M^{-3.6} 3.38\times 10^{77}\textrm{ sec}
+\end{align}
+
+Problem 3a:\\
+%
+%\begin{align}
+%\frac{dP}{dR} &= -\rho g\\
+%&= -\frac{M}{\frac{4}{3} \pi R^3} \frac{GM}{R^2}~,\frac{dP}{dR} \sim \frac{P}{R}\\
+%\frac{P}{R} &\pt \frac{M^2}{R^5}\\
+%P &\pt \frac{M^2}{R^4}
+%\end{align}
+
+\begin{align}
+\frac{dP}{dR} &= -\rho g\\
+dP &= -\rho g dr~,\rho 4 \pi r^2 dr = dM~,\rho dr = \frac{dM}{4 \pi r^2}\\
+P &= \int -g \frac{dM}{4 \pi r^2}\\
+P &= -\frac{GM}{r^2}\frac{M_{\textrm{shell}}}{4 \pi r^2}\\
+\Aboxed{P &= \frac{GMM_{\textrm{shell}}}{4\pi R_s^4}}
+\end{align}
+
+Problem 3b:\\
+Small changes in fusion will result in an increase of energy which will heat up the shell more, increase the amount of fusion. Since it's only a shell and not a spherical body, there is no central force pushing outwards to counteract the force of gravity. Any small change in fusion will cause the shell to heat up, increase fusion more, expand, then puff out. Yes, there is matter being dumped on the core, but that only serves to increase the core temp and thus luminosity, streaming more photons out to push against the shell. 
+
+
+\end{document}

@@ -1,0 +1,150 @@
+\chapter{Stellar Atmospheres and Spectra}
+
+\begin{center}
+\textbf{\begin{huge} October 27, 2011\end{huge}}
+\end{center}
+
+\section{Stellar Classification}
+
+Photosphere is where $l \simeq H$ which implies $l = \frac{1}{\kappa \rho} \approx \frac{kT}{mg}$. This then turns into $n \approx \frac{g}{kT\kappa}, P \approx\frac{g}{\kappa}$. For our sun, 
+\begin{list}{$\circ$}{}
+\item $T_{eff}= 5800$ K
+\item  $n = 10^{17} $ cm$^{-3}\sim 10^{-3} n_\oplus$
+\item $P \approx 10^5 $ dyne cm$^{-2} = 0.1$ atm
+\end{list}  
+
+For a MS Star,
+\begin{list}{$\circ$}{}
+\item $T_{eff} = 5800$ K $\mfrac^{3/8} \ra n(M), P(M)$
+\item $M \approx 0.1 M_\odot, T_{eff} \sim 3000$ K
+\item $M \approx 100M_\odot, T_{eff} \sim 30,000$ K
+\end{list}  
+
+\begin{list}{$\circ$}{}
+\item O B A F G K M L T (L \& T have $T_{eff} \sim 1000 - 1500$ K and are dominated by molecular lines and bands)
+\end{list}
+
+In a nutshell, the $M$ gives us the $T_{eff}$ which will in turn give us the spectra. This is understood as a consequence of thermal equilibrium in the atmospheres of stars. Imagine an atom/molecule with energy levels $E_i$ and $E_j$:
+
+\begin{align}
+\frac{N_j}{N_i} = \frac{g_j}{g_i}e^{-(E_j - E_i)/kT}
+\end{align}
+
+Are the atoms in this atmosphere ionized or neutral and how does it depend on temperature? This we will understand through the Saha Equation which deals with ionization equilibrium. You have ionization (bound electron + photon = free electron) and recombination (electron + proton = bound neutral hydrogen atom) in a gas. What deals with changes in particles? $\mu$.... oh no.
+
+\section{Chemical Potential and Thermal Equilibrium}
+
+\begin{align}
+dE = TdS + PdV - \mu dN\\
+P,T,\mu: \text{macroscopic thermodynamic properties of a gas}\\
+P = \lp \frac{\delta E}{\delta V} \rp_{S,N}\\
+\mu = \lp \frac{\delta E}{\delta N} \rp_{S,V}\\
+T = \lp \frac{\delta E}{\delta S} \rp_{V,N}
+\end{align}
+
+Approach thermal equilibrium via changes in:
+
+\begin{list}{$\circ$}{}
+\item heat/temp (changes in thermal energy)
+\item pressure (changes in volume)
+\item chemical potential (changes in \# or type of particle)
+\end{list}
+
+Say you have a box with $N_1,V_1,E_1$ and $N_2,V_2,E_2$ on another side with a separator in between. If you exchange energy between the particles (exchange of heat), then thermodynamic equilibrium is the temperatures equal each other. If the boundary is permeable, then the pressures become equal to each other. If you can exchange the number of types of particles, such as the ionization and recombination process, then in thermal equilibrium, the chemical potentials become equal. \\
+
+For our purposes, what this means is that if you have reactions that convert:
+
+\begin{align}
+A + B \ra C + D\\
+\underbrace{C + D \ra A + B}_{\text{ approach thermal equilibrium}}\\
+\mu(A) + \mu(B) = \mu(C) + \mu(D)
+\end{align}
+
+\section{H Fusion}
+
+\begin{align}
+4 H \ra ^4He~,\text{ no opposite reaction and thus no thermal equilibrium describable with $\mu$}
+\end{align}
+
+But we can work with:
+\begin{align}
+e^- + p \ra H + \gamma~.
+\end{align}
+
+\begin{align}
+\underbrace{\text{\# of recombinations per vol per unit time} = \text{\# of ionizations per vol per unit time}}_{\text{after long enough time so that both directions have happened}}
+\end{align}
+
+This can be described as:
+\begin{align}
+\mu(e^-) + \mu(p) = \mu(H) + \mu(\gamma)
+\end{align}
+
+\section{How to Calculate $\mu$}
+
+$e^-,p,H,...$ in the atmospheres of stars can be described as a classical, ideal gas. What is the $\mu$ of a classical, ideal gas? We know how to calculate it for a degenerate gas ($\mu = E_F$), but not for classical yet. We have to go back to the distribution function that describes particles as a function of momentum. 
+
+\begin{align}
+n(p) &= \frac{g}{h^3} \frac{1}{e^{(E_p - \mu)/kT} \pm 1}~,\text{ $g$ is a constant related to spin states}\\
+n(p) &= \text{ density in $p-$space}\\
+``+" &= \text{ Fermions}\\
+``-" &= \text{ Bosons}
+\end{align}
+
+If it's classical, should mean that we don't care either fermions or bosons. we would \textit{GUESS} that the exponential is $\gg 1$. Then,
+
+\begin{align}
+n(p) &= \frac{g}{h^3}e ^{-(E_p - \mu)/kT}\\
+E_p^2 &= p^2c^2 +  m^2c^4~.
+\end{align}
+
+However, line 18 isn't completely classical because there's still an $h$ in the equation. Recall the classical limit is when $\lambda \ll n^{-1/3}$ or $n \ll n_Q = \lp \frac{2 \pi m kT}{h^2} \rp^{3/2}$.
+
+\subsection{NR Gas}
+
+\begin{align}
+E_p^2 &= mc^2\lp 1 + \frac{p^2c^2}{mc^4} \rp^{1/2}\\
+E_p &= mc^2 \lp 1 + \frac{p^2}{2m} \frac{1}{mc^2} \rp\\
+E_p &= \underbrace{mc^2}_{\text{ rest mass}} + \underbrace{\frac{p^2}{2m}}_{\text{ kinetic}}
+\end{align}
+
+\begin{align}
+\mu + E_F \pt n^{2/3}\\
+n &= \int n(p) d^3p\\
+&= 4 \pi \int p^2 dp n(p)\\
+&= \frac{4 \pi g}{h^3}  \in p^2 e^{-(mc^2 + \frac{p^2}{2m} - \mu)/kT} dp\\
+&= \frac{4 \pi g}{h^3} e^{(\mu -mc^2)/kT} \underbrace{\int  p^2 e^{-\frac{p^2}{2mkT}} dp}_{(2mkT)^{3/2} \frac{\sqrt{\pi}}{4}}\\
+\Aboxed{n &= g e^{(\mu - mc^2)/kT} \lp \frac{2 \pi mkT}{h^2} \rp^{3/2}}\\
+\Aboxed{n &= n_Q g e^{(\mu - mc^2)/kT}}\\
+e^{(mc^2 - \mu)/kT} = g\frac{n_Q}{n} \gg 1 ~, \text{ for classical}\\
+n \ll n_Q \ra e^{(E_p - \mu)/kT} \gg 1
+\end{align}
+
+Now we'll solve for $\mu$
+
+\begin{align}
+\boxed{\mu = mc^2 - kT \ln \lp \frac{gn_Q}{n} \rp} ~,\text{ $\mu$ for a classical, NR ideal gas, }kT \gg E_F
+\end{align}
+
+For a degenerate gas, $p_F \sim hn^{1/3}$, $E_F \sim \frac{h^2 n^{2/3}}{m} \equiv \mu$ of a degenerate NR gas. For this, $kT \ll E_F$. \\
+
+We wanted to understand ionization balance in stars (focusing on $H$) which is described by:
+
+\begin{align}
+\mu(p) + \mu(e^-) = \mu(H) + \underbrace{\mu(\gamma)}_{\mu = 0}
+\end{align}
+
+To actually implement this:
+
+\begin{align}
+\mu(p) &= m_pc^2 - kT\ln \lp \frac{gn_{Q,p}}{n_p} \rp\\
+\mu(e^-) &= m_ec^2 - kT\ln \lp \frac{gn_{Q,e}}{n_e} \rp\\
+\mu(H) &= m_Hc^2 - kT\ln \lp \frac{gn_{Q,H}}{n_h} \rp~,\text{ where $n_H$ is the density of neutral hydrogen}\\
+m_Hc^2 &= m_pc^2 + m_ec^2 - \chi~,\chi = \text{ binding energy of $e^-$ and $p$ in atom}
+\end{align}
+
+\begin{align}
+\mu(H) &= \mu(p) + \mu(e^-)\\
+m_pc^2 + m_ec^2 - \chi - kT \ln \lp \frac{gn_{Q,H}}{n_H} \rp &= m_pc^2+m_ec^2 - kT\ln \lp \frac{g_e n_{Q,e}}{n_e} \rp -  kT\ln \lp \frac{g_p n_{Q,p}}{n_p} \rp\\
+\frac{n_e  n_p}{n_H} &= \frac{g_eg_p}{g_H}n_{Q,e} e^{-\chi/kT}~,\text{ Saha Equation for ionization balance}
+\end{align}

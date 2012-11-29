@@ -1,0 +1,92 @@
+\chapter{Neutron Stars}
+
+\begin{center}
+\textbf{\begin{huge} November 17, 2011\end{huge}}
+\end{center}
+
+\section{Collapse}
+Imagine (once again), a star that's fused it's core into Fe, leaving it without an energy source and with $M> M_{ch}$. Now, without pressure support, the core contracts on a timescale determined by $t_{KH}$. %To go from gradual contraction to a catastrophic collapse, there are 2 key processes.\\
+As you start to contract, $T \uparrow$, $\langle h\nu \rangle \uparrow$ and thus:
+\begin{align}
+\gamma + \textrm{$^{56}$Fe} \leftrightarrow \textrm{$^{4}$He} 
+\end{align}
+At low temperatures ($1 \times 10^9$ K), this favors the bound object, $^{56}$Fe. As you contract to higher $T$, it favors everything being ionized and thus favors either He or n \& p. Starting out with a Fe core, photons break it down into smaller things which requires energy, robbing core of heat. There's a catastrophic runaway that as the core contracts, $T$ increases which then increases the amount of Fe that breaks down into He, robbing the core of heat and thus outwards pressure, making the core contract even more.\\
+As the core contracts, $\rho \uparrow$ and thus $E_F$ of an electron increases too.
+\begin{align}
+E_F \sim 5 \textrm{ MeV} \lp \frac{\rho}{10^9 \textrm{ g cm}^{-3}} \rp^{1/3}
+\end{align}
+\begin{align}
+E_F &> (m_n - m_p)c^2 = 13\textrm{ MeV}\\
+n &\ra p + e^- + \overline{\nu_e}\textrm{ (free n)}\\
+e^- + p &\ra n + \nu_e\textrm{ electron capture}
+\end{align}
+This process means 3 things:
+\begin{list}{$^\circ$}{}
+\item Lots of neutrons (preparing for a neutron star)
+\item Neutrinos carry away energy
+\item and...
+\end{list}
+If photons have energy greater than the rest mass energy of the difference in mass of p and n, electron capture can occur. Now, you can go from:
+\begin{align}
+e^- + \textrm{heavy nuclei}\ra\textrm{n-rich nucleus}.
+\end{align}
+
+Since there are a bunch of $\nu$'s now, they carry a bunch of energy away which cools the core and thus accelerates the contraction, just like the breaking up of Fe. If you get rid of electrons, the $M_{\textrm{ch}}$ goes down since there are physically less electrons for electron degeneracy pressure. \\
+
+Now the core of the star enters free-fall collapses where the timescale is $t_{ff} \sim \frac{1}{\sqrt{G\rho}}\sim 0.1$ secs. Note that it's only the core; the outer parts of the star hasn't realized anything about the inner workings of the core yet. Why does this collapse stop though (even if temporarily)?\\
+
+As the collapse proceeds and the core gets denser, smaller and hotter, does the pressure ever counteract gravity?
+\begin{align}
+\frac{dP}{dr} &= -\rho g\\
+\textrm{HE requires }P &\sim \frac{ GM^2}{R^4} \sim GM^{2/3}\rho^{4/3}
+\end{align}
+
+The electron degeneracy pressure doesn't help (we're above $M_{\textrm{ch}}$), gas pressure doesn't help ($P\pt \rho T$) since $T$ isn't going up very rapidly (a lot of energy is being carried out), so what we end up with is neutron degeneracy pressure. Remember the magic thing picked out by QM is $p_F \sim hn^{1/3}$. If we wanted to find out the $v$ of particles at a given density, we can use $v \sim \frac{ hn^{1/3}}{m}$. Given an $n$, neutrons are non-relativistic while the electrons are relativistic. Thus, the neutron degeneracy pressure is the non-relativistic degeneracy pressure. The relativistic  electrons provide a degenerate pressure $\pt \rho^{4/3}$.\\
+
+Initially, at the beginning of collapse, the neutron degeneracy pressure in the core is small. As the star collapses, the neutron degeneracy pressure which is $\pt n^{5/3} \pt \rho^{5/3}$ goes up faster than the pressure than $P_{HE} \pt \rho^{4/3}$. There will be a point where neutron degeneracy pressure will be large enough to support the star under its own gravity. The radius of an object supported by degeneracy pressure is:
+\begin{align}
+R \pt \frac{M^{1/3}}{\underbrace{m}_{\textrm{mass of fermion}}}
+\end{align}
+What this means is that at a given mass, neutron stars are 1000 times smaller than white dwarf stars. (ratio of masses is about 1000) 
+
+\subsection{Neutron Degeneracy Pressure}
+$P_n$ kicks in when the radius of the star approaches 15 km. 
+\begin{align}
+\rho &\sim \frac{3M}{4 \pi R^3} \sim 2 \times 10^{14} \textrm{ g cm}^{-3}\\
+n_n &\sim \frac{\rho}{m_n} \sim 10^{38}\textrm{ particles cm}^{-3}\\
+\textrm{distance between neutrons}&\sim n^{-1/3} \sim 2 \times 10^{-13}~,\sim \textrm{size of neutron}
+\end{align}
+All the neutrons are packed so tightly together they're nearly overlapping. We've gone from an Fe core with $R \approx 1000$ km and $M \approx \ms$ and in about 0.1 secs convert it into a newly formed NS with $R \approx 10-15$ km and $M \approx \ms$. Initially, there's a certain gravitational binding energy associated with the star.
+\begin{align}
+E_i &\sim \frac{GM_{core}^2}{R_{core}}\\
+E_f &\sim \frac{GM_{core}^2}{R_{NS}}\\
+\Delta E &= |E_f| - |E_i| \\
+&= |E_f| =\frac{GM_{core}^2}{R_{NS}} \sim 10^{53}\textrm{ ergs} \\
+&= 0.1 M_{NS} c^2
+\end{align}
+
+Fusion releases 0.7\% of the rest mass energy, meaning this $\Delta E$ is an extraordinarily effective release of energy. The binding energy of stuff outside the core (which is closest to core) is $\sim \frac{GM_{core}^2}{R_{core}}$. This is about $10^{51}$ ergs. Why is this important? As you go from Fe to a NS, that energy release ($\Delta E$) is much larger than the binding energy of the rest of the star. This is how we explain the outer parts of the star explodes while the core collapses. This gives us a core-collapse SN!
+
+\subsection{Dimensional Calculations}
+We have a hot NS surrounded by the rest of the star falling in (1D: spherically symmetric). The material kind of slams to a halt, called a shock. The NS is radiating $\nu$ and is so dense that they cannot freely escape and must random walk. Recall particles (photons, neutrinos, etc) that undergo RW produce a BB spectrum. Eventually, the neutrinos get out and the surface of the NS is radiating $\nu$ as a BB. Is there a way to tap into the $10^{53}$ ergs of energy that will interact will the in-falling material and blow it out? A guess is some fraction of neutrinos interact with the closest in-falling material, heating it up.  Yes, most of the neutrinos don't interact, but as long as we tap into 1\% (and overcome the binding energy of star), we can blow up the outer part of the star.
+\begin{align}
+\nu_e + n &\ra e^- + p\\
+\overline{\nu_e} + p &\ra e^+ + n
+\end{align}
+Through these reactions, the neutrinos heat up surrounding gas and maybe, hopefully, we can initiate explosion. Remember that the stuff right outside the neutrinosphere is also extremely dense so neutrinos can still interact with it. \\
+
+Imagine a newly formed NS with appropriate shells, with a $10^{51}$ ergs KE shockwave ripping though and blowing away the outer layers. The time it takes for neutrinos to exit the NS is:
+\begin{align}
+t_{\textrm{diffusion}} &\sim \frac{R}{l} \frac{R}{c} \sim 1-10 \textrm{sec}\\
+L_\nu &\sim \frac{\Delta E}{t_{\textrm{diff}}} \sim 10^{52} -10^{53}\textrm{ ergs/s}\\
+&\sim 10^{20} L_\odot
+\end{align}
+We can use this immense $L_\nu$ to calculate the $T$ and thus the energy per neutrino.
+\begin{align}
+L_\nu &= \underbrace{6}_{\textrm{6 flavors of neutrinos}} 4 \pi R^2 \underbrace{\frac{7}{16}}_{\textrm{FD-statistics}} \sigma T_{eff}^4\\
+T_{eff} &\sim 8 \textrm{ MeV}\\
+\langle E_\nu \rangle &\sim 3kT_{\textrm{eff}}\\
+\sim &\textrm{20 MeV}
+\end{align}
+
+19 neutrinos with energies approximately 20-30 MeV were detected during the 1987A SN, giving us an observational estimate on the energy of the explosion to be 2-3 $\times 10^{53}$ ergs.

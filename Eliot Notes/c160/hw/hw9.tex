@@ -1,0 +1,248 @@
+\documentclass[10pt,letter,preprint]{aastex}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{fullpage}
+
+\newcommand{\pt}{\propto}
+\newcommand{\rp}{\right)}
+\newcommand{\lp}{\left(}
+\newcommand{\half}{\frac{1}{2}}
+\newcommand{\mfrac}{\lp \frac{M}{M_\odot}\rp}
+\newcommand{\rfrac}{\lp \frac{R}{R_\odot} \rp}
+\newcommand{\ms}{M_\odot}
+
+\begin{document}
+
+\title{HW \#9}
+\author{\begin{large}Jeren Suzuki\end{large}}
+\author{November 4, 2011}
+
+Problem 1:\\
+Starting with the expression for $\mu$ in class, 
+
+\begin{align}
+\mu &= mc^2 - kT\ln \lp \frac{gn_Q}{n} \rp\\
+MB &= \frac{g}{h^3}\frac{1}{e^{(E-\mu)/kT} \pm 1}~,\textrm{ the exponent is much greater than $\pm1$ so we can drop it}\\
+&= \frac{g}{h^3}\frac{1}{e^{(E-\mu)/kT} }~,E = \frac{p^2}{2m} + mc^2\\
+&= \frac{g}{h^3}e^{(\mu-E)/kT}\\
+&= \frac{g}{h^3}e^{(mc^2 - kT\ln \lp \frac{gn_Q}{n} \rp - \frac{p^2}{2m} - mc^2)/kT}\\
+&= \frac{g}{h^3}e^{( - kT\ln \lp \frac{gn_Q}{n} \rp - \frac{p^2}{2m})/kT}\\
+&= \frac{g}{h^3}e^{( -\ln \lp \frac{gn_Q}{n} \rp}e^{- \frac{p^2}{2mkT}}\\
+&= \frac{g}{h^3}e^{(\ln \lp \frac{gn_Q}{n} \rp^{-1}}e^{- \frac{p^2}{2mkT}}\\
+&= \frac{g}{h^3}\lp \frac{gn_Q}{n} \rp^{-1}e^{- \frac{p^2}{2mkT}}\\
+&= \frac{g}{h^3}\lp \frac{n}{gn_Q} \rp e^{- \frac{p^2}{2mkT}}\\
+&= \frac{n}{n_Qh^3}e^{- \frac{p^2}{2mkT}}\\
+&= \frac{n}{h^3} \lp \frac{h^2}{2 \pi m_e kT}\rp^{3/2}e^{- \frac{p^2}{2mkT}}\\
+\Aboxed{&= n \lp \frac{1}{2 \pi m_e kT}\rp^{3/2}e^{- \frac{p^2}{2mkT}}}
+\end{align}
+
+\newpage
+Problem 2a:\\
+\begin{align}
+\frac{\frac{dN_2}{dm_2} \pt m_2^{-\alpha}}{\frac{dN_1}{dm_1} \pt m_1^{-\alpha}}\\
+\frac{dN_2}{dN_1} &\pt  \frac{m_2}{m_1} \lp \frac{m_2}{m_1} \rp^{-\alpha}\\
+\frac{dN_2}{dN_1} &\pt  \lp \frac{m_2}{m_1} \rp^{-\alpha+1}\\
+\frac{N_2}{N_1} &\pt \lp \frac{150}{0.5} \rp^{-\alpha+1}~,\textrm{ going to conjure black magic and setting } \frac{dN_1}{dN_2} = \frac{N_1}{N_2} \\
+\Aboxed{N_2 &\pt 2208 N_1}
+\end{align}
+There's about 2200 small $0.5\ms$ stars for every $150\ms$ star.
+
+Problem 2b:\\
+Let's find $N_{tot}$
+%\begin{align}
+%R &= \frac{GM\mu m_p}{3kT}\\
+%\rho &= \frac{3M}{4 \pi R^3}\\
+%\rho &= \lp \frac{3M}{4\pi}\rp \lp \frac{3kT}{GM\mu m_p} \rp^3
+%\end{align}
+%
+%\begin{align}
+%M_{cloud} &= N_1m_1 + N_2m_2\\
+%M_{cloud} &= 1 \times 150\ms + 2200 \times  0.5\ms\\
+%M_{cloud} &= 1250\ms
+%\end{align}
+%
+%\begin{align}
+%\rho &= \lp \frac{3\cdot M_{cloud}}{4\pi}\rp \lp \frac{3kT}{GM_{cloud} \mu m_p} \rp^3\\
+%\rho &= \lp \frac{3\cdot 1250\ms}{4\pi}\rp \lp \frac{3kT}{G\cdot 1250\ms \mu m_p} \rp^3\\
+%\rho &= 9.07 \times 10^{-24} \textrm{g cm}^{-3}\\
+%n &= \frac{\rho}{\mu m_p}\\
+%\Aboxed{n&= 9.05 \textrm{ cm}^{-3}}~,\textrm{ for cold mol. gas and normalized to 50$\ms$, $n$ is 1000, so we're okay. }
+%\end{align}
+%
+\begin{align}
+\frac{N_{1}}{N_{2}}&=\beta\\
+\frac{dN_{1}}{dm_{1}} &= m_1^{-\alpha}\\
+N_{1}&=\beta N_{2}~, \textrm{ insert black magic and say }dN_{1}= \beta dN_{2}\\
+\beta \frac{dN_{2}}{dm_{1}} &= m_{1}^{-\alpha}\\
+\beta dN_{2} &= m_{1}^{-\alpha}dm_{1}\\
+\int dN_{2}&=\frac{1}{\beta} \int m_{1}^{-\alpha}dm_{1}\\
+N_{2}&= \frac{1}{\beta} \int_{m_{1}}^{m}m_{1}^{-\alpha}dm_{1}\\
+N_{2}&= \frac{1}{\beta} \frac{1}{1-\alpha }m_{1}^{1-\alpha} \Bigl\lvert_{m_{1}}^{m}\\
+N_{2}&= \frac{1}{\beta} \frac{1}{1-\alpha } \lp m^{1-\alpha} -m_{1}^{1-\alpha} \rp
+\end{align}
+
+Use same argument for $N_{1}$ and we get:
+\begin{align}
+N_{1} &= \frac{\beta}{1-\alpha} \lp m_{2}^{1-\alpha} - m^{1-\alpha} \rp
+\end{align}
+
+We know $m_{1},m_{2},\beta$, and $\alpha$, so we just need to plot $N$ as a function of $m$.
+\begin{align}
+N_{tot} &= N_{1}+N_{2} \\
+N_{tot} &=  \frac{\beta}{1-\alpha} \lp m_{2}^{1-\alpha} - m^{1-\alpha} \rp + \frac{1}{\beta} \frac{1}{1-\alpha } \lp m^{1-\alpha} -m_{1}^{1-\alpha} \rp
+\end{align}
+
+We want to know the total number of stars between 0.5$M_{\odot}$ and 50$M_{\odot}$, so we're going to integrate this.%
+%
+\begin{align}
+M_{tot} &=  \int_{0.5 M_{\odot}}^{150M_{\odot}}\lp  \frac{\beta}{1-\alpha} \lp m_{2}^{1-\alpha} - m^{1-\alpha} \rp + \frac{1}{\beta} \frac{1}{1-\alpha } \lp m^{1-\alpha} -m_{1}^{1-\alpha} \rp \rp dm\\
+\Aboxed{M_{tot}&\approx 4847.29 M_{\odot}}
+\end{align}
+
+Now we're going to use V.T and $\rho = \frac{3M}{4 \pi R^{3}}$.
+%
+\begin{align}
+\frac{3}{2}kT &= \frac{GM\mu m_p}{2R}\\
+R &= \frac{GM\mu m_{p}}{3kT}\\
+\rho &= \frac{3M}{4 \pi R^{3}}\\
+\rho &=\frac{3M}{4\pi}\lp \frac{GM\mu m_{p}}{3kT} \rp^{-3}\\
+\rho &=\frac{3M}{4\pi}\lp  \frac{3kT}{GM\mu m_{p}} \rp^{3}\\
+\Aboxed{\rho&= 6.04 \times 10^{-25} \textrm{ gm cm}^{-3}}\\
+n &= 6 \times 10^{-1} \textrm{ cm}^{-3}
+\end{align}
+
+\newpage
+Problem 3:
+%
+\begin{align}
+\mu &= mc^2 - kT \ln \lp \frac{gn_Q}{n} \rp\\
+\mu(H_2) &= 2 \mu(H)\\
+\mu(H) &= m_Hc^2 - kT \ln \lp \frac{n_{Q,H}}{n_H} \rp\\
+\mu(H_2) &= 2m_Hc^2 - \chi -kT \ln \lp \frac{n_{Q,H_2}}{n_{H2}} \rp\\ % pdftex doesn't like the n_H_2
+2 \lp m_Hc^2 - kT \ln \lp \frac{n_{Q,H}}{n_H} \rp \rp &=2m_Hc^2 - \chi -kT \ln \lp \frac{n_{Q,H2}}{n_{H2}} \rp\\
+-2kT \ln \lp \frac{n_{Q,H}}{n_H} \rp &= -\chi -kT \ln \lp \frac{n_{Q,H2}}{n_{H2}} \rp\\
+\ln \lp \frac{n_{Q,H}}{n_H} \rp^2 &= \frac{\chi}{kT} + \ln \lp \frac{n_{Q,H2}}{n_{H2}} \rp\\
+\lp \frac{n_{Q,H}}{n_H} \rp^2 &= e^{\chi/kT} \lp \frac{n_{Q,H2}}{n_{H2}} \rp\\
+\frac{n_Hn_H}{n_{H2}} &= e^{-\chi/kT} \frac{n_{Q,H}n_{Q,H}}{n_{Q,H2}}\\
+\frac{1}{2}n_H &= e^{-\chi/kT} 2^{-3/2}n_{Q,H}
+\end{align}
+
+\begin{align}
+P = \frac{3}{2}n_HkT &= 100 \textrm{ Pa} = 1000 \textrm{ cm s}^{-2}\\
+n_H &= \frac{2000}{3kT}\\
+\frac{1000}{3kT} &= e^{-\chi/kT}2^{-3/2}n_{Q,H}
+\end{align}
+
+Solving for $T$, I get $\boxed{T \approx 2291 K}$.
+\newpage
+Problem 4a:\\
+%
+%\begin{align}
+%n &= n_p + n_H~,\textrm{ we want } \frac{n_p}{n}\textrm{ but the Saha Eq. gives us } \frac{n_p}{n_H}
+%\end{align}
+The Saha Eq gives us:
+%
+\begin{align}
+\frac{n_pn_e}{n_H} &= \frac{g_eg_p}{g_H}e^{-\chi/kT}n_{Q,e}\\
+\frac{n_p^2}{n_H} &= \frac{2 \cdot 1}{2} e^{-\chi/kT}n_{Q,e}\\
+n &= n_p + n_H~,\textrm{ we want } \frac{n_p}{n}\textrm{ but the Saha Eq. gives us } \frac{n_p}{n_H}\\
+\frac{n_p^2}{n - n_p} &=  e^{-\chi/kT}n_{Q,e}\\
+%n_p^2 &= (n - n_p) e^{-\chi/kT}n_{Q,e}\\
+%n_p^2 + n_p e^{-\chi/kT}n_{Q,e} -ne^{-\chi/kT}n_{Q,e} &= 0~,\textrm{ use that quadratic equation}\\
+%n_p^2 + n_p \beta + \gamma =0\\
+\frac{\frac{n_p^2}{n}}{1- \frac{n_p}{n}} &=  e^{-\chi/kT}n_{Q,e}\\\
+\frac{\frac{n_p^2}{n^2}}{1- \frac{n_p}{n}} &=  \frac{1}{n} e^{-\chi/kT}n_{Q,e}~,\frac{n_p}{n} = F\\
+\frac{F^2}{1-F}&=  \frac{1}{n} e^{-\chi/kT}n_{Q,e}\\
+F^2 &= (1-F)\frac{1}{n} e^{-\chi/kT}n_{Q,e}\\
+0&= F^2 + \frac{F}{n}e^{-\chi/kT}n_{Q,e}-\frac{1}{n} e^{-\chi/kT}n_{Q,e}~,\textrm{ solve for $F$}\\
+\Aboxed{F &= \frac{-\frac{1}{n} e^{-\chi/kT}n_{Q,e} \pm \sqrt{(\frac{1}{n} e^{-\chi/kT}n_{Q,e})^2 + 4 \frac{1}{n} e^{-\chi/kT}n_{Q,e}}}{2}}
+\end{align}
+
+Plot at back
+
+Problem 4b:
+
+In class.
+\begin{align}
+\frac{n_{n=2}}{n_{n=1}} &= 4 e^{-10.2\textrm{eV}/kT}\\
+\frac{n_{n=2}}{n_H} &= 4 e^{-10.2\textrm{eV}/kT}\\
+\frac{n_{n=2}}{n- n_p} &= 4 e^{-10.2\textrm{eV}/kT}\\
+\frac{\frac{n_{n=2}}{n}}{1 - \frac{n_p}{n}} &=  4 e^{-10.2\textrm{eV}/kT}\\
+\Aboxed{\frac{n_{n=2}}{n} &= \lp {1 - \frac{n_p}{n}} \rp 4 e^{-10.2\textrm{eV}/kT}}
+\end{align}
+
+We just plotted $\frac{n_p}{n}$ so we're going to reuse it and multiply by the exponent factor.
+
+Plot at back.
+
+\newpage
+Problem 4c:
+\begin{align}
+\Delta E &= h \nu\\
+\Delta E &= \frac{h c}{\lambda}\\
+\Delta E &= -13.6\textrm{eV} \lp \frac{1}{9} - \frac{1}{4} \rp~,\textrm{ from $n=2$ to $n=3$}\\
+-13.6\textrm{eV} \lp \frac{1}{9} - \frac{1}{4} \rp &= \frac{h c}{\lambda}\\
+\Aboxed{\lambda_\alpha &= 6.51 \times 10^{-5} \textrm{ cm}}
+\end{align}
+
+\begin{align}
+-13.6\textrm{eV} \lp \frac{1}{16} - \frac{1}{4} \rp &= \frac{h c}{\lambda}~,\textrm{ from $n=2$ to $n=4$}\\
+\Aboxed{\lambda_\beta &= 4.8 \times 10^{-5} \textrm{ cm}}
+\end{align}
+
+The temperature of A stars is about $1 \times 10^4$ K, right about where there is a maximum in the fractional number of electrons in the Balmer Line. M stars are too cold and O stars are too hot. 
+
+Problem 4d:
+
+\begin{align}
+-13.6\textrm{eV} \lp \frac{1}{4} - \frac{1}{1} \rp &= \frac{h c}{\lambda}~,\textrm{ from $n=1$ to $n=2$}\\
+\Aboxed{\lambda_\alpha &= 1.2 \times 10^{-5} \textrm{ cm}}
+\end{align}
+
+The fraction of electrons in the ground state can be interpreted as:
+
+\begin{align}
+n &= n_p + n_H\\
+1&= \frac{n_p}{n} - \frac{n_H}{n}\\
+\Aboxed{\frac{n_H}{n} &=  \frac{n_p}{n}  - 1}
+\end{align}
+
+Since we have a plot for $ \frac{n_p}{n}$ and since it goes from 0 to 1, we just flip it upside down to find the plot for $\frac{n_H}{n}$. At the typical M star temperature (3000 K), we see that most of the H is in the ground state and see no prominent $Ly_\alpha$ lines. 3000 K is too cold and there isn't enough thermal energy to bump up an electron to the second energy state. Even though $kT$ can be much less than the ionization $E$, we can kind of use the argument that:
+
+\begin{align}
+kT ~&? -13.6\textrm{eV} \lp \frac{1}{4} - \frac{1}{1} \rp\\
+4.14 \times 10^{-13}\textrm{ ergs} &< 1.22 \times 10^{-11}\textrm{ ergs}~,
+\end{align}
+
+The thermal energy is less than $\Delta E$ so we don't see much (if at all) bumped up.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

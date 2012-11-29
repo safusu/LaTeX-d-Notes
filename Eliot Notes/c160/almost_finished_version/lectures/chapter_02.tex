@@ -1,0 +1,175 @@
+\chapter{Understanding the Basics of Stars}
+
+\begin{center}
+\textbf{\begin{huge} October 30, 2011\end{huge}}
+\end{center}
+
+\section{3 Key Pieces of Physics}
+
+\begin{list}{$^\circ$}{}
+\item Force Balance in stars: pressure \& gravity
+\item Energy Transport: conduction, radiation, convection
+\item Energy Generation: fusion and gravitational contraction
+\end{list}
+
+Each of these key pieces depends on the composition of the star which changes as a function of time. 
+
+\section{Force Balance}
+Let's look at a layer
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=\textwidth /2]{images/layers.ps}
+\label{fig:layers}
+\end{figure}
+
+\begin{align}
+M_{shell}&=Adr\rho\\
+M_r& \equiv \textrm{ mass interior to point at $r$}
+\end{align}
+use $F=ma$
+\begin{align}
+M_{\textrm{shell}} a &= F_{\textrm{net}} = P_{\textrm{below}}A -P_{\textrm{above}}A - \frac{GM_rM_{\textrm{shell}}}{r^2}~,dr\ll r\\
+P_{\textrm{above}} &= P_{\textrm{below}} + dP\\
+M_{\textrm{shell}}a &= P_{\textrm{below}}A - (P_{\textrm{below}} + dP)A -\frac{GM_rM_{\textrm{shell}}}{r^2}\\
+M_{\textrm{shell}}a &= \cancel{P_{\textrm{below}}A} - (\cancel{P_{\textrm{below}}} + dP)A -\frac{GM_rM_{\textrm{shell}}}{r^2}
+\end{align}
+want $M_{\textrm{shell}}a=0$ for Hydrostatic Equilibrium
+\begin{align}
+\cancel{A}dr\rho a &= -dP\cancel{A} - \frac{GM_r\cancel{A}dr\rho}{r^2}\\
+\rho a &= -\frac{dP}{dr}-\rho\frac{GM_r}{r^2}
+\end{align}
+now assume $a=0 \ra $ no net force
+\begin{align}
+\boxed{\frac{dP}{dr} = -\rho\frac{GM_r}{r^2}}
+\end{align}
+
+assume $\rho\frac{GM_R}{r^2} > \frac{dP}{dr}$, drop pressure gradient so $a \sim -\frac{GM_r}{r^2}$. Let's say that $M_r \sim M, r\sim R$ so that $a \sim -\frac{GM}{R^2} \sim \frac{\Delta R}{t^2}$. What is the time such that gravity can move stuff a distance comparable to the size of the star? This is the ``Dynamical Timescale", or ``Freefall Timescale" of the star, represented as either $t_{dyn}$ or $t_{ff} \sim \sqrt{\frac{R^3}{GM}}$.
+
+\subsection{Dynamical Timescale}
+\begin{align}
+\langle \rho \rangle &= \frac{3M}{4\pi R^3}\\
+t_{dyn} &\sim \sqrt{\frac{R^3}{GM}} = \sqrt{\frac{1}{\langle \rho \rangle G}}~,\textrm{ sun:}\langle \rho \rangle = 1\textrm{ g cm}^{-3}\\
+t_{dyn} &\sim 1\textrm{ hr}\ll 4.5 \times 10^9\textrm{ years}
+\end{align}
+This is why it's okay to assume that there is no imbalance of forces $\ra$ justification for Hydrostatic Equilibrium. 
+
+\section{Scale Height}
+But actually, imbalances within a star lead to sound waves. How are these detected?
+\begin{align}
+\Aboxed{M_r &= \int_0^r 4 \pi r^2 \rho dr}\\
+\Aboxed{\frac{dM_r}{dr} &= 4\pi r^2\rho}
+\end{align}
+
+We can't solve $P = nkT$ because we have 2 equations ($M_r = ...~ \&~ \frac{dP}{dr} = ...$) and 3 unknowns ($P(\textrm{or }T),\rho,M_r$). To do this, let's look at the isothermal atmosphere (not the interior).\\
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=\textwidth /2]{images/isotherm_atmosphere.ps}
+\label{fig:atmosphere}
+\end{figure}
+
+\begin{list}{$^\circ$}{}
+\item $z=$ height above surface
+\item $z=0$ at surface
+\item assume $M_r$ = constant = $M$ (total mass)
+\item assume $z \ll R$ so that $g$ is constant. 
+\end{list}
+We generally can't solve this unless you assume that $T = $ constant. If we do, then
+\begin{align}
+\frac{dP}{dz} &= kT \frac{dn}{dz} = -\rho g~,\rho = n\cdot \mu m_p\\
+kT \frac{dn}{dz} &= -nmg\\
+\int_{n(z=0)}^z \frac{dn}{n} &= \int_0^z -\frac{mg}{kT} = -\frac{mg}{kT}z\\
+\ln \lp \frac{n(z)}{n(z=0)} \rp &= -\frac{mg}{kT}z\\
+\Aboxed{n(z) &= n(z=0)e^{-z/h}~, h=\frac{kT}{mg}}
+\end{align}
+This is an ``exponential atmosphere" where $h$ is the scale height, the distance over which $n$ changes by approximately $\frac{1}{e}$. For comparison,
+\begin{align}
+\frac{h}{R} &= \frac{kT}{mgR}\\
+&= \frac{kT}{\frac{GMm}{R}}\\
+&= \frac{\textrm{KE or Thermal Energy}}{\textrm{Gravitational Potential Energy}}
+\end{align}
+
+If the thermal energy is larger, the atmosphere will be stretched higher up. For the sun,
+
+\begin{align}
+T_{eff}&= 5800\textrm{ K}\\
+\frac{h}{r} &= 3 \times 10^{-4}~, h \approx 200\textrm{ km}
+\end{align}
+ 
+ Think of thus as a statistical mechanics problem with particles of temperature $T$ and energy $E$:
+ \begin{align}
+n(E) &\sim e^{-E/kT}
+\end{align}
+
+Above the surface a distance $z$, $g$ is pretty much constant and $n(z) = e^{-mgz/kT}$. 
+
+\section{Mean Molecular Mass}
+
+\begin{center}
+\begin{tabular}{c|c}
+\hline
+neutral H & $m=m_p$ \\ \hline
+ionized H & $m=\frac{1}{2}m_p$ \\ \hline
+\end{tabular}
+\end{center}
+
+In other words, if you ionize the atmosphere, it will expand by a factor of 2.
+
+Looking back at HE: 
+\begin{center}
+\begin{tabular}{c|c}
+\hline
+neutral H & $P=nkT$ \\ \hline
+ionized H & $P =n_ekT + n_pkT = 2nkT$ \\ \hline
+\end{tabular}
+\end{center}
+
+We see that ionized H has twice the pressure of neutral H.
+\begin{align}
+h &= \frac{kT}{mg}\\
+&=\frac{2kT}{m_pg}
+\end{align}
+
+if $e^-$ and p don't have the same density profile, then
+\begin{align}
+e^- : h&= \frac{kT}{m_eg}\\
+p: h&= \frac{kT}{m_pg}~,
+\end{align}
+but then the charge distribution is not neutral; we'd need an electric field to provide additional force. 
+
+Let's assume a fully ionized gas of ions and electrons:
+\begin{align}
+P_{\textrm{ions}} = \sum_i n_ikT
+\end{align}
+
+Gravity only cares about the \textbf{total} mass density. To go from $n_i$ to $\rho$,
+\begin{list}{$^\circ$}{}
+\item $X_i$ = mass fraction of ion
+\item $A_i$ = atomic \# (n \& p)
+\item $n_i = \frac{X_i \rho}{m_pA_i}$
+\end{list}
+
+\begin{align}
+P_{\textrm{ions}} &= \sum_i \frac{X_i \rho}{m_p A_i}kT\\
+\Aboxed{&= \frac{\rho kT}{m_p} \sum_i \frac{X_i}{A_i} = \frac{\rho kT}{\mu_i m_p}}\\
+\Aboxed{\frac{1}{\mu_i} &= \sum_i \frac{X_i}{A_i}~,\mu_i\textrm{ is the average mass per ion}}
+\end{align}
+
+For electrons, $P_e = n_ekT$.
+\begin{align}
+n_e &= \sum_i Z_in_i\textrm{ because the gas is fully ionized}\\
+&= \sum_i \frac{X_iZ_i}{A_i}\frac{\rho}{m_p}\\
+P_e &= \frac{\rho kT}{\mu_e m_p}~,\frac{1}{\mu_e} = \sum\frac{X_iZ_i}{A_i}
+\end{align}
+where $\mu_e$ is the electron mean molecular weight. 
+
+\begin{align}
+P_{\textrm{tot}} &= P_e + P_{\textrm{ions}} \\
+&= \frac{\rho kT}{\mu_e m_p} +  \frac{\rho kT}{\mu_i m_p}\\
+\Aboxed{&= \frac{\rho kT}{\mu m_p} ~,\frac{1}{\mu} = \frac{1}{\mu_e} + \frac{1}{\mu_i} = \sum_i \frac{X_i(1+Z_i)}{A_i}}
+\end{align}
+
+For ionized H, $Z_i = A_i = X_i = 1$, so $\mu = \frac{1}{2}$. Cosmic composition, by comparison, is 75\% H and 25\% He which turns out to be a $\mu$ of 0.62 or so.
+
+

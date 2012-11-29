@@ -1,0 +1,198 @@
+\documentclass[10pt,a4paper,preprint]{aastex}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{fullpage}
+
+%Notes:
+%Compile with PDFLaTeX because LaTeX doesn't like $e^{-70.7 T'_7^{-1/3}}$, double-subscript error.
+%
+
+\begin{document}
+
+\title{HW \#6}
+\author{\begin{large}Jeren Suzuki\end{large}}
+\author{\today}
+
+Who are you.\\
+\\
+Problem 1a\\
+
+For 2 protons:
+\begin{align}
+r_c & = \frac{Z_1 Z_2 e^2}{E}\\
+& = \frac{1~e^2}{2 ~\text{keV}}\\
+& = 7.2 \times 10^{-11}~\text{cm}\\
+\\
+P & \approx e^{-(E_g/E)^{1/2}}\\
+m_r & = \frac{1}{2}m_p\\
+E_g & = \frac{2 \pi^2 m_r e^4 Z_1^2 Z_2^2}{\hbar^2}\\
+P & \approx 1.46 \times 10^{-7}
+\end{align}
+
+For 2 $^4$He:
+\begin{align}
+r_c & = \frac{Z_1 Z_2 e^2}{E}\\
+& = \frac{4~e^2}{2 ~\text{keV}}\\
+& = 2.88 \times 10^{-10}~\text{cm}\\
+\\
+P & \approx e^{-(E_g/E)^{1/2}}\\
+m_r & = 2 m_p\\
+P & \approx 2.2 \times 10^{-54} 
+\end{align}
+
+For $^4$He and $p$:
+\begin{align}
+r_c & = \frac{Z_1 Z_2 e^2}{E}\\
+& = \frac{2~e^2}{2 ~\text{keV}}\\
+& = 1.44 \times 10^{-10}~\text{cm}\\
+\\
+P & \approx e^{-(E_g/E)^{1/2}}\\
+m_r & = \frac{4}{5}m_p\\
+P & \approx 1.08 \times 10^{-17}
+\end{align}
+
+Problem 1b:
+
+For 2 $^4$He:
+\begin{align}
+1.46 \times 10^{-7} & \approx e^{-(E_g/E)^{1/2}}\\
+[-\ln (1.46 \times 10^{-7})]^2 & = \frac{E_g}{E}\\
+E & = \frac{E_g}{[-\ln (1.46 \times 10^{-7})]^2}\\
+E & = \frac{1}{[-\ln (1.46 \times 10^{-7})]^2}\frac{2 \pi^2 2 m_p e^4 4 \cdot 4}{\hbar^2}\\
+E & = 1.9 \times 10^{-7} ~\text{ergs}\\
+\\
+\frac{3}{2}kT & = E \\
+T &=  9.2 \times 10^{8}~\text{K}
+\end{align}
+
+For $p$ + $^4$He:
+\begin{align}
+E & = \frac{1}{[-\ln (1.46 \times 10^{-7})]^2}\frac{2 \pi^2 4 m_p e^4 4}{\hbar^2}\\
+E & = 1.9 \times 10^{-8} ~\text{ergs}\\
+\\
+T & = 9.18 \times 10^7~\text{K}
+\end{align}
+
+For $^{12}$C + $^{12}$C:
+\begin{align}
+E & = \frac{1}{[-\ln (1.46 \times 10^{-7})]^2}\frac{2 \pi^2 6 m_p e^4 36 \cdot 36}{\hbar^2}\\
+E & = 7.67 \times 10^{-6}~\text{ergs}
+\\
+T & = 3.7 \times 10^{10}~\text{K}
+\end{align}
+
+
+Problem 2a:
+\begin{align}
+E_0 & = \left( \frac{1}{2}E_g^{1/2}kT \right)^{2/3}\\
+MB & = \frac{2}{kT} \left( \frac{E}{\pi kT} \right)^{1/2} e^{\left( - \dfrac{E}{kT} \right)} dE~,
+\end{align}
+where $MB$ is just the shorthand for the Maxwell-Boltzmann Distribution.\\
+Plugin $E_0$ for $E$ and $dE$:
+\begin{align}
+MB & = \frac{2}{kT} \left( \frac{E_0}{\pi kT} \right)^{1/2} e^{\left( - \dfrac{E_0}{kT} \right)} E_0\\
+& = .113\\
+& = 11.3 ~\%
+\end{align}
+
+Problem 2b:
+\begin{align}
+S & = 3.78 \times 10^{-22} ~\text{keV barn}\\
+\sigma & = \frac{S}{E}e^{(E_g/E)^{1/2}}\\
+\end{align}
+
+We have to take into account that only 10\% of the mass in the sun is fusing and therefore must multiply our $l$ by $0.1$.
+\begin{align}
+l &= \frac{.1}{n \sigma} ~,n=\frac{\rho \mu}{m_p}\\
+& = \frac{0.1 m_p}{\rho \mu \sigma}\\
+& = \frac{0.1m_p E}{\rho \mu S e^{(E_g/E)^{1/2}}}\\
+& = 3.29 \times 10^{24}~\text{cm}\\
+l & = 4.72 \times 10^{13}R_\odot\\
+\\
+t& = \frac{l}{v}\\
+\frac{1}{2}mv^2 & = \frac{3}{2}kT\\
+v & = \sqrt{\frac{3kT}{m_p}}\\
+ & = 6.23 \times 10^7 ~\text{cm/s}\\
+t & = \frac{3.29 \times 10^{24}~\text{cm}}{6.23 \times 10^7 ~\text{cm/s}}\\
+t & \approx 1.67 ~\text{billion years}
+\end{align}
+
+Problem 3:
+\begin{align}
+I & = \int\limits_0^\infty e^{-f(E)}dE\\
+\text{Taylor expand}~f(E)~\text{around}~E_0\\
+f(E) & = f(E_0) + \frac{f'(E_0)}{1!}[E-E_0] + \frac{f''(E_0)}{2!}[E-E_0]^2~,
+\end{align}
+and the first derivative is zero, so we can just get rid of that middle term.
+\begin{align}
+f(E) & = f(E_0) + \frac{1}{2} f''(E_0)[E-E_0]^2\\
+I & = \int\limits_0^\infty e^{-f(E_0) - \frac{1}{2} f''(E_0)[E-E_0]^2}dE\\
+I & = e^{-f(E_0)}\int\limits_0^\infty e^{-\frac{1}{2} f''(E_0)[E-E_0]^2}dE
+\end{align}
+We want to make line 63 look like a Gaussian integral,
+\begin{equation}
+\int\limits_{-\infty}^\infty e^{-x^2}}dx = \sqrt{\pi}~,
+\end{equation}
+so that we can easily plug in $\sqrt{\pi}$.
+\begin{align}
+-\frac{1}{2} f''(E_0)[E-E_0]^2 = -x^2\\
+\sqrt{\frac{f''(E_0)}{2}} (E-E_0) = x\\
+\sqrt{\frac{f''(E_0)}{2}} dE = dx\\
+\\
+I & = e^{-f(E_0)} \int\limits_0^\infty e^{-x^2}dx \cdot \sqrt{\frac{2}{f''(E_0)}}\\
+I & = e^{-f(E_0)} \sqrt{\frac{2}{f''(E_0)}} \sqrt{\pi}\\
+I & \approx \frac{\sqrt{2 \pi} e^{-f(E_0)}}{\sqrt{f''(E_0)}}
+\end{align}
+
+We can ignore the $\int_0^\infty$ difference in the integral given in the homework problem with $\int_{- \infty}^\infty$ of the actual Gaussian equation because the Gaussian integral from $\int_{- \infty}^\infty$ assumes it's symmetrical around 0. In our case, the Gaussian is symmetrical around $E_0$, which is far enough away from 0 that there is no contributing factor to the Gaussian at 0. Therefore, integrating from $-\infty \rightarrow \infty$ will be the same as $0 \rightarrow \infty$.
+
+Problem 4:
+\begin{align}
+E & \ll E_g\\
+E & \ll \frac{2 \pi^2 e^4 Z_1^2 Z_2^2 m_r}{\hbar^2}~, \text{and}~e^4 Z_1^2 Z_2^2~\text{looks like}~E=\frac{e^2 Z_1 Z_2}{r}\\
+E & \ll \frac{2 \pi^2 m_r}{\hbar^2} (Er)^2\\
+\frac{1}{E} & \ll \frac{2 \pi^2 m_r}{\hbar^2}r^2~, E=\frac{p^2}{2m}\\
+\frac{2m}{p^2} & \ll \frac{2 \pi^2 m_r}{\hbar^2} r^2~, \lambda = \frac{h}{p}\\
+\frac{\lambda^2 2m}{h^2} & \ll \frac{2 \pi^2 m_r}{\hbar^2}r^2\\
+\frac{\lambda^2}{h^2} & \ll \frac{\pi^2}{\hbar^2}r^2\\
+\lambda^2 & \ll (2\pi)^2 \pi^2 r^2\\
+\lambda & \ll 2\pi^2 r\\
+\lambda & \ll r
+\end{align}
+
+Problem 5a:
+\begin{align}
+\beta & = -\frac{2}{3} +23.6\cdot T_7^{-1/3}\\
+\beta(1.5 \times 10^7~\text{K}) & \approx 19.95\\
+\beta(3 \times 10^7~\text{K}) &  \approx 15.7
+\end{align}
+
+Problem 5b:
+\begin{align}
+L_{CNO} = .016L_\odot\\
+L &= \int \epsilon dM\\
+& \sim \epsilon M\\
+\epsilon & \propto 4.4 \times 10^{27} \frac{\rho X Z}{T_7 ^{2/3}} e^{-70.7 T_7^{-1/3}}
+\end{align}
+We divide luminosities at different Ts to cancel out $\rho$, $X$, and anything that isn't $T$-dependent. 
+
+\begin{align}
+\frac{L'_{CNO}}{L_{CNO}} & \sim \left( \frac{T_7}{T'_7} \right)^{2/3} \frac{e^{-70.7 T'_7^{-1/3}}}{e^{-70.7 T_7^{-1/3}}}~,\text{where}~L'_{CNO}~\text{is the Luminosity of the CNO chain at the new} ~T'\\
+ & \sim \left( \frac{T_7}{T'_7} \right)^{2/3} e^{-70.7(T'_7 ^{-1/3} - T_7^{-1/3})}\\
+ & \sim \left(  \frac{1.5}{1.65} \right)^{2/3} e^{-70.7(1.65 ^{-1/3} - 1.5^{-1/3})}\\
+L'_{CNO} & \sim 8.5 L_{CNO}\\
+& \sim 8.5\cdot .016L_\odot\\
+& \sim .1360 L_\odot\\
+& \sim 13.6\% ~L_\odot
+\end{align}
+
+Problem 5c:\\
+Since $\epsilon \propto T^\beta$, we can rearrange the proportionality to find $T$ in terms of $\epsilon$ and get $T \propto \epsilon^{1/\beta}$. At higher $T$, $\beta$ essentially becomes constant at around 20. Looking at the Line 87, we see that we can change the $\rho$, $X$, and $Z$ of a star, but that change will be suppressed by any $^{1/20}$ dependence. 
+
+
+
+
+
+\end{document}

@@ -1,0 +1,112 @@
+
+\chapter{Finishing Convection}
+
+\begin{center}
+\textbf{\begin{huge} September 20, 2011\end{huge}}
+\end{center}
+
+\section{Convection Continued}
+
+\begin{align}
+a = |N|^2 \delta r\\
+|N|^2 &= \frac{g}{c_p} \Bigl\lvert \frac{ds}{dr} \Bigl\lvert\\
+&= \frac{g}{H} \Bigl\lvert \frac{H}{c_p} \frac{ds}{dr} \Bigl\lvert\\
+v_c^2 = a \delta r = |N|^2 \delta r^2\\
+\delta r \equiv \alpha H\\
+v_c = \alpha c_s \Bigl\lvert \frac{H}{c_p} \frac{ds}{dr} \Bigl\lvert^{1/2}\\
+F = \frac{1}{2}\rho v_c^3 = \frac{1}{2} \rho \alpha ^3 c_s^3 \Bigl\lvert \frac{H}{c_p} \frac{ds}{dr} \Bigl\lvert ^{3/2}\\
+c_s^2 = \frac{kT}{\mu m_p} = \frac{P}{\rho}
+\end{align}
+
+We wanted to find the $F_r = -\frac{4}{3} \frac{caT^3}{\kappa \rho}\frac{dT}{dr}$ equivalent for convection. $F = \frac{1}{2}\rho v_c^3 = \frac{1}{2} \rho \alpha ^3 c_s^3 \Bigl\lvert \frac{H}{c_p} \frac{ds}{dr} \Bigl\lvert ^{3/2}$ gives the $v_c$ and $\frac{ds}{dr}$ given the flux. \\
+
+$\Bigl\lvert \frac{H}{c_p} \frac{ds}{dr} \Bigl\lvert \sim 10^{-6}$, $s \sim c_p$, so $\frac{\Delta s }{s} \sim 10^{-6}$ on a length scale $\sim H$. Ergo, $s$ = constant in the convection zone. This replaces $F_r = -\frac{4}{3} \frac{caT^3}{\kappa \rho}\frac{dT}{dr}$. Let's assume $P \pt \rho^\gamma$ \& $\frac{dP}{dr} = -\rho \frac{GM_r}{r^2}$. 
+
+\begin{align}
+\frac{dM_r}{dr} = 4 \pi r^2 \rho\\
+\frac{d}{dr} \lp \frac{r^2}{\rho} \frac{dP}{dr} = -\rho GM_r \rp\\
+\frac{d}{dr} \lp \frac{r^2}{\rho	} \frac{dP}{dr} \rp = -4\pi r^2 G\rho
+\end{align}
+
+But... if $P = K \rho^\gamma$, $\frac{dP}{dr} = \gamma K \rho^{\gamma-1} \frac{d\rho}{dr}$! These kinds of models are called:
+
+\subsection{Polytropic Models}
+
+\begin{align}
+P &= K\rho^\gamma\\
+&= K \rho^{1 + 1/n}, \gamma = 1 + \frac{1}{n}, \text{ where n is the polytropic index}
+\end{align}
+
+\begin{align}
+\theta = \lp \frac{\rho}{\rho_c} \rp ^{1/n}~,\rho_c = \rho(r=0)\\
+\zeta = \frac{r}{a}~, a = \sqrt{\frac{(n+1) K \rho_c ^{\frac{1}{n} -1}}{4 \pi G}}~,[a] = \text{ cm}
+\end{align}
+
+\begin{align}
+\underbrace{\boxed{\frac{1}{\zeta^2} \cdot \frac{d}{d\zeta} \lp  \zeta^2 \frac{d\theta}{d\zeta} \rp = -\theta^n}}_{\text{Lane-Emden Equation}}
+\end{align}
+
+Boundary conditions:
+
+\begin{align}
+\theta (0) = 1\\
+\frac{d \theta}{d \zeta} \Bigl\lvert_{r=0}\\
+\frac{d \theta}{d \zeta} \pt \frac{d \rho}{dr} \pt \frac{dP}{dr} \sim -\frac{\rho GM_r}{r^2} \pt r \text{ as } r \rightarrow 0\\
+\frac{dM_r}{dr} = 4 \pi r^2 \rho\\
+M_r \sim \rho r^3
+\end{align}
+
+Let's look at the properties of a fully convective star of low mass. Low mass $\rightarrow$ low $T$ $\rightarrow$ high $\kappa$. 
+
+\subsection{$M_\star < \frac{1}{3} M_\odot$ on Main Sequence - Pre and Post-Stars Too (Giants)}
+
+For stars with photons carrying the energy out, $L \pt M^3$ if $\sigma = \sigma_T$. For fully convective stars, $L = 4 \pi R^2 F_c$, where $F_c = \rho v_c^3 \pt \Bigl\lvert \frac{ds}{dr} \Bigl\lvert^{3/2}$. Let's look at the surface where photons are carrying the energy out. 
+
+\begin{align}
+\text{s = constant}\\
+P \pt \rho^{5/3} \pt T^{5/2}\\
+\rho T \pt \rho^{5/3}, T \pt \rho^{2/3}\\
+\frac{P_c}{P_{photons}} = \lp \frac{T_c}{T_{eff}} \rp ^{5/2},\text{ now use V.T. to relate $T_c$ and $M$ \& $R$.}
+\end{align}
+\begin{center}
+{\Huge BUT}
+\end{center}
+We know that this is a $n=\sfrac{3}{2}$ polytrope so $kT_c = .54 \frac{GM\mu m_p}{R}$
+
+\begin{align}
+P_c = 0.77 \frac{GM^2}{R^4}\\
+\frac{dP}{dr} = -\rho \frac{GM_r}{r^2}\\
+\frac{P_c}{R} \sim \frac{M}{R^3}\frac{GM}{R^2}\\
+P_c \sim \frac{GM^2}{R^4}
+\end{align}
+
+\begin{align}
+\frac{1}{\kappa_{ph}\rho_{ph}} &= \frac{kT_{eff}}{mg} \\
+&= \frac{kT_{eff}R^2}{GMm}\\
+\frac{\rho_{ph}kT_{eff}}{m} &= \frac{g}{\kappa_{ph}}\\
+&\equiv P_{ph}\\
+& = \frac{GM}{R^2\kappa_{ph}}
+\end{align}
+
+Now all that's left is $\kappa$. $\kappa_{ph}(\rho_{ph},T_{ph})~, \kappa_{ph} \sim 3 \times 10^{-31} \rho_{ph}^{1/2} T_{eff}^9$. Now we have $\frac{\rho_{ph} kT_{eff}}{m} = \frac{g}{\kappa_{ph}}$. In this example, $\kappa = \kappa_{H^-}$ and $T_{eff} \sim 3000 \sim 10^4$ K. Now we can solve:
+
+\begin{align}
+\frac{P_c}{P_{ph}}&= \lp \frac{T_c}{T_{eff}} \rp^{5/2}\\
+T_{eff} &= T_c \lp \frac{P_{ph}}{P_c	} \rp ^{2/5}\rightarrow T_{eff}(M,R)~,
+\end{align}
+
+and from here you can solve for $T_c(M,R), P_c(M,R), P_{ph}(T_{eff},M,R)$.\\
+
+We're going to assume that $s=$ constant and some other stuff about polytropes. $l \sim H \rightarrow P_{ph}(M,R,T_{eff})$ to get:
+
+\begin{align}
+\Aboxed{T_{eff} &\approx 3000 \text{ K }\lp \frac{M}{M_\odot} \rp^{1/7} \lp \frac{R}{R_\odot} \rp^{1/49}}\\
+\Aboxed{L = 4 \pi R^2 \sigma T_{eff}^4 &\sim 0.1 L_\odot \lp \frac{M}{M_\odot} \rp^{4/7} \lp \frac{R}{R_\odot} \rp^{102/49}}
+\end{align}
+for a fully convective star; this is analogous to the $L \pt M^3$ for a radiative star
+\begin{align}
+T_{eff} &\approx 3000 \text{ K } \lp \frac{L}{L_\odot} \rp^{1/102} \lp \frac{R}{R_\odot} \rp^{7/51}
+\end{align}
+
+But the dependence on $M$ and $R$ are so low that fully convective stars share the same $T_{eff} \sim 3000-4000$ K and are pretty much located on the Hayashi Line.
+

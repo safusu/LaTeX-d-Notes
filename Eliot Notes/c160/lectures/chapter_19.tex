@@ -1,0 +1,122 @@
+
+\chapter{Stellar Spectra Continued}
+
+\begin{center}
+\textbf{\begin{huge} November 1, 2011\end{huge}}
+\end{center}
+
+\section{Saha Equation}
+
+Recall, 
+
+\begin{align}
+\text{\# of ionizations} = \text{\# of atoms neutral vs \# ionized}
+\end{align}
+
+How do we describe $\mu(H) = \mu(p) + \mu(e^-)$ mathematically? For a classical, NR gas, 
+
+\begin{align}
+\boxed{\mu = mc^2 -kT \ln \lp \frac{gn_Q}{n} \rp}~.
+\end{align}
+
+Since the temperatures we care about sets the thermal energy to be around the binding energy of $H$, we can't ignore it and must include it in 
+
+\begin{align}
+m_Hc^2 &= m_pc^2 + m_ec^2 - \chi~.
+\end{align}
+
+\begin{align}
+-\frac{\chi}{kT} &= \ln \lp \frac{g_H n_{Q,H}n_en_p}{n_Hn_{Q,e}n_{Q,p}g_eg_p}\rp\\
+n_Q &= \lp \frac{2 \pi mkT}{h^2} \rp^{3/2}\\
+n_{Q,H} &= n_{Q,p}\\
+\Aboxed{\frac{n_en_p}{n_H} &= \frac{g_eg_p}{g_H}n_{Q,e}e^{-\chi / kT}}~,\text{ Saha Equation of $H$}\\
+n_H: \text{ $H$ in the ground state, $\chi = 13.6$ eV}
+\end{align}
+
+At what $T$ is $H$ half-ionized?
+
+\begin{align}
+n_e &= n_p= n_H\\
+\frac{n_en_p}{n_H} &= n_H~\text{ for the ground state of $H$, $g_H = 2$}\\
+n_H &= \lp \frac{2 \pi m_e kT}{h^2} \rp^{3/2} e^{-\chi /kT}\\
+T_4 = T / 10^4 \text{ K}\\
+\chi /kT = \frac{15.77}{T_4}\\
+13.6 \text{ eV} \ra T = 1.577 \times 10^5 \text{ K}\\
+n_H &= \lp \frac{2 \pi m_e kT}{h^2} \rp^{3/2}  e^{-15.77/T_4}~,~T \text{ at which $H$ is half-ionized given $n$}
+\end{align}
+
+For the sun,
+
+\begin{align}
+\frac{1}{\kappa \rho} = \frac{kT}{mg} \ra n\approx 10^{12} \text{ cm}^{-3}\\
+1 \approx \frac{3 \times 10^4}{n_{17}}T_4^{3/2} e^{-15.77 /kT}~,n_{17} = n/10^{17}\\
+T \approx 1.5 \times 10^4 \text{ K for $H$ to be half-ionized at $n = 10^{17}$ cm$^{-3}$}
+\end{align}
+
+$H$ is half-ionized at $kT \sim 0.1 \chi$! Even though the $T$ is well below the ionization $T$ of $H$, it's because there are many more free electron states. There are many QM states of a free electron at $10^4$ K, creating a bias even though there's an energy wall you have to go through. This  $kT \sim 0.1 \chi$ proves to e a very good rule of thumb for stars. \\
+
+He is ionized a about 24.6 eV and is half-ionized at around $kT \sim 0.1 \chi, T \approx 1 \times 10^4$ K. Na has an ionization energy of 5.14 eV, needing $T > 6000$ K for it to be ionized. \\
+
+The Saha Equation however doesn't work very well (quantitatively not applicable) in the interior of stars... and there's two reasons for that. In low mass stars, degeneracy pressure dominates core pressure and $n \sim n_Q$ and thus you can't treat it as a classical gas. Also, the spacing between particles is now less than the B\"ohr radius for densities above 1 gm cm$^{-3}$. There's a version of the Saha Equation for degenerate gases, but not for overlapping energy levels, it's too complicated.
+
+\section{Masses and What's What }
+
+3 types of elements:
+\begin{list}{$\circ$}{}
+\item Noble gases: He and Ne, $\chi \sim 25$ eV, ionized at around $T \sim 30,000$ K
+\item H, C, N, O $\chi \sim 10$ eV, ionized around $T \sim 10^4$ K
+\item Metals: Na, K, ... $\chi \sim 6$ eV, ionized around $T \sim 5000$ K
+\end{list} 
+These energies are just to strip off the first electron, btw. 
+
+\begin{center}
+\begin{tabular}{lccc}
+\hline
+Mass ($M_\odot$)&Class&$T_{eff}$ (K)&What's ionized\\ \hline
+100&O& $ \sim 30,000$&He II, all else ionized\\ \hline
+10&B& $\sim 20,000$&He neutral\\ \hline
+2.5&A&$ \sim 9,000$&H neutral\\ \hline
+1&G& $\sim 6,000$&neutral metals\\ \hline
+0.1&M&$\sim 3,000$&all neutral (almost)\\ \hline
+\end{tabular}
+\end{center}
+
+\section{Balmer Lines of $H$}
+
+The Balmer lines correspond to $n=2 \ra n=3,4,5,...$ and are important because they correspond to the optical lines of $H$. To go from $n=1$ to $n=2$ takes 10.2 eV, just to know. What determines whether or not you'll see a Balmer line is dependent on how many electrons there are in the $n=2$ state. i.e., the $\frac{n_{n=2}}{n_H}$ which determines the strength of the line. 
+
+\begin{align}
+\frac{n_{n=2}}{n_{n=1}} = 4e^{-\Delta E /kT}
+\end{align}
+
+How is it that even though in the best case scenario, where 1 out of 100,000 electrons have the energy needed to emit a Balmer Line, that line is sufficiently strong in stars? To have an observable line, the $l$ due to the atomic transition is $\ll$ the $l$ of other photons in the spectrum. This is basically the condition for stars to have a ``strong" line. 
+
+\begin{align}
+l &= \frac{1}{n \sigma}\\
+l &= \frac{1}{n_{n=2} \sigma_{\text{line}}}~,\text{ for a Balmer line}\\
+l_{\text{other photons}} &= \frac{1}{n_{tot} \sigma_{cont}}~,\sigma_{cont} \sim \sigma_T
+\end{align}
+
+Strong Balmer line requires:
+
+\begin{align}
+n_{n=2}\sigma_{\text{line}} &> n_{tot}\sigma_T\\
+\frac{n_{n=2}}{n_{tot}} &> \frac{\sigma_T}{\sigma_{\text{line}}}
+\end{align}
+
+For Balmer lines, $\sigma_{\text{line}} \sim a_0^2 \sim 10^{-16}$ cm$^2$ and $\sigma_T \sim 6.65 \times 10^{-25}$ cm$^2$. Strong line requires:
+
+\begin{align}
+\frac{n_{n=2}}{n_{tot}} \geq 10^{-8}
+\end{align}
+
+Even though the number of electrons in the $n=2$ state is so small, the $\sigma_{\text{line}} $ is so large. So far, we've understood that the spectrum of a star depends primarily on its $T_{eff}$ and also it's composition. There is one other thing it depends on, and that's the $R$ of a star. On the MS, $M \ra T \ra L \ra T_{eff}$, but off the MS, two stars can have the same $T_{eff}$ and have different $R$ (giants). Where does this come into the problem?
+
+\begin{align}
+T_{eff} \\
+n_{ph} &: \frac{1}{\kappa \rho} = \frac{kT_{eff}}{mg}\\
+n &\approx \frac{g}{\kappa kT_{eff}}\\
+&\approx \frac{GM}{R^2 \kappa kT_{eff}}
+\end{align}
+
+For $M = M_\odot$, $T_{eff} = 5800$ K and $R = 100R_\odot$ (giant). This then corresponds to $n_{ph} \sim 10^{13}$ cm$^{-3}$ which changes the spectrum (subtly). T at which $H$ is half-ionized: $1.5 \times 10^4$ K at $n=10^{17}$ cm$^{-3}$ and $8000$ K at $n = 10^{13}$ cm$^{-3}$. 

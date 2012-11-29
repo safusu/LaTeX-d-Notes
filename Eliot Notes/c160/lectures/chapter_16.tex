@@ -1,0 +1,141 @@
+\chapter{QM Effects in Stars}
+
+\begin{center}
+\textbf{\begin{huge} October 18, 2011\end{huge}}
+\end{center}
+
+\section{Min and Max Masses of Stars}
+
+A star is an object held together by it's own gravity; undergoes H fusion into He. Doesn't matter if it's fused in the past, it's still a star, just at a different phase in it's life. In the present day universe, stars have $M$ between $.08 M_\odot  \leq M \leq 100-200 M_\odot$. The fact that stars under $.08M_\odot$ don't undergo fusion is well understood, due to the QM nature of stars. The fact that stars above $100-200 M_\odot$ don't fuse, however, isn't well understood. Best guess it has something to with $P$ dominated by $P_{rad}$.
+
+\subsection{Lower Limit}
+
+Th lower limit is placed based on the QM properties of the gas in stars. We've treated the gas in stars as an ideal, classical gas. $P  = nkT + \frac{1}{3}aT^4$. What is required for the aforementioned equation to be valid? 1) QM degeneracy $P$ is small, 2) at typical distance, not interacting with itself. QM nature is important when:
+
+\begin{align}
+\lambda \gtrsim \text{ distance between particles} \sim n^{-3}\\
+p_{th} = mv_{th} \approx \sqrt{mkT}\\
+\lambda = \frac{h}{p} = \frac{h}{\sqrt{mkT}}\\
+\end{align}
+
+The QM nature is important if $\lambda \geq n^{-3} $. $n \geq \lp \frac{mkT}{h^2} \rp^{3/2}$. 
+
+\begin{align}
+n_Q &\equiv \text{ quantum density}\\
+&= \lp \frac{2 \pi m k T}{h^2} \rp ^{3/2} = n_Q(T)\\
+n &\geq n_Q~,\text{ then QM is important}
+\end{align}
+
+If $n_q \pt m^{3/2}$, then the first particles you have to worry about are the electrons, not the protons. Electrons have a lower mass, but what about photons? \\
+
+At the center of the sun, density of electrons is actually close to the quantum density. So what we've been doing so far has been wrong? If we think about stars of different masses, we need to look at how the $T$ and $\rho$ change with $M$. 
+
+\begin{align}
+R \pt M^{3/4}\\
+T_C \pt \frac{M}{R} \pt M^{1/4} \downarrow \text{ as } M \downarrow~, n_Q \downarrow \text{ too}\\
+\rho \pt \frac{M}{R^3} \pt \frac{M}{M^{9/4}} \pt M^{-5/4}~, n \uparrow \text{ as } M \downarrow\\
+\end{align}
+
+QM becomes increasingly important for low mass stars. It's the electrons we worry about, specifically. Distribution function of particles isn't really MB, but something more general.\\
+
+\begin{align}
+n(p)= \frac{2/h^3}{e^{(E_p - \mu)/kT} \pm 1}~, E_p = p^2 c^2 + m^2 c^4,\mu = \text{ chemical potential} = \frac{\delta E}{ \delta N} \Bigl\lvert_{S,V}
+\end{align}
+
+$\pm$ relates to: "$+$" obeys Fermi-Dirac Statistics and "$-$" obeys Bose-Einstein Statistics. We want Fermi statistics because electrons lie there. $n(p)$ is the number density defined to be: 
+
+\begin{align}
+n= \int d^3 p \cdot n(p)~,
+\end{align}
+
+where $n(p)$ is the number of particles per unit volume in $d^3x \pt d^3p$. Real space and in momentum space. Now we're going to focus on Fermions...
+
+\subsection{Fermions}
+
+\begin{align}
+n(p)= \frac{2/h^3}{e^{(E_p - \mu)/kT} + 1}
+\end{align}
+
+Let's consider a fully degenerate gas. i.e. QM nature is very very important. This is at the limit $n \gg n_Q$ where $T \rightarrow 0$. What is the limit of the distribution function as $T \rightarrow 0$? 
+
+\begin{align}
+e^{\pm \text{ big \#}}
+\end{align}
+
+$n(p) \simeq 0 $ if $E_p > \mu$ and $n(p) \simeq \frac{2}{h^3} $ if $E_p < \mu$. This is only in the QM limit though. But! Stars never reach $T = 0$, so what do we really mean? When we say the T is 0, we mean the thermal energy is small compared to something. More precisely, $\mu \gg kT$. \\
+
+We can just calculate the number density $n$ of fermions, $n = \int n(p) \times d^3p$. This is either an integral of 0 or a constant. Define: $p_F$ as the Fermi Momentum
+
+\begin{align}
+p_F = p \text{ such that }E_p = \mu
+\end{align}
+
+Then, 
+
+\begin{align}
+n &= \int_{0}^{p_F} \frac{2}{h^3}d^3p\\
+&= \frac{8 \pi}{h^3} \int_0^{p_F} p^2 dp\\
+&= \frac{8 \pi}{3h^3} p_F^3\\
+\Aboxed{p_F &= \lp \frac{3h^3}{8 \pi} \rp^{1/3} n^{1/3}}~,\text{ this is true in both NR and R limits}
+\end{align}
+
+Let's assume NR fermions:
+
+\begin{align}
+E_p &= \frac{1}{2}mv^2 = \frac{p^2}{2m}\\
+E_F &= \frac{p_F^2}{2m}\\
+\Aboxed{&= \lp \frac{3h^3}{8 \pi} \rp ^{2/3} \frac{n^{2/3}}{2m} }
+\end{align}
+
+This can also be described as $\mu$. $\boxed{\mu = E_F}$. No matter how close to $T=0$ you get, particles will still move!
+
+\begin{list}{}{}
+\item gas density $n$
+\item typical dist between particles $\sim n^{-1/3}$
+\end{list}
+
+If $\lambda \geq n^{-1/3}$, particles seem to blur together. But the P.E.P says that particles needs to be in separate discrete states. This blurring isn't possible for fermions that obey the P.E.P. If you obey the P.E.P, you have to have a $\lambda \leq n^{-1/3}$, even if $T \rightarrow 0$. As you get closer to $T \rightarrow 0$, then $\lambda \geq n^{-1/3}$, but at some point, P.E.P. forces $\lambda \leq n^{-1/3}$. 
+
+\begin{align}
+\frac{h}{p}\sim n^{-1/3} \rightarrow p \sim hn^{-1/3} \sim p_F
+\end{align}
+
+The $p_F$ is largely determined by $\lambda$. Whether particles are R or NR is irrelevant, they can still be QM in both situations. If we assume things are NR, $E_F \sim \frac{p_F^2}{2m		} \sim \frac{h^2}{2m} n^{2/3} \equiv \mu$. The flux you radiate doesn't care about the Fermi nature of the electrons. When we say $F = aT^4$, we mean $T$ to be $T$, not kinetic energy, not thermal energy, just $T$. With QM, we're saying that even with a low $T$, we can still have a high $p$ and $E$. \\
+
+What we really want to understand is the structure of low mass stars. What is the pressure produced by these particles? This is what's going to compete with gas or radiation pressure. Remember
+
+\begin{align}
+P &= \frac{2}{3} \epsilon\text{ for NR} \\
+P &= \frac{1}{3} \epsilon \text{ for R}
+\end{align}
+
+Our guess would be for the NR case:
+
+\begin{align}
+P  &\sim n E_F~,\text{ number of particles per unit volume time energy per particle}\\
+P &\sim \frac{h^2}{2m}n^{5/3}
+\end{align}
+
+\begin{align}
+\epsilon &= \int \frac{p^2}{2m}n(p) d^3p\\
+&= \int_0^{p_F} \frac{p^2}{mh^3}4 \pi p^2 dp \\
+&= \frac{4 \pi}{mh^3} \int_0^{p_F} p^4 dp\\
+\Aboxed{\epsilon &= \frac{4 \pi}{5} \lp \frac{3}{8 \pi} \rp^{5/3} \frac{h^2 n^{5/3}}{m}}
+\end{align}
+
+\begin{align}
+\Aboxed{P &= \frac{h^2}{5m} \lp \frac{3}{8 \pi} \rp^{2/3} n^{5/3}}~\text{ NR QM degeneracy pressure of fermions}\\
+&\pt \frac{n^{5/3}}{m}~,\text{ lowest mass particles dominates pressure (in our case, $e^-$)}\\
+&\pt \frac{n^{5/3}}{m}~,\text{ $n=3/2$ polytrope!}
+\end{align}
+
+Since $P \pt n^{5/3}$ it doesn't mean the star is convective although the opposite is true. It's totally unrelated. Elliot thinks. We assumed a NR gas of fermions, now how about R? $p_F$ is so large that the velocity approaches the speed of light. Can't use $P = \frac{2}{3} \epsilon$, must use $P = \frac{1}{3} \epsilon$.
+
+\begin{align}
+\epsilon \sim n \times p_F c~,p_fc = E_F\\
+p_F \sim hn^{1/3}\\
+P _{\text{R Degenerate Gas}}&\sim hn^{4/3}c\\
+&\sim \frac{hc}{4} \lp \frac{3}{8 \pi} \rp^{1/3} n^{4/3}~,\text{ only depends on $p$, not $p$ and $m$.}
+\end{align}
+
+This is an example of a $n=3$ polytrope. 
